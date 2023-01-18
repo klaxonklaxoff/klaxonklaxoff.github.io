@@ -1,0 +1,11 @@
+---
+title: "Landing page"
+---
+
+<!-- This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>. -->
+
+Welcome to this site!
+
+This is a work in progress, please be patient.

@@ -1,6 +1,6 @@
 # Site
 
-This is the testing ground for playing around with Quarto and websites.
+This is the testing ground for playing around with Quarto and websites. Here is the site output: <https://klaxonklaxoff.github.io/site/>.
 
 ## Some things I want to get around playing with
 

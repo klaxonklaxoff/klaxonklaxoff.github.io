@@ -3,20 +3,14 @@ project:
   output-dir: docs
 
 website:
-  title: "Site"
+  title: "My site"
   reader-mode: true
-  # repo-url: https://github.com/quarto-dev/quarto-demo
-  # repo-actions: [edit, issue]
+  repo-url: https://github.com/klaxonklaxoff/site
+  repo-actions: [edit, issue]
   sidebar:
     style: "docked"
     search: true
     tools:
-      - icon: github
-        menu:
-          - text: Source Code
-            url:  https://github.com/klaxonklaxoff/site
-          - text: Report a Bug
-            url:  https://github.com/klaxonklaxoff/site/issues
       - icon: linkedin
         href: https://www.linkedin.com/in/brittnyvongdara/
     contents: 
@@ -24,12 +18,14 @@ website:
       text: Landing page
     - href: about.qmd
       text: About me
+    - href: nyt_analysis.qmd
+      text: New York Times crossword analysis
       # text: Home
       # - section: Section 1
       #   - content:
 page-footer:  
   - icon: github
-    href: https://github.com/
+    href: https://github.com/klaxonklaxoff
   - icon: linkedin 
     href: https://www.linkedin.com/in/brittnyvongdara/ 
 
@@ -38,7 +34,7 @@ lang: en
 format:
   html:
     theme: 
-      light: flatly
+      light: minty
       dark: darkly
     css: styles.css
     toc: true

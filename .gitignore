@@ -1,1 +1,3 @@
-/.quarto/
+*/.quarto/*
+*.html
+*/docs/*

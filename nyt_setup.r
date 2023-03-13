@@ -7,7 +7,7 @@ library(MetBrewer)
 
 # Read in data file ----
 nyt <-
-  read.csv("../data/nyt_data.csv") %>%
+  read.csv("nyt_data.csv") %>%
   mutate(date = as.Date(date),
          year = as.integer(format(date, "%Y"))) %>%
   group_by(year, day) %>%

@@ -18,7 +18,7 @@ website:
       text: Landing page
     - href: about.qmd
       text: About me
-    - href: nyt_analysis.qmd
+    - href: nyt.qmd
       text: New York Times crossword analysis
       # text: Home
       # - section: Section 1

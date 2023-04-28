@@ -1,6 +1,5 @@
 project:
   type: website
-  output-dir: _site
   
 execute:
   freeze: auto
@@ -43,3 +42,5 @@ format:
       dark: darkly
     css: styles.css
     toc: true
+    
+editor: visual

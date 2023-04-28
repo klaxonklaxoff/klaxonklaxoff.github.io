@@ -2,7 +2,8 @@ project:
   type: website
   output-dir: docs
   
-freeze: true
+execute:
+  freeze: auto
 
 website:
   title: "My site"

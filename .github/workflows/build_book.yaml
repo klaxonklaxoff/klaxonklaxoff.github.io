@@ -40,6 +40,7 @@ jobs:
       - name: Render book to all format
         # Add any command line argument needed
         run: |
+          Rscript -e "install.packages(c('dplyr', 'ggplot2', 'plotly', 'scales', 'MetBrewer'))"
           quarto render
 
       - name: Deploy to Netlify

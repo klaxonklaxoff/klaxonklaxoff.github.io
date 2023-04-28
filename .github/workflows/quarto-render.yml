@@ -14,7 +14,7 @@ jobs:
     
     - name: "Install R packages"
       run: |
-        R -e "install.packages(c('dplyr', 'ggplot2', 'plotly', 'scales', 'MetBrewer'))"
+        R -e 'install.packages("dplyr")'
     
 #       with:
 #         cache-version: 2

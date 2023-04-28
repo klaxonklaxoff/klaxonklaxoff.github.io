@@ -20,7 +20,7 @@ jobs:
           coverage
           
     - name: "Install Quarto and render"
-      uses: pommevilla/quarto-render@main
+      uses: klaxonklaxoff/quarto-render@main
 
     - name: "Deploy to gh-pages"
       uses: klaxonklaxoff/actions-gh-pages@v3

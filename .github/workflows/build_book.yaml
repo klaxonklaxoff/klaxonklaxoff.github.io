@@ -19,10 +19,6 @@ jobs:
           any::plotly
           any::scales
           any::MetBrewer
-          
-        needs: |
-          website
-          coverage
 
     - name: "Install Quarto and render"
       uses: pommevilla/quarto-render@main

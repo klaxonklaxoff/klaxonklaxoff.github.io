@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Brittny Vongdara">
+<meta name="dcterms.date" content="2023-03-08">
+
+<title>My site - New York Times crossword analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.0/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="site_libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">New York Times crossword analysis</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">My site</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://www.linkedin.com/in/brittnyvongdara/" title="" class="sidebar-tool px-1"><i class="bi bi-linkedin"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Landing page</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">About me</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nyt.html" class="sidebar-item-text sidebar-link active">New York Times crossword analysis</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Testing page" class="sidebar-item-text sidebar-link">test.qmd</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The data</a></li>
+  <li><a href="#the-analysis" id="toc-the-analysis" class="nav-link" data-scroll-target="#the-analysis">The analysis</a>
+  <ul class="collapse">
+  <li><a href="#total-solves" id="toc-total-solves" class="nav-link" data-scroll-target="#total-solves">Total solves</a></li>
+  <li><a href="#solved-monday-crosswords" id="toc-solved-monday-crosswords" class="nav-link" data-scroll-target="#solved-monday-crosswords">Solved Monday crosswords</a></li>
+  </ul></li>
+  <li><a href="#breakdown-by-day" id="toc-breakdown-by-day" class="nav-link" data-scroll-target="#breakdown-by-day">Breakdown by day</a></li>
+  <li><a href="#backtracking" id="toc-backtracking" class="nav-link" data-scroll-target="#backtracking">Backtracking</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/klaxonklaxoff/site/edit/main/nyt.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/klaxonklaxoff/site/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">New York Times crossword analysis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Brittny Vongdara </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 8, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>My partner and I started doing crosswords sometime in 2017 and we’ve been hooked since. This led us to getting a New York Times (NYT) crossword subscription in 2018. The NYT app shows you when you complete a crossword with a gold or blue star, where the former means you solved it without revealing any answers <strong>and</strong> before the answers come out. The app also provides <em>some</em> stats but I wanted to see what else is the data telling us.</p>
+</section>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">The data</h2>
+<p>I found a Python package by <a href="https://github.com/mattdodge/nyt-crossword-stats">Matt Dodge</a> that retrieves your NYT crossword stats and used this to pull in our stats. This data spans from January 01, 2018 to January 23, 2023.</p>
+</section>
+<section id="the-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="the-analysis">The analysis</h2>
+<blockquote class="blockquote">
+<p>I’m using the “Hiroshige” palette from the <a href="https://github.com/BlakeRMills/MetBrewer"><code>MetBrewer</code></a> package.</p>
+</blockquote>
+<section id="total-solves" class="level3">
+<h3 class="anchored" data-anchor-id="total-solves">Total solves</h3>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">By check status and day</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">By check status, day, and year</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Let’s start off by looking at total solves. ~I’ll note that these crosswords are mostly a team effort–at least in the beginning.~ If you’re unfamiiliar with crosswords, you’ll notice most solves are on Mondays and that’s because it’s the easiest day and it progressively gets harder with the hardest being the Sunday crossword. This plot also separates the solves which I refer to as “check status” here, meaning thatif it was solved without any reveals and within the time limit it’s a <strong>legit</strong> solve, otherwise we’ll refer to it as checkked–which isn’t as fun.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-447f051977ea94a74805" style="width:100%;height:464px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-447f051977ea94a74805">{"x":{"data":[{"orientation":"v","width":[0.9,0.9,0.9,0.9,0.9,0.9,0.9],"base":[0,112,1,0,3,41,8],"x":[5,1,7,6,4,2,3],"y":[7,122,2,3,22,120,62],"text":["Day: Fri<br>Check status: Checked<br>Count: 7","Day: Mon<br>Check status: Checked<br>Count: 122","Day: Sat<br>Check status: Checked<br>Count: 2","Day: Sun<br>Check status: Checked<br>Count: 3","Day: Thu<br>Check status: Checked<br>Count: 22","Day: Tue<br>Check status: Checked<br>Count: 120","Day: Wed<br>Check status: Checked<br>Count: 62"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(231,98,84,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Checked","legendgroup":"Checked","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9,0.9,0.9],"base":[0,0,0,0,0],"x":[1,7,4,2,3],"y":[112,1,3,41,8],"text":["Day: Mon<br>Check status: Legit<br>Count: 112","Day: Sat<br>Check status: Legit<br>Count: 1","Day: Thu<br>Check status: Legit<br>Count: 3","Day: Tue<br>Check status: Legit<br>Count: 41","Day: Wed<br>Check status: Legit<br>Count: 8"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(30,70,110,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Legit","legendgroup":"Legit","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":43.1050228310502},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Solved crosswords by check status","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,7.6],"tickmode":"array","ticktext":["Mon","Tue","Wed","Thu","Fri","Sun","Sat"],"tickvals":[1,2,3,4,5,6,7],"categoryorder":"array","categoryarray":["Mon","Tue","Wed","Thu","Fri","Sun","Sat"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-11.7,245.7],"tickmode":"array","ticktext":["0","50","100","150","200"],"tickvals":[0,50,100,150,200],"categoryorder":"array","categoryarray":["0","50","100","150","200"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Count of solved crosswords","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"Check<br />status","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}}},"hovermode":"x unified","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1982aead4cb":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"1982aead4cb","visdat":{"1982aead4cb":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>So this plot is telling us that Mondays are the easiest solves with the highest count (by far) but it doesn’t really give us a fulsome picture. If we were to just take this as is, we’d see that about half the Mondays solves are legit, whereas the remaining solves needed an extra little nudge.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Let’s look at our progress over the years.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-824c4a97c2bb26910953" style="width:100%;height:464px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-824c4a97c2bb26910953">{"x":{"data":[{"orientation":"v","width":[0.9,0.9,0.9,0.9,0.9,0.9,0.9],"base":[0,17,1,0,2,8,4],"x":[5,1,6,7,4,2,3],"y":[5,35,2,2,13,37,21],"text":["Day: Fri<br>Check status: Checked<br>Count: 5","Day: Mon<br>Check status: Checked<br>Count: 35","Day: Sat<br>Check status: Checked<br>Count: 2","Day: Sun<br>Check status: Checked<br>Count: 2","Day: Thu<br>Check status: Checked<br>Count: 13","Day: Tue<br>Check status: Checked<br>Count: 37","Day: Wed<br>Check status: Checked<br>Count: 21"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(231,98,84,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Checked","legendgroup":"Checked","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9,0.9],"base":[29,0,11,0],"x":[1,4,2,3],"y":[20,1,29,15],"text":["Day: Mon<br>Check status: Checked<br>Count: 20","Day: Thu<br>Check status: Checked<br>Count: 1","Day: Tue<br>Check status: Checked<br>Count: 29","Day: Wed<br>Check status: Checked<br>Count: 15"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(231,98,84,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Checked","legendgroup":"Checked","showlegend":false,"xaxis":"x2","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9,0.9,0.9,0.9],"base":[0,13,0,0,7,0],"x":[5,1,7,4,2,3],"y":[1,24,1,1,12,3],"text":["Day: Fri<br>Check status: Checked<br>Count: 1","Day: Mon<br>Check status: Checked<br>Count: 24","Day: Sun<br>Check status: Checked<br>Count: 1","Day: Thu<br>Check status: Checked<br>Count: 1","Day: Tue<br>Check status: Checked<br>Count: 12","Day: Wed<br>Check status: Checked<br>Count: 3"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(231,98,84,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Checked","legendgroup":"Checked","showlegend":false,"xaxis":"x3","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9,0.9],"base":[19,0,8,2],"x":[1,4,2,3],"y":[28,5,22,15],"text":["Day: Mon<br>Check status: Checked<br>Count: 28","Day: Thu<br>Check status: Checked<br>Count: 5","Day: Tue<br>Check status: Checked<br>Count: 22","Day: Wed<br>Check status: Checked<br>Count: 15"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(231,98,84,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Checked","legendgroup":"Checked","showlegend":false,"xaxis":"x4","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9,0.9,0.9],"base":[0,31,1,5,1],"x":[5,1,4,2,3],"y":[1,14,1,18,6],"text":["Day: Fri<br>Check status: Checked<br>Count: 1","Day: Mon<br>Check status: Checked<br>Count: 14","Day: Thu<br>Check status: Checked<br>Count: 1","Day: Tue<br>Check status: Checked<br>Count: 18","Day: Wed<br>Check status: Checked<br>Count: 6"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(231,98,84,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Checked","legendgroup":"Checked","showlegend":false,"xaxis":"x5","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9,0.9],"base":[3,0,2,1],"x":[1,4,2,3],"y":[1,1,2,2],"text":["Day: Mon<br>Check status: Checked<br>Count: 1","Day: Thu<br>Check status: Checked<br>Count: 1","Day: Tue<br>Check status: Checked<br>Count: 2","Day: Wed<br>Check status: Checked<br>Count: 2"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(231,98,84,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Checked","legendgroup":"Checked","showlegend":false,"xaxis":"x6","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9,0.9,0.9],"base":[0,0,0,0,0],"x":[1,6,4,2,3],"y":[17,1,2,8,4],"text":["Day: Mon<br>Check status: Legit<br>Count: 17","Day: Sat<br>Check status: Legit<br>Count: 1","Day: Thu<br>Check status: Legit<br>Count: 2","Day: Tue<br>Check status: Legit<br>Count: 8","Day: Wed<br>Check status: Legit<br>Count: 4"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(30,70,110,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Legit","legendgroup":"Legit","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9],"base":[0,0],"x":[1,2],"y":[29,11],"text":["Day: Mon<br>Check status: Legit<br>Count: 29","Day: Tue<br>Check status: Legit<br>Count: 11"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(30,70,110,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Legit","legendgroup":"Legit","showlegend":false,"xaxis":"x2","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9],"base":[0,0],"x":[1,2],"y":[13,7],"text":["Day: Mon<br>Check status: Legit<br>Count: 13","Day: Tue<br>Check status: Legit<br>Count: 7"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(30,70,110,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Legit","legendgroup":"Legit","showlegend":false,"xaxis":"x3","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9],"base":[0,0,0],"x":[1,2,3],"y":[19,8,2],"text":["Day: Mon<br>Check status: Legit<br>Count: 19","Day: Tue<br>Check status: Legit<br>Count: 8","Day: Wed<br>Check status: Legit<br>Count: 2"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(30,70,110,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Legit","legendgroup":"Legit","showlegend":false,"xaxis":"x4","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9,0.9],"base":[0,0,0,0],"x":[1,4,2,3],"y":[31,1,5,1],"text":["Day: Mon<br>Check status: Legit<br>Count: 31","Day: Thu<br>Check status: Legit<br>Count: 1","Day: Tue<br>Check status: Legit<br>Count: 5","Day: Wed<br>Check status: Legit<br>Count: 1"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(30,70,110,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Legit","legendgroup":"Legit","showlegend":false,"xaxis":"x5","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9],"base":[0,0,0],"x":[1,2,3],"y":[3,2,1],"text":["Day: Mon<br>Check status: Legit<br>Count: 3","Day: Tue<br>Check status: Legit<br>Count: 2","Day: Wed<br>Check status: Legit<br>Count: 1"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(30,70,110,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Legit","legendgroup":"Legit","showlegend":false,"xaxis":"x6","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":55.4520547945205,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Solved crosswords by solve status and year","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,0.155794737986519],"automargin":true,"type":"linear","autorange":false,"range":[0.4,7.6],"tickmode":"array","ticktext":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"tickvals":[1,2,3,4,5,6,7],"categoryorder":"array","categoryarray":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-45,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"annotations":[{"text":"Day","x":0.5,"y":0,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"top","annotationType":"axis","yshift":-21.9178082191781},{"text":"Solved crosswords","x":0,"y":0.5,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-90,"xanchor":"right","yanchor":"center","annotationType":"axis","xshift":-21.9178082191781},{"text":"2018","x":0.0778973689932594,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"2019","x":0.25,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"2020","x":0.416666666666667,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"2021","x":0.583333333333333,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"2022","x":0.75,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"2023","x":0.922102631006741,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"}],"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2.6,54.6],"tickmode":"array","ticktext":["0","10","20","30","40","50"],"tickvals":[0,10,20,30,40,50],"categoryorder":"array","categoryarray":["0","10","20","30","40","50"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":"","hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":0.155794737986519,"y0":0,"y1":1},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":0.155794737986519,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.177538595346815,"x1":0.322461404653185,"y0":0,"y1":1},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.177538595346815,"x1":0.322461404653185,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.344205262013481,"x1":0.489128071319852,"y0":0,"y1":1},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.344205262013481,"x1":0.489128071319852,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.510871928680148,"x1":0.655794737986519,"y0":0,"y1":1},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.510871928680148,"x1":0.655794737986519,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.677538595346814,"x1":0.822461404653185,"y0":0,"y1":1},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.677538595346814,"x1":0.822461404653185,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.844205262013481,"x1":1,"y0":0,"y1":1},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.844205262013481,"x1":1,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"}],"xaxis2":{"type":"linear","autorange":false,"range":[0.4,7.6],"tickmode":"array","ticktext":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"tickvals":[1,2,3,4,5,6,7],"categoryorder":"array","categoryarray":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-45,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0.177538595346815,0.322461404653185],"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"xaxis3":{"type":"linear","autorange":false,"range":[0.4,7.6],"tickmode":"array","ticktext":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"tickvals":[1,2,3,4,5,6,7],"categoryorder":"array","categoryarray":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-45,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0.344205262013481,0.489128071319852],"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"xaxis4":{"type":"linear","autorange":false,"range":[0.4,7.6],"tickmode":"array","ticktext":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"tickvals":[1,2,3,4,5,6,7],"categoryorder":"array","categoryarray":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-45,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0.510871928680148,0.655794737986519],"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"xaxis5":{"type":"linear","autorange":false,"range":[0.4,7.6],"tickmode":"array","ticktext":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"tickvals":[1,2,3,4,5,6,7],"categoryorder":"array","categoryarray":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-45,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0.677538595346814,0.822461404653185],"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"xaxis6":{"type":"linear","autorange":false,"range":[0.4,7.6],"tickmode":"array","ticktext":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"tickvals":[1,2,3,4,5,6,7],"categoryorder":"array","categoryarray":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-45,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0.844205262013481,1],"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"Check<br />status","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}}},"hovermode":"x unified","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1982430946d4":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"1982430946d4","visdat":{"1982430946d4":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>We see we’re real keen early on, there’s a bit of a dip in 2020 but we’re up again in 2021 and 2022. Of course, we’re still early in 2023 so there’s always room for potential there. So it looks at a glance that the legit Monday solves are slowly increasing but we can confirm this by digging into the data a little bit more.</p>
+</section>
+<section id="solved-monday-crosswords" class="level3">
+<h3 class="anchored" data-anchor-id="solved-monday-crosswords">Solved Monday crosswords</h3>
+<blockquote class="blockquote">
+<p>We’re omitting 2023 from these anlayses because they’ll throw off the mean and regression models since this year in incomplete.</p>
+</blockquote>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Mean</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Linear model</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>This line plot shows solved Mondays by their check status. The solid lines show the count of solved Mondays and the dotted lines show the average (or mean) per respective check status.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-919f376f6088b0523c63" style="width:100%;height:464px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-919f376f6088b0523c63">{"x":{"data":[{"x":[2018,2019,2020,2021,2022],"y":[115,65,42,70,40],"text":"","type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(247,170,88,1)","dash":"solid"},"hoveron":"points","name":"Checked","legendgroup":"Checked","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2018,2019,2020,2021,2022],"y":[32,40,20,29,38],"text":"","type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(82,143,173,1)","dash":"solid"},"hoveron":"points","name":"Legit","legendgroup":"Legit","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2018,2019,2020,2021,2022],"y":[66.4,66.4,66.4,66.4,66.4],"text":"","type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(247,170,88,1)","dash":"dot"},"hoveron":"points","name":"Checked","legendgroup":"Checked","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2018,2019,2020,2021,2022],"y":[31.8,31.8,31.8,31.8,31.8],"text":"","type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(82,143,173,1)","dash":"dot"},"hoveron":"points","name":"Legit","legendgroup":"Legit","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Solved Monday crosswords","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2017.8,2022.2],"tickmode":"array","ticktext":["2018","2019","2020","2021","2022"],"tickvals":[2018,2019,2020,2021,2022],"categoryorder":"array","categoryarray":["2018","2019","2020","2021","2022"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Reference period","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[15.25,119.75],"tickmode":"array","ticktext":["30","60","90"],"tickvals":[30,60,90],"categoryorder":"array","categoryarray":["30","60","90"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Count of solved crosswords","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"Check<br />status","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"19822ea27af1":{"x":{},"colour":{},"y":{},"type":"scatter"},"19822d357c22":{"x":{},"colour":{},"y":{}}},"cur_data":"19822ea27af1","visdat":{"19822ea27af1":["function (y) ","x"],"19822d357c22":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>We see here we’re above the average in 2018, 2019, and 2022.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>This line plot shows solved Mondays by their check status. The solid lines show the count of solved Mondays and the dotted lines show the regression line (using a linear model).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-e77d05c4f740dcf9ae27" style="width:100%;height:464px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e77d05c4f740dcf9ae27">{"x":{"data":[{"x":[2018,2019,2020,2021,2022],"y":[115,65,42,70,40],"text":"","type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(231,98,84,1)","dash":"solid"},"hoveron":"points","name":"Checked","legendgroup":"Checked","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2018,2019,2020,2021,2022],"y":[32,40,20,29,38],"text":"","type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(30,70,110,1)","dash":"solid"},"hoveron":"points","name":"Legit","legendgroup":"Legit","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2018,2018.05063291139,2018.10126582278,2018.15189873418,2018.20253164557,2018.25316455696,2018.30379746835,2018.35443037975,2018.40506329114,2018.45569620253,2018.50632911392,2018.55696202532,2018.60759493671,2018.6582278481,2018.70886075949,2018.75949367089,2018.81012658228,2018.86075949367,2018.91139240506,2018.96202531646,2019.01265822785,2019.06329113924,2019.11392405063,2019.16455696203,2019.21518987342,2019.26582278481,2019.3164556962,2019.36708860759,2019.41772151899,2019.46835443038,2019.51898734177,2019.56962025316,2019.62025316456,2019.67088607595,2019.72151898734,2019.77215189873,2019.82278481013,2019.87341772152,2019.92405063291,2019.9746835443,2020.0253164557,2020.07594936709,2020.12658227848,2020.17721518987,2020.22784810127,2020.27848101266,2020.32911392405,2020.37974683544,2020.43037974684,2020.48101265823,2020.53164556962,2020.58227848101,2020.63291139241,2020.6835443038,2020.73417721519,2020.78481012658,2020.83544303797,2020.88607594937,2020.93670886076,2020.98734177215,2021.03797468354,2021.08860759494,2021.13924050633,2021.18987341772,2021.24050632911,2021.29113924051,2021.3417721519,2021.39240506329,2021.44303797468,2021.49367088608,2021.54430379747,2021.59493670886,2021.64556962025,2021.69620253165,2021.74683544304,2021.79746835443,2021.84810126582,2021.89873417722,2021.94936708861,2022],"y":[95.3999999999978,94.6658227848093,93.9316455696171,93.1974683544286,92.4632911392364,91.7291139240479,90.9949367088593,90.2607594936671,89.5265822784786,88.7924050632864,88.0582278480979,87.3240506329093,86.5898734177172,85.8556962025286,85.1215189873365,84.3873417721479,83.6531645569594,82.9189873417672,82.1848101265787,81.4506329113865,80.716455696198,79.9822784810058,79.2481012658172,78.5139240506287,77.7797468354402,77.0455696202516,76.3113924050595,75.5772151898709,74.8430379746824,74.1088607594902,73.3746835443017,72.6405063291095,71.9063291139209,71.1721518987324,70.4379746835402,69.7037974683517,68.9696202531595,68.235443037971,67.5012658227824,66.7670886075903,66.0329113924017,65.2987341772096,64.564556962021,63.8303797468325,63.0962025316403,62.3620253164518,61.6278481012596,60.893670886071,60.1594936708825,59.4253164556903,58.6911392405018,57.9569620253133,57.2227848101247,56.4886075949362,55.754430379744,55.0202531645555,54.2860759493633,53.5518987341748,52.8177215189862,52.083544303794,51.3493670886055,50.6151898734133,49.8810126582248,49.1468354430326,48.4126582278441,47.6784810126555,46.9443037974634,46.2101265822748,45.4759493670826,44.7417721518941,44.0075949367056,43.2734177215134,42.5392405063249,41.8050632911327,41.0708860759441,40.3367088607556,39.6025316455634,38.8683544303749,38.1341772151864,37.3999999999978],"text":"","type":"scatter","mode":"lines","name":"Checked","line":{"width":3.77952755905512,"color":"rgba(231,98,84,1)","dash":"dot"},"hoveron":"points","legendgroup":"Checked","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2018,2018.05063291139,2018.10126582278,2018.15189873418,2018.20253164557,2018.25316455696,2018.30379746835,2018.35443037975,2018.40506329114,2018.45569620253,2018.50632911392,2018.55696202532,2018.60759493671,2018.6582278481,2018.70886075949,2018.75949367089,2018.81012658228,2018.86075949367,2018.91139240506,2018.96202531646,2019.01265822785,2019.06329113924,2019.11392405063,2019.16455696203,2019.21518987342,2019.26582278481,2019.3164556962,2019.36708860759,2019.41772151899,2019.46835443038,2019.51898734177,2019.56962025316,2019.62025316456,2019.67088607595,2019.72151898734,2019.77215189873,2019.82278481013,2019.87341772152,2019.92405063291,2019.9746835443,2020.0253164557,2020.07594936709,2020.12658227848,2020.17721518987,2020.22784810127,2020.27848101266,2020.32911392405,2020.37974683544,2020.43037974684,2020.48101265823,2020.53164556962,2020.58227848101,2020.63291139241,2020.6835443038,2020.73417721519,2020.78481012658,2020.83544303797,2020.88607594937,2020.93670886076,2020.98734177215,2021.03797468354,2021.08860759494,2021.13924050633,2021.18987341772,2021.24050632911,2021.29113924051,2021.3417721519,2021.39240506329,2021.44303797468,2021.49367088608,2021.54430379747,2021.59493670886,2021.64556962025,2021.69620253165,2021.74683544304,2021.79746835443,2021.84810126582,2021.89873417722,2021.94936708861,2022],"y":[31.6000000000001,31.6050632911393,31.6101265822785,31.6151898734178,31.620253164557,31.6253164556963,31.6303797468355,31.6354430379747,31.640506329114,31.6455696202532,31.6506329113924,31.6556962025317,31.660759493671,31.6658227848102,31.6708860759494,31.6759493670887,31.6810126582279,31.6860759493671,31.6911392405064,31.6962025316456,31.7012658227849,31.7063291139241,31.7113924050633,31.7164556962026,31.7215189873418,31.7265822784811,31.7316455696203,31.7367088607596,31.7417721518988,31.746835443038,31.7518987341773,31.7569620253165,31.7620253164557,31.767088607595,31.7721518987343,31.7772151898735,31.7822784810127,31.787341772152,31.7924050632912,31.7974683544304,31.8025316455697,31.8075949367089,31.8126582278481,31.8177215189874,31.8227848101266,31.8278481012659,31.8329113924051,31.8379746835444,31.8430379746836,31.8481012658228,31.8531645569621,31.8582278481013,31.8632911392406,31.8683544303798,31.873417721519,31.8784810126583,31.8835443037975,31.8886075949368,31.893670886076,31.8987341772153,31.9037974683545,31.9088607594937,31.913924050633,31.9189873417722,31.9240506329114,31.9291139240507,31.9341772151899,31.9392405063292,31.9443037974684,31.9493670886077,31.9544303797469,31.9594936708861,31.9645569620254,31.9696202531646,31.9746835443039,31.9797468354431,31.9848101265823,31.9898734177216,31.9949367088608,32.0000000000001],"text":"","type":"scatter","mode":"lines","name":"Legit","line":{"width":3.77952755905512,"color":"rgba(30,70,110,1)","dash":"dot"},"hoveron":"points","legendgroup":"Legit","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Solved Monday crosswords","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2017.8,2022.2],"tickmode":"array","ticktext":["2018","2019","2020","2021","2022"],"tickvals":[2018,2019,2020,2021,2022],"categoryorder":"array","categoryarray":["2018","2019","2020","2021","2022"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Reference period","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[15.25,119.75],"tickmode":"array","ticktext":["30","60","90"],"tickvals":[30,60,90],"categoryorder":"array","categoryarray":["30","60","90"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Count of solved crosswords","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"Check<br />status","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1982137d5080":{"x":{},"y":{},"colour":{},"type":"scatter"},"19828300d7f":{"x":{},"y":{},"colour":{}}},"cur_data":"1982137d5080","visdat":{"1982137d5080":["function (y) ","x"],"19828300d7f":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>The legit line looks pretty steady here, which is at least that seeing that there is a decrease for the non-legit solves.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="breakdown-by-day" class="level2">
+<h2 class="anchored" data-anchor-id="breakdown-by-day">Breakdown by day</h2>
+<p>The blue line indicates the time in seconds to complete a crossword, the red dotted line indicates the moving average (yearly), and the orange dashed line indicates the linear model regression. Ideally, and it’s what we’re seeing here, that the time to complete Monday crosswords is decreasing over time. Looking at the time completion is another take on the data to see if there’s any improvement in our crosswording.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Mondays</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Tuesdays</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-69e5a191af6699ac0ba0" style="width:100%;height:464px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-69e5a191af6699ac0ba0">{"x":{"data":[{"x":[17532,17539,17567,17637,17686,17700,17707,17728,17735,17749,17777,17784,17812,17819,17861,17882,17896,17903,17910,17924,17931,17938,17945,17952,17966,17973,17987,17994,18001,18008,18015,18043,18064,18071,18078,18099,18120,18134,18155,18169,18176,18197,18204,18232,18239,18253,18288,18309,18358,18365,18386,18421,18456,18463,18491,18519,18533,18547,18561,18638,18666,18673,18701,18708,18729,18757,18771,18778,18785,18806,18827,18841,18890,18904,18911,18932,18960,18974,19002,19030,19037,19058,19065,19079,19100,19107,19114,19128,19142,19149,19156,19163,19170,19184,19205,19212,19219,19233,19240,19247,19254,19261,19268,19275,19282,19296,19310,19338,19352,19359,19373,19380],"y":[1941,1165,1195,1296,1346,1036,829,1023,886,1278,806,1183,318,815,877,578,1001,1248,1055,1424,1132,614,622,638,1176,1499,936,728,967,1220,924,815,574,1253,946,1251,836,754,1072,664,797,787,703,922,535,1299,1069,646,1044,851,1094,615,830,583,851,875,877,1006,764,773,1081,949,1138,934,688,1262,1036,641,758,956,925,944,931,721,996,759,1096,661,643,656,808,773,744,924,1114,845,675,627,597,925,913,1128,787,660,816,986,827,842,871,595,848,454,1340,874,721,654,713,581,967,576,843,604],"text":"","type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(30,70,110,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[17532,17539,17567,17637,17686,17700,17707,17728,17735,17749,17777,17784,17812,17819,17861,17882,17896,17903,17910,17924,17931,17938,17945,17952,17966,17973,17987,17994,18001,18008,18015,18043,18064,18071,18078,18099,18120,18134,18155,18169,18176,18197,18204,18232,18239,18253,18288,18309,18358,18365,18386,18421,18456,18463,18491,18519,18533,18547,18561,18638,18666,18673,18701,18708,18729,18757,18771,18778,18785,18806,18827,18841,18890,18904,18911,18932,18960,18974,19002,19030,19037,19058,19065,19079,19100,19107,19114,19128,19142,19149,19156,19163,19170,19184,19205,19212,19219,19233,19240,19247,19254,19261,19268,19275,19282,19296,19310,19338,19352,19359,19373,19380],"y":[1379,1379,1379,1379,1379,1379,1379,1379,1379,1379,1379,1379,1379,1379,1379,1379,1379,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,1007.71,726.29,726.29,726.29,726.29,726.29,726.29,726.29,726.29,726.29,726.29,726.29,726.29,726.29,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,964.69,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,873.71,694.25,694.25,694.25],"text":"","type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(231,98,84,1)","dash":"dot"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[17532,17555.3924050633,17578.7848101266,17602.1772151899,17625.5696202532,17648.9620253165,17672.3544303797,17695.746835443,17719.1392405063,17742.5316455696,17765.9240506329,17789.3164556962,17812.7088607595,17836.1012658228,17859.4936708861,17882.8860759494,17906.2784810127,17929.6708860759,17953.0632911392,17976.4556962025,17999.8481012658,18023.2405063291,18046.6329113924,18070.0253164557,18093.417721519,18116.8101265823,18140.2025316456,18163.5949367089,18186.9873417722,18210.3797468354,18233.7721518987,18257.164556962,18280.5569620253,18303.9493670886,18327.3417721519,18350.7341772152,18374.1265822785,18397.5189873418,18420.9113924051,18444.3037974684,18467.6962025316,18491.0886075949,18514.4810126582,18537.8734177215,18561.2658227848,18584.6582278481,18608.0506329114,18631.4430379747,18654.835443038,18678.2278481013,18701.6202531646,18725.0126582278,18748.4050632911,18771.7974683544,18795.1898734177,18818.582278481,18841.9746835443,18865.3670886076,18888.7594936709,18912.1518987342,18935.5443037975,18958.9367088608,18982.3291139241,19005.7215189873,19029.1139240506,19052.5063291139,19075.8987341772,19099.2911392405,19122.6835443038,19146.0759493671,19169.4683544304,19192.8607594937,19216.253164557,19239.6455696203,19263.0379746835,19286.4303797468,19309.8227848101,19333.2151898734,19356.6075949367,19380],"y":[1052.21194519568,1048.5112799493,1044.81061470292,1041.10994945653,1037.40928421015,1033.70861896377,1030.00795371738,1026.307288471,1022.60662322462,1018.90595797824,1015.20529273185,1011.50462748547,1007.80396223909,1004.1032969927,1000.40263174632,996.701966499938,993.001301253555,989.300636007172,985.599970760789,981.899305514406,978.198640268023,974.49797502164,970.797309775257,967.096644528875,963.395979282491,959.695314036109,955.994648789725,952.293983543343,948.593318296959,944.892653050577,941.191987804194,937.491322557811,933.790657311428,930.089992065045,926.389326818662,922.688661572279,918.987996325896,915.287331079513,911.58666583313,907.886000586747,904.185335340364,900.484670093981,896.784004847598,893.083339601215,889.382674354832,885.68200910845,881.981343862066,878.280678615683,874.580013369301,870.879348122918,867.178682876534,863.478017630152,859.777352383769,856.076687137386,852.376021891002,848.67535664462,844.974691398237,841.274026151854,837.573360905471,833.872695659088,830.172030412705,826.471365166322,822.770699919939,819.070034673556,815.369369427173,811.66870418079,807.968038934408,804.267373688024,800.566708441642,796.866043195258,793.165377948876,789.464712702493,785.76404745611,782.063382209727,778.362716963343,774.662051716961,770.961386470578,767.260721224195,763.560055977812,759.859390731429],"text":"","type":"scatter","mode":"lines","name":"fitted values","line":{"width":3.77952755905512,"color":"rgba(247,170,88,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":48.9497716894977},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Elapsed time (seconds) of solved crosswords on Mondays","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[17439.6,19472.4],"tickmode":"array","ticktext":["2018","2019","2020","2021","2022","2023"],"tickvals":[17532,17897,18262,18628,18993,19358],"categoryorder":"array","categoryarray":["2018","2019","2020","2021","2022","2023"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Reference period","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[236.85,2022.15],"tickmode":"array","ticktext":["500","1000","1500","2000"],"tickvals":[500,1000,1500,2000],"categoryorder":"array","categoryarray":["500","1000","1500","2000"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Elapsed time (seconds)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"19827cda46b":{"x":{},"y":{},"type":"scatter"},"19824de570cd":{"x":{},"y":{}},"19821250caaf":{"x":{},"y":{},"colour":{}}},"cur_data":"19827cda46b","visdat":{"19827cda46b":["function (y) ","x"],"19824de570cd":["function (y) ","x"],"19821250caaf":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>The data for Tuesdays isn’t as good as for the Mondays because it was only recently we graduated to being able to do Tuesdays consistently.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-b2fc579b6bc673320040" style="width:100%;height:464px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b2fc579b6bc673320040">{"x":{"data":[{"x":[17533,17540,17708,17757,17778,17785,17862,17876,17904,17925,17932,17981,18009,18016,18037,18044,18100,18128,18135,18303,18345,18352,18366,18373,18492,18534,18751,18758,18765,18779,18793,18800,18905,18912,19178,19255,19262,19290,19297,19374,19381],"y":[2238,2069,1050,1587,2578,1388,1031,1283,1369,1163,799,964,1269,1613,1662,1308,1513,812,1860,1175,897,786,865,2096,1465,1203,1098,1199,914,800,797,1222,1512,957,1525,1361,976,980,1831,1176,1410],"text":"","type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(30,70,110,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[17533,17540,17708,17757,17778,17785,17862,17876,17904,17925,17932,17981,18009,18016,18037,18044,18100,18128,18135,18303,18345,18352,18366,18373,18492,18534,18751,18758,18765,18779,18793,18800,18905,18912,19178,19255,19262,19290,19297,19374,19381],"y":[1943.58,1943.58,1943.58,1943.58,1943.58,1943.58,1943.58,1943.58,1412.81,1412.81,1412.81,1412.81,1412.81,1412.81,1412.81,1412.81,1412.81,1412.81,1412.81,508.02,508.02,508.02,508.02,508.02,508.02,508.02,817.54,817.54,817.54,817.54,817.54,817.54,817.54,817.54,666.98,666.98,666.98,666.98,666.98,1305.25,1305.25],"text":"","type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(231,98,84,1)","dash":"dot"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[17533,17556.3924050633,17579.7848101266,17603.1772151899,17626.5696202532,17649.9620253165,17673.3544303797,17696.746835443,17720.1392405063,17743.5316455696,17766.9240506329,17790.3164556962,17813.7088607595,17837.1012658228,17860.4936708861,17883.8860759494,17907.2784810127,17930.6708860759,17954.0632911392,17977.4556962025,18000.8481012658,18024.2405063291,18047.6329113924,18071.0253164557,18094.417721519,18117.8101265823,18141.2025316456,18164.5949367089,18187.9873417722,18211.3797468354,18234.7721518987,18258.164556962,18281.5569620253,18304.9493670886,18328.3417721519,18351.7341772152,18375.1265822785,18398.5189873418,18421.9113924051,18445.3037974684,18468.6962025316,18492.0886075949,18515.4810126582,18538.8734177215,18562.2658227848,18585.6582278481,18609.0506329114,18632.4430379747,18655.835443038,18679.2278481013,18702.6202531646,18726.0126582278,18749.4050632911,18772.7974683544,18796.1898734177,18819.582278481,18842.9746835443,18866.3670886076,18889.7594936709,18913.1518987342,18936.5443037975,18959.9367088608,18983.3291139241,19006.7215189873,19030.1139240506,19053.5063291139,19076.8987341772,19100.2911392405,19123.6835443038,19147.0759493671,19170.4683544304,19193.8607594937,19217.253164557,19240.6455696203,19264.0379746835,19287.4303797468,19310.8227848101,19334.2151898734,19357.6075949367,19381],"y":[1497.64516879382,1492.63023351663,1487.61529823944,1482.60036296226,1477.58542768507,1472.57049240788,1467.55555713069,1462.54062185351,1457.52568657632,1452.51075129913,1447.49581602194,1442.48088074476,1437.46594546757,1432.45101019038,1427.43607491319,1422.42113963601,1417.40620435882,1412.39126908163,1407.37633380444,1402.36139852726,1397.34646325007,1392.33152797288,1387.31659269569,1382.30165741851,1377.28672214132,1372.27178686413,1367.25685158694,1362.24191630976,1357.22698103257,1352.21204575538,1347.19711047819,1342.18217520101,1337.16723992382,1332.15230464663,1327.13736936944,1322.12243409226,1317.10749881507,1312.09256353788,1307.0776282607,1302.06269298351,1297.04775770632,1292.03282242913,1287.01788715195,1282.00295187476,1276.98801659757,1271.97308132038,1266.9581460432,1261.94321076601,1256.92827548882,1251.91334021163,1246.89840493445,1241.88346965726,1236.86853438007,1231.85359910288,1226.8386638257,1221.82372854851,1216.80879327132,1211.79385799413,1206.77892271695,1201.76398743976,1196.74905216257,1191.73411688538,1186.7191816082,1181.70424633101,1176.68931105382,1171.67437577664,1166.65944049945,1161.64450522226,1156.62956994507,1151.61463466789,1146.5996993907,1141.58476411351,1136.56982883632,1131.55489355914,1126.53995828195,1121.52502300476,1116.51008772757,1111.49515245039,1106.4802171732,1101.46528189601],"text":"","type":"scatter","mode":"lines","name":"fitted values","line":{"width":3.77952755905512,"color":"rgba(247,170,88,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":48.9497716894977},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Elapsed time (seconds) of solved crosswords on Tuesday","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[17440.6,19473.4],"tickmode":"array","ticktext":["2018","2019","2020","2021","2022","2023"],"tickvals":[17532,17897,18262,18628,18993,19358],"categoryorder":"array","categoryarray":["2018","2019","2020","2021","2022","2023"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Reference period","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[404.521,2681.499],"tickmode":"array","ticktext":["500","1000","1500","2000","2500"],"tickvals":[500,1000,1500,2000,2500],"categoryorder":"array","categoryarray":["500","1000","1500","2000","2500"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Elapsed time (seconds)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"19823d40626":{"x":{},"y":{},"type":"scatter"},"198254dfaac0":{"x":{},"y":{}},"198228434ec8":{"x":{},"y":{},"colour":{}}},"cur_data":"19823d40626","visdat":{"19823d40626":["function (y) ","x"],"198254dfaac0":["function (y) ","x"],"198228434ec8":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="backtracking" class="level2">
+<h2 class="anchored" data-anchor-id="backtracking">Backtracking</h2>
+<p>I wanted to take a peek at one more thing. So as we’ve become more comfortable with crosswords we’ve been going back into the archives–and sometimes I’ve gone into the archives on my own–to do Mondays. So for this last plot, we look at solved crosswords that weren’t checked or had the answers revealed. This plot supports and potentially explains some weird behaviours seen in the above plots. This plot also includes a dotted line to indicate the average number of solved crosswords that were not checked or revealed from 2018 to 2023.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-d5ff296fb4b0d1424df0" style="width:100%;height:464px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d5ff296fb4b0d1424df0">{"x":{"data":[{"orientation":"v","width":0.900000000000091,"base":0,"x":[2018],"y":[32],"text":"Year: 2018<br>Count: 32","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(231,98,84,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"2018","legendgroup":"2018","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":0.900000000000091,"base":0,"x":[2019],"y":[40],"text":"Year: 2019<br>Count: 40","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(239,138,71,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"2019","legendgroup":"2019","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":0.900000000000091,"base":0,"x":[2020],"y":[20],"text":"Year: 2020<br>Count: 20","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(247,170,88,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"2020","legendgroup":"2020","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":0.900000000000091,"base":0,"x":[2021],"y":[29],"text":"Year: 2021<br>Count: 29","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,208,111,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"2021","legendgroup":"2021","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":0.900000000000091,"base":0,"x":[2022],"y":[38],"text":"Year: 2022<br>Count: 38","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,230,183,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"2022","legendgroup":"2022","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2018,2019,2020,2021,2022],"y":[32,32,32,32,32],"text":"","type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(0,0,0,1)","dash":"dot"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Solved crosswords that weren't checked or revealed","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2017.305,2022.695],"tickmode":"array","ticktext":["2018","2019","2020","2021","2022"],"tickvals":[2018,2019,2020,2021,2022],"categoryorder":"array","categoryarray":["2018","2019","2020","2021","2022"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Year","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2,42],"tickmode":"array","ticktext":["0","10","20","30","40"],"tickvals":[0,10,20,30,40],"categoryorder":"array","categoryarray":["0","10","20","30","40"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Count of solved crosswords","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1982593a5ee7":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"},"198272cbd75":{"x":{},"y":{}}},"cur_data":"1982593a5ee7","visdat":{"1982593a5ee7":["function (y) ","x"],"198272cbd75":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>Why this plot is important is to consider things outside of what you see in the data to explain the data. But this is only the beginning of data exploration!</p>
+<p>I hope you’ve enjoyed this brief analysis of our NYT crossword journey :smile:</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

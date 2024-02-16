@@ -38,4 +38,4 @@ format:
       light: minty
       dark: darkly
     css: styles.css
-    toc: true
+    toc: false

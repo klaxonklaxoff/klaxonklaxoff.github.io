@@ -1,7 +1,0 @@
----
-title: "Testing page"
----
-
-```{r, include=TRUE, warning=FALSE, echo=TRUE}
-print(head(mtcars))
-``` 

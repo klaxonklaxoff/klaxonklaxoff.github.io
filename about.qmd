@@ -5,11 +5,13 @@ title: "About me"
 Hello, my name is Brittny!
 
 ## My life interests
+
 - Climbing
 - My cat
 - Knitting
 
 ## My programming interests
+
 - R
 - Git
     - GitLab & GitHub

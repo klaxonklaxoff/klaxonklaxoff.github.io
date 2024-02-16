@@ -1,1 +1,24 @@
-/* css styles */
+/*-- scss:rules --*/
+img {
+    border: none;
+    box-shadow: none;
+  }
+table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+td {
+  min-width: 200px;
+}
+div.sidebar-item-container:hover {
+  font-weight: bolder;
+  color: #20c997;
+}
+ 
+div.sidebar-item-container .active {
+  font-weight: bold;
+  color: #20c997;
+}
+ 

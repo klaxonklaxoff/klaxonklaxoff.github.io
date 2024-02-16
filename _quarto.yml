@@ -1,8 +1,5 @@
 project:
   type: website
-  
-execute:
-  freeze: auto
 
 website:
   title: "My site"
@@ -22,8 +19,8 @@ website:
       text: About me
     - href: nyt.qmd
       text: New York Times crossword analysis
-    - href: Testing page
-      text: test.qmd
+    - href: zole.qmd
+      text: Zole
       # text: Home
       # - section: Section 1
       #   - content:
@@ -42,5 +39,3 @@ format:
       dark: darkly
     css: styles.css
     toc: true
-    
-editor: visual

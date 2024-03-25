@@ -3,24 +3,45 @@ project:
 
 website:
   title: "My site"
+
+  navbar:
+      background: primary
+      search: true
+      left:
+        - text: Landing page
+          file: index.qmd
+        - text: About me
+          file: about.qmd
+        - text: Analysis
+          menu:
+            - text: New York Times crosswording
+              file: nyt.qmd
+            - text: PWHL
+              file: pwhl_dv.qmd
+        - text: Reference
+          menu:
+            - text: Zole
+              file: zole.qmd
+
   reader-mode: true
   repo-url: https://github.com/klaxonklaxoff/site
   repo-actions: [edit, issue]
-  sidebar:
-    style: "docked"
-    search: true
-    tools:
-      - icon: linkedin
-        href: https://www.linkedin.com/in/brittnyvongdara/
-    contents: 
-    - href: index.qmd
-      text: Landing page
-    - href: about.qmd
-      text: About me
-    - href: nyt.qmd
-      text: New York Times crossword analysis
-    - href: zole.qmd
-      text: Zole
+  
+  # sidebar:
+  #   style: "docked"
+  #   search: true
+  #   tools:
+  #     - icon: linkedin
+  #       href: https://www.linkedin.com/in/brittnyvongdara/
+    # contents: 
+    # - href: index.qmd
+    #   text: Landing page
+    # - href: about.qmd
+    #   text: About me
+    # - href: nyt.qmd
+    #   text: New York Times crossword analysis
+    # - href: zole.qmd
+    #   text: Zole
       # text: Home
       # - section: Section 1
       #   - content:

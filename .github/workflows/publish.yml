@@ -26,6 +26,10 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
+
+      - name: Install packages
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
           packages: |
             any::tidyverse
             any::fastRhockey

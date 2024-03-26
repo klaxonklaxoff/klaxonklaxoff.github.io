@@ -14,12 +14,6 @@ footer: "RLadies 2024 IWD data visualization submission"
 ```{r setup}
 #| echo: false
 
-# Install package ----
-if (!requireNamespace('devtools', quietly = TRUE)){
-  install.packages('devtools')
-}
-devtools::install_github(repo = "sportsdataverse/fastRhockey")
-
 # Load libraries ----
 library(fastRhockey)
 library(tidyverse)

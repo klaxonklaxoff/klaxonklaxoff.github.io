@@ -17,7 +17,6 @@ footer: "RLadies 2024 IWD data visualization submission"
 # Load libraries ----
 library(fastRhockey)
 library(tidyverse)
-library(wordcloud2)
 library(ggridges)
 library(RColorBrewer)
 

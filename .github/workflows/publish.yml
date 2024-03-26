@@ -26,11 +26,9 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
-
-      - name: Install other packages
-        run: |
-          Rscript -e 'install.packages(c("devtools", "ggridges"))'
-          Rscript -e 'devtools::install_github(repo = "sportsdataverse/fastRhockey")'   
+          packages: |
+            devtools::install_github(repo = "sportsdataverse/fastRhockey")
+            any::ggridges
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

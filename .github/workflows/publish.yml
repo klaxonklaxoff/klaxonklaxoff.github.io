@@ -26,9 +26,13 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
-          packages: |
-            devtools::install_github(repo = "sportsdataverse/fastRhockey")
-            any::ggridges
+
+      - name: Install packages
+        uses: r-lib/actions/setup-r-dependencies@v2
+          with:
+            packages: |
+              any::fastRhockey
+              any::ggridges
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

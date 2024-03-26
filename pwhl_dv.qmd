@@ -15,54 +15,15 @@ footer: "RLadies 2024 IWD data visualization submission"
 #| echo: false
 
 # Load libraries ----
-library(fastRhockey)
 library(tidyverse)
 library(ggridges)
 library(RColorBrewer)
 
 # Get data ----
-teams <- 
-  pwhl_teams()
-
-standing <- 
-  pwhl_standings() %>% 
-  mutate(across(c(games_played:penalty_kill_pct), as.numeric))
-
-schedule <- 
-  pwhl_schedule(season = 2023) %>% 
-  select(-c(home_team_id, away_team_id, venue_url)) %>% 
-  mutate(game_date = as.Date(strptime(sub(".*, ", "", game_date), "%b %d"))) %>% 
-  filter(game_date <= Sys.Date())
-
-stats_goalie <- 
-  pwhl_stats(season = 2023) %>% 
-  select(-minutes) %>% 
-  mutate(across(c(games_played:so_save_percentage), as.numeric))
-
-# stats_player <- 
-  # do.call(rbind, lapply(c(unique(teams$team_label)), function(x) {
-  #   pwhl_stats(season = 2023, position = "skater", team = x)
-  # }))
-  # pwhl_stats(position = "skater", team = "BOS", season = 2023)
-
-players <- 
-  do.call(rbind, lapply(c(unique(teams$team_label)), function(x) {
-    pwhl_team_roster(season = 2023, team = x)
-  }))
-
-rm(teams)
-
-w_v_l <-
-  standing %>%
-  select(team, wins, losses) %>%
-  mutate(
-    team = sub("PWHL ", "", team),
-    losses = losses * -1) %>%
-  pivot_longer(
-    cols = c("wins", "losses"),
-    names_to = "w_l",
-    values_to = "score"
-  )
+schedule <- read.csv("./data/schedule.csv")
+stats_goalie <- read.csv("./data/stats_goalie.csv")
+players <- read.csv("./data/players.csv")
+w_v_l <- read.csv("./data/w_v_l.csv")
 ```
 
 International Women’s Day takes place on March 8th, 2024. The theme for this year is “Invest in women: Accelerate progress”.
@@ -115,6 +76,8 @@ In sum, when we **invest in women's professional sports we invest in women**!
 # The data visualizations
 
 So let's get onto some fun data visualizations about the PHWL.
+
+These data was run `r format("2024-03-22", "%M %D, %Y")`.
 
 ## Horizontal bar chart
 

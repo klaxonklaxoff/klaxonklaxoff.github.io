@@ -31,9 +31,7 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: |
-            any::devtools
             any::tidyverse
-            devtools::install_github(repo = "sportsdataverse/fastRhockey")
             any::ggridges
             any::RColorBrewer
 

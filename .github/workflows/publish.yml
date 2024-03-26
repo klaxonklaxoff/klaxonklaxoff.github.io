@@ -27,8 +27,10 @@ jobs:
         with:
           cache-version: 1
 
-      - name: Install fastRhockey
-        run: Rscript -e 'devtools::install_github(repo = "sportsdataverse/fastRhockey")'   
+      - name: Install other packages
+        run: |
+          Rscript -e 'install.packages(c("devtools", "ggridges"))'
+          Rscript -e 'devtools::install_github(repo = "sportsdataverse/fastRhockey")'   
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

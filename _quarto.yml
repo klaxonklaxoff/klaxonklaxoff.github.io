@@ -27,24 +27,6 @@ website:
   repo-url: https://github.com/klaxonklaxoff/site
   repo-actions: [edit, issue]
   
-  # sidebar:
-  #   style: "docked"
-  #   search: true
-  #   tools:
-  #     - icon: linkedin
-  #       href: https://www.linkedin.com/in/brittnyvongdara/
-    # contents: 
-    # - href: index.qmd
-    #   text: Landing page
-    # - href: about.qmd
-    #   text: About me
-    # - href: nyt.qmd
-    #   text: New York Times crossword analysis
-    # - href: zole.qmd
-    #   text: Zole
-      # text: Home
-      # - section: Section 1
-      #   - content:
 page-footer:  
   - icon: github
     href: https://github.com/klaxonklaxoff
@@ -59,7 +41,7 @@ format:
       light: minty
       dark: darkly
     css: styles.css
-    toc: false
+    toc: true
     grid:
       sidebar-width: 0px
       body-width: 1200px

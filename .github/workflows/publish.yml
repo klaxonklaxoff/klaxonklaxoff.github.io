@@ -34,6 +34,9 @@ jobs:
             any::tidyverse
             any::ggridges
             any::RColorBrewer
+            any::plotly
+            any::scales
+            any::MetBrewer
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

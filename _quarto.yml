@@ -62,7 +62,7 @@ format:
     css: styles.css
     toc: false
     grid:
-      sidebar-width: 0
+      sidebar-width: 0px
       body-width: 1200px
       margin-width: 300px
       gutter-width: 1.5rem

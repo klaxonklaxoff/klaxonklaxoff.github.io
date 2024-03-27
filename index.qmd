@@ -1,7 +1,0 @@
----
-title: "Landing page"
----
-
-Welcome to this site!
-
-This is a work in progress, please be patient.

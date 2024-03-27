@@ -77,7 +77,7 @@ In sum, when we **invest in women's professional sports we invest in women**!
 
 So let's get onto some fun data visualizations about the PHWL.
 
-These data was run `r format("2024-03-22", "%M %D, %Y")`.
+These data was run `r format(as.Date("2024-03-22"), "%B %d, %Y")`.
 
 ## Horizontal bar chart
 

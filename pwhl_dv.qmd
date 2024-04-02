@@ -1,6 +1,6 @@
 ---
 title: "PWHL data visualizations"
-author: "Brittny Vongdara"
+author: "Brittny"
 format: 
   revealjs:
     theme: solarized

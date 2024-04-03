@@ -24,7 +24,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -42,11 +41,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -73,72 +72,11 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">My site</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Landing page</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About me</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-analysis" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Analysis</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-analysis">    
-        <li>
-    <a class="dropdown-item" href="./nyt.html">
- <span class="dropdown-text">New York Times crosswording</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./pwhl_dv.html">
- <span class="dropdown-text">PWHL</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reference" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Reference</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-reference">    
-        <li>
-    <a class="dropdown-item" href="./zole.html">
- <span class="dropdown-text">Zole</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-          </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -166,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/klaxonklaxoff/site/edit/main/zole.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/klaxonklaxoff/site/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
@@ -320,7 +258,7 @@ Important
 <section id="flowchart" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="flowchart">Flowchart</h3>
 <div class="column-body">
-<p><img src="./zole_flow.png" class="img-fluid"></p>
+<p><img src="./images/zole_flow.png" class="img-fluid"></p>
 </div>
 </section>
 <section id="types-of-cards" class="level3">
@@ -331,11 +269,6 @@ Important
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>Below is a list of the trumps cards, ranked in order of strength:</p>
 <table class="table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>#</th>
@@ -347,72 +280,72 @@ Important
 <tr class="odd">
 <td>1</td>
 <td>Q</td>
-<td>Club {{&lt; fa clover &gt;}}</td>
+<td><span style="color:blue;">Club</span></td>
 </tr>
 <tr class="even">
 <td>2</td>
 <td>Q</td>
-<td>Spade {{&lt; fa spoon &gt;}}</td>
+<td><span style="color:green;">Spade</span></td>
 </tr>
 <tr class="odd">
 <td>3</td>
 <td>Q</td>
-<td>Heart {{&lt; fa heart &gt;}}</td>
+<td><span style="color:red;">Heart</span></td>
 </tr>
 <tr class="even">
 <td>4</td>
 <td>Q</td>
-<td>Diamond {{&lt; fa diamond &gt;}}</td>
+<td><span style="color:orange;">Diamond</span></td>
 </tr>
 <tr class="odd">
 <td>5</td>
 <td>J</td>
-<td>Club {{&lt; fa clover &gt;}}</td>
+<td><span style="color:blue;">Club</span></td>
 </tr>
 <tr class="even">
 <td>6</td>
 <td>J</td>
-<td>Spade {{&lt; fa spoon &gt;}}</td>
+<td><span style="color:green;">Spade</span></td>
 </tr>
 <tr class="odd">
 <td>7</td>
 <td>J</td>
-<td>Heart {{&lt; fa heart &gt;}}</td>
+<td><span style="color:red;">Heart</span></td>
 </tr>
 <tr class="even">
 <td>8</td>
 <td>J</td>
-<td>Diamond {{&lt; fa diamond &gt;}}</td>
+<td><span style="color:orange;">Diamond</span></td>
 </tr>
 <tr class="odd">
 <td>9</td>
 <td>10</td>
-<td>Diamond {{&lt; fa diamond &gt;}}</td>
+<td><span style="color:orange;">Diamond</span></td>
 </tr>
 <tr class="even">
 <td>10</td>
 <td>A</td>
-<td>Diamond {{&lt; fa diamond &gt;}}</td>
+<td><span style="color:orange;">Diamond</span></td>
 </tr>
 <tr class="odd">
 <td>11</td>
 <td>K</td>
-<td>Diamond {{&lt; fa diamond &gt;}}</td>
+<td><span style="color:orange;">Diamond</span></td>
 </tr>
 <tr class="even">
 <td>12</td>
 <td>9</td>
-<td>Diamond {{&lt; fa diamond &gt;}}</td>
+<td><span style="color:orange;">Diamond</span></td>
 </tr>
 <tr class="odd">
 <td>13</td>
 <td>8</td>
-<td>Diamond {{&lt; fa diamond &gt;}}</td>
+<td><span style="color:orange;">Diamond</span></td>
 </tr>
 <tr class="even">
 <td>14</td>
 <td>7</td>
-<td>Diamond {{&lt; fa diamond &gt;}}</td>
+<td><span style="color:orange;">Diamond</span></td>
 </tr>
 </tbody>
 </table>
@@ -1264,4 +1197,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/klaxonklaxoff/site/edit/main/zole.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/klaxonklaxoff/site/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>

@@ -87,7 +87,7 @@ Like most trick-taking games, the play is determined by the first action. Theref
 
 ::: {.column-body}
 
-![](./zole_flow.png)
+![](./images/zole_flow.png)
 
 :::
 
@@ -101,20 +101,20 @@ Below is a list of the trumps cards, ranked in order of strength:
 
 | # | Card | Suit |
 |---|---|---|
-| 1 | Q | Club {{< fa clover >}} |
-| 2 | Q | Spade {{< fa spoon >}}|
-| 3 | Q | Heart {{< fa heart >}} |
-| 4 | Q | Diamond {{< fa diamond >}} |
-| 5 | J | Club {{< fa clover >}} |
-| 6 | J | Spade {{< fa spoon >}} |
-| 7 | J | Heart {{< fa heart >}} |
-| 8 | J | Diamond {{< fa diamond >}} |
-| 9 | 10 | Diamond {{< fa diamond >}} |
-| 10 | A | Diamond {{< fa diamond >}} |
-| 11 | K | Diamond {{< fa diamond >}} |
-| 12 | 9 | Diamond {{< fa diamond >}} |
-| 13 | 8 | Diamond {{< fa diamond >}} |
-| 14 | 7 | Diamond {{< fa diamond >}} |
+| 1 | Q | <span style="color:blue;">Club</span> |
+| 2 | Q | <span style="color:green;">Spade</span> |
+| 3 | Q | <span style="color:red;">Heart</span> |  
+| 4 | Q | <span style="color:orange;">Diamond</span> |
+| 5 | J | <span style="color:blue;">Club</span> |
+| 6 | J | <span style="color:green;">Spade</span> |
+| 7 | J | <span style="color:red;">Heart</span> |
+| 8 | J | <span style="color:orange;">Diamond</span> |
+| 9 | 10 | <span style="color:orange;">Diamond</span> |
+| 10 | A | <span style="color:orange;">Diamond</span> |
+| 11 | K | <span style="color:orange;">Diamond</span> |
+| 12 | 9 | <span style="color:orange;">Diamond</span> |
+| 13 | 8 | <span style="color:orange;">Diamond</span> |
+| 14 | 7 | <span style="color:orange;">Diamond</span> |
 
 ::: {.callout-important}
 This order isn't a commonly seen order; note that the K is lower than the 10!

@@ -180,7 +180,7 @@ I found a Python package by [Matt Dodge](https://github.com/mattdodge/nyt-crossw
 
 #### By check status and day
 
-Let's start off by looking at total solves. ~I'll note that these crosswords are mostly a team effort--at least in the beginning.~ If you're unfamiiliar with crosswords, you'll notice most solves are on Mondays and that's because it's the easiest day and it progressively gets harder with the hardest being the Sunday crossword. This plot also separates the solves which I refer to as "check status" here, meaning thatif it was solved without any reveals and within the time limit it's a **legit** solve, otherwise we'll refer to it as checkked--which isn't as fun.
+Let's start off by looking at total solves. ~I'll note that these crosswords are mostly a team effort--at least in the beginning.~ If you're unfamiiliar with crosswords, you'll notice most solves are on Mondays and that's because it's the easiest day and it progressively gets harder with the hardest being the Sunday crossword. This plot also separates the solves which I refer to as "check status" here, meaning thatif it was solved without any reveals and within the time limit it's a **legit** solve, otherwise we'll refer to it as checked--which isn't as fun.
 
 ```{r total_solves}
 ## Total Solved ----

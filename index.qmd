@@ -2,6 +2,43 @@
 title: "Landing page"
 ---
 
-Welcome to this site!
+Hello, my name is Brittny and welcome to my site.
 
+::: {.callout-warning}
 This is a work in progress, please be patient.
+:::
+
+<!-- ## My life interests
+
+- Climbing
+- My cat
+- Knitting
+
+## My programming interests
+
+- R
+- Git
+    - GitLab & GitHub
+- Python -->
+
+## General philosophy
+
+I think data should be accessible. I believe in transparency and knowledge-sharing.
+
+I'm trying to play around with Quarto since it's something that's new and fun. It's really nice to share information with and my next steps with this will be to show some simple data work.
+
+## Playing with ...
+
+### Plots
+
+I took the data from my NYT crosswords and made some interactive plots showing things such as solve stats by year and by day to see any patterns or trends over time.
+
+I am currently working on web-scraping data from IMDB on Bob's Burgers, a cartoon series I enjoy. I want to pull these data and see if there's any patterns in my favourite episodes or other general trends such as ratings over the many seasons.
+
+### Documentation
+
+I took the (complicated) rules of a Latvian card game, Zole, and made the information easier to access and reference using some fun Quarto functionalities.
+
+### Slides
+
+My submission for the [2024 RLadies International Women's Day Data challenge](https://rladies-ottawa.github.io/events/2024/iwd.html) is a Quarto presentation that looks into some PWHL data.

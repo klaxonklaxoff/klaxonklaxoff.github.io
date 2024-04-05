@@ -8,20 +8,7 @@ Hello, my name is Brittny and welcome to my site.
 This is a work in progress, please be patient.
 :::
 
-<!-- ## My life interests
-
-- Climbing
-- My cat
-- Knitting
-
-## My programming interests
-
-- R
-- Git
-    - GitLab & GitHub
-- Python -->
-
-## General philosophy
+## About this site
 
 I think data should be accessible. I believe in transparency and knowledge-sharing.
 

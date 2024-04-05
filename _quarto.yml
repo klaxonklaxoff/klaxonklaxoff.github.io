@@ -4,38 +4,37 @@ project:
 website:
   title: "My site"
 
-navbar:
-
-  reader-mode: true
-  search: true
-  background: primary
-  repo-url: https://github.com/klaxonklaxoff/site
-  repo-actions: [edit, issue]
-
-  tools:
-    - icon: github
-      menu:
-        - text: Source Code
-          url:  https://github.com/klaxonklaxoff/klaxonklaxoff.github.io
-        - text: Report a Bug
-          url:  https://github.com/klaxonklaxoff/klaxonklaxoff.github.io/issues
-
-  left:
-    - text: Landing page
-      file: index.qmd
-    - text: Analysis
-      menu:
-        - text: New York Times crosswording
-          file: nyt.qmd
-        - text: PWHL
-          file: pwhl_dv.qmd
-    - text: Reference
-      menu:
-        - text: Zole
-          file: zole.qmd
-
-
+  navbar:
+    background: primary
+    reader-mode: true
+    search: true
   
+    repo-url: https://github.com/klaxonklaxoff/site
+    repo-actions: [edit, issue]
+
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            url:  https://github.com/klaxonklaxoff/klaxonklaxoff.github.io
+          - text: Report a Bug
+            url:  https://github.com/klaxonklaxoff/klaxonklaxoff.github.io/issues
+
+    left:
+      - text: Landing page
+        file: index.qmd
+      - text: Analysis
+        menu:
+          - text: New York Times crosswording
+            file: nyt.qmd
+          - text: PWHL
+            file: pwhl_dv.qmd
+      - text: Reference
+        menu:
+          - text: Zole
+            file: zole.qmd
+
+    
 page-footer:  
   - icon: github
     href: https://github.com/klaxonklaxoff

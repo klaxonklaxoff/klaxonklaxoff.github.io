@@ -1,6 +1,5 @@
 ---
 title: New York Times crossword analysis
-author: Brittny Vongdara
 date: '`r format(as.Date("2023-03-08"), "%B %d, %Y")`'
 ---
 ```{r setup, include = FALSE, warning = FALSE, echo = FALSE}

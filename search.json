@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Landing page",
-    "section": "",
-    "text": "Hello, my name is Brittny and welcome to my site."
-  },
-  {
-    "objectID": "index.html#general-philosophy",
-    "href": "index.html#general-philosophy",
-    "title": "Landing page",
-    "section": "General philosophy",
-    "text": "General philosophy\nI think data should be accessible. I believe in transparency and knowledge-sharing.\nI’m trying to play around with Quarto since it’s something that’s new and fun. It’s really nice to share information with and my next steps with this will be to show some simple data work."
-  },
-  {
-    "objectID": "index.html#playing-with",
-    "href": "index.html#playing-with",
-    "title": "Landing page",
-    "section": "Playing with …",
-    "text": "Playing with …\n\nPlots\nI took the data from my NYT crosswords and made some interactive plots showing things such as solve stats by year and by day to see any patterns or trends over time.\nI am currently working on web-scraping data from IMDB on Bob’s Burgers, a cartoon series I enjoy. I want to pull these data and see if there’s any patterns in my favourite episodes or other general trends such as ratings over the many seasons.\n\n\nDocumentation\nI took the (complicated) rules of a Latvian card game, Zole, and made the information easier to access and reference using some fun Quarto functionalities.\n\n\nSlides\nMy submission for the 2024 RLadies International Women’s Day Data challenge is a Quarto presentation that looks into some PWHL data."
-  },
-  {
     "objectID": "pwhl_dv.html#investing-in-women",
     "href": "pwhl_dv.html#investing-in-women",
     "title": "PWHL data visualizations",
@@ -133,13 +112,6 @@
     "text": "Final output"
   },
   {
-    "objectID": "scripts/zole_mermaid.html",
-    "href": "scripts/zole_mermaid.html",
-    "title": "Untitled",
-    "section": "",
-    "text": "flowchart TD\n\n  a((Help me!))\n\n  a --&gt; g(What role are\\nyou playing?)\n  g --&gt; h(I'm the Big) \n  h --&gt; hh(What cards\\nshould I bury?)\n\n  hh --&gt;| I mostly\\n have trumps | hhh(Bury any high\\npoint cards because\\nit's likely the\\nSmalls have them\\nor any non-trump\\nso you can play\\nyour trumps)\n  hh --&gt;| I mostly\\n have high\\npoint cards | hhhh(Bury high cards\\nyou don't think\\nyou'll be able\\nto win or non-trumps\\nbecause you want\\nto keep any trumps)\n  hh --&gt;| I have\\ngarbage cards | m{Just live\\nyour life}\n\n  g --&gt; i(I'm one of\\nthe Smalls)\n  i --&gt; j(What cards do\\nyou mostly have?)\n  j --&gt;| I mostly\\n have trumps | k(Try to get\\ninto the 3rd\\nposition)\n  j --&gt;| I mostly\\n have high\\npoint cards | l(Try to get\\ninto the 1st\\nposition)\n  l --&gt; ll(Try to win a round earlier on)\n  j --&gt;| I have\\ngarbage cards | m\n\n  subgraph What do you need to play?\n\n  c(What was\\nplayed?) --&gt;| A trump\\ncard | e(Play a\\ntrump card)\n  c --&gt;| A non-trump\\ncard | f(Play a\\nnon-trump\\ncard)\n  e --&gt; ee(Otherwise you\\ncan play any\\nother card)\n  f --&gt; ee\n\n  end"
-  },
-  {
     "objectID": "zole.html",
     "href": "zole.html",
     "title": "Zole",
@@ -194,6 +166,34 @@
     "title": "Zole",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nYou can play this game with up to 5 people but if you have more than 3 players then the remaining players have sit out for a round.↩︎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Landing page",
+    "section": "",
+    "text": "Hello, my name is Brittny and welcome to my site."
+  },
+  {
+    "objectID": "index.html#about-this-site",
+    "href": "index.html#about-this-site",
+    "title": "Landing page",
+    "section": "About this site",
+    "text": "About this site\nI think data should be accessible. I believe in transparency and knowledge-sharing.\nI’m trying to play around with Quarto since it’s something that’s new and fun. It’s really nice to share information with and my next steps with this will be to show some simple data work."
+  },
+  {
+    "objectID": "index.html#playing-with",
+    "href": "index.html#playing-with",
+    "title": "Landing page",
+    "section": "Playing with …",
+    "text": "Playing with …\n\nPlots\nI took the data from my NYT crosswords and made some interactive plots showing things such as solve stats by year and by day to see any patterns or trends over time.\nI am currently working on web-scraping data from IMDB on Bob’s Burgers, a cartoon series I enjoy. I want to pull these data and see if there’s any patterns in my favourite episodes or other general trends such as ratings over the many seasons.\n\n\nDocumentation\nI took the (complicated) rules of a Latvian card game, Zole, and made the information easier to access and reference using some fun Quarto functionalities.\n\n\nSlides\nMy submission for the 2024 RLadies International Women’s Day Data challenge is a Quarto presentation that looks into some PWHL data."
+  },
+  {
+    "objectID": "scripts/zole_mermaid.html",
+    "href": "scripts/zole_mermaid.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "flowchart TD\n\n  a((Help me!))\n\n  a --&gt; g(What role are\\nyou playing?)\n  g --&gt; h(I'm the Big) \n  h --&gt; hh(What cards\\nshould I bury?)\n\n  hh --&gt;| I mostly\\n have trumps | hhh(Bury any high\\npoint cards because\\nit's likely the\\nSmalls have them\\nor any non-trump\\nso you can play\\nyour trumps)\n  hh --&gt;| I mostly\\n have high\\npoint cards | hhhh(Bury high cards\\nyou don't think\\nyou'll be able\\nto win or non-trumps\\nbecause you want\\nto keep any trumps)\n  hh --&gt;| I have\\ngarbage cards | m{Just live\\nyour life}\n\n  g --&gt; i(I'm one of\\nthe Smalls)\n  i --&gt; j(What cards do\\nyou mostly have?)\n  j --&gt;| I mostly\\n have trumps | k(Try to get\\ninto the 3rd\\nposition)\n  j --&gt;| I mostly\\n have high\\npoint cards | l(Try to get\\ninto the 1st\\nposition)\n  l --&gt; ll(Try to win a round earlier on)\n  j --&gt;| I have\\ngarbage cards | m\n\n  subgraph What do you need to play?\n\n  c(What was\\nplayed?) --&gt;| A trump\\ncard | e(Play a\\ntrump card)\n  c --&gt;| A non-trump\\ncard | f(Play a\\nnon-trump\\ncard)\n  e --&gt; ee(Otherwise you\\ncan play any\\nother card)\n  f --&gt; ee\n\n  end"
   },
   {
     "objectID": "nyt.html",

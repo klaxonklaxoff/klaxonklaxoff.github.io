@@ -1,0 +1,56 @@
+# Pi deng
+
+## What is pi deng?
+
+I can't seem to find anything about this game on the internet but I swear it's a game that me and my family played. And when we had family friends over they all played this game--so it's not like my parents made it up for us. It might also be a lost in translation situation where I'm not quite googling the right thing because I only know the phonetic name of the game in English, nor can I write it out in Laos.
+
+Pi deng means "red card" and sometimes my parents called it "Make 10". Neither of these were helpful to find the game I was thinking of so we're going to push forward.
+
+Pi deng is a 2-player card game. There is a 3-player variant where the main difference is the card distribution but otherwise the gameplay is the same.
+
+## The goal
+
+You win by scoring 105 points or higher at the end of the round.
+
+## Set up
+
+You use a normal 52-card deck. Remove jokers. Shuffle and get the other player to cut the deck before dealing the cards.
+
+:::{.callout-tip}
+It is important that you thoroughly shuffle and cut to deck as it is perninent to ensure that the colours are all mixed in inbetween rounds.
+:::
+
+### Dealing
+
+You deal 10 cards to each player. The dealer always starts with the other player, alternating dealing, and 12 cards are dealt face-up in a communal pile in the middle. These cards in the middle are free to both players.
+
+<!-- ::: {.callout-note collapse="true"}
+For the 3-player variant, deal out x cards to each player and deal x face-up cards in the communal pile.
+::: -->
+
+Once the cards are deal, the reminder of the deck is placed in the middle (face-down)--let's call this the **draw pile**.
+
+## How to play
+
+::: {.callout-important}
+## Before starting!
+
+Since 10s and face cards match each other, if you start a game and there's 3 of a face card or 3 10s in the communal pile, they immediately go to the first player. This is because there is nothing to win a pair. However, after this whatever is left at the end of the game goes to the last player (AKA the dealer).
+:::
+
+Starting left of the dealer, this player will put a card in the middle--attempting to make 10, or match face cards or 10s with the cards in the communal pile. If there is a match then both cards need to be removed into that player's win pile (a spot off to the side away from the communal pile). Then, that player flips a card from the draw pile. If this card matches, the player must take that match as well, if not that card remains in the communal pile. Therefore, on each turn a player can have up to 2 matches on a turn. If you cannot make a match you must still put a card into the communal pile--this means that that card is now available to the other player so discard carefully! Once a player draws a card from the draw pile and takes a match, if applicable, their turn ends and it is now the next player's turn. In sum, a typical turn will consist of:
+
+- putting a card into the communal pile--aiming to get a match but this is not guaranteed
+- removing matches, if applicable
+- drawing from the draw pile,
+- removing matches, if applicable
+
+## Ending the game
+
+The game ends when the draw pile is exhausted, this should be on the dealer's turn.
+
+### Scoring
+
+Like the name entails, only red cards are counted for points in the end. Separate your red cards from your black cards.
+
+All number cards are worth their value, e.g., a 3 is worth 3 points and all face cards are worth 10 points. The exception is that standalone aces are worth 20 points and aces that are paired with a 9 are worth 30 points. Therefore, the highest scoring combination is an ace and a 9--which do not need to be won in the same play.

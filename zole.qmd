@@ -6,18 +6,18 @@
 
 I'll be using the following shorthand in this document:
 
-| | |
-|---|---|
+|       |   |
+|-------|---|
 | 1/Ace | A |
-| King | K |
+| King  | K |
 | Queen | Q |
-| Jack | J | 
+| Jack  | J |
 
 :::
 
 ## What is zole?
 
-This is a 3-player[^1] Latvian trick-taking card game. The official rules and terminology were published by the Latvian Zole Game Federation in 1996.
+This is a 3-player[^1] Latvian **trick-taking** card game. The official rules and terminology were published by the Latvian Zole Game Federation in 1996.
 
 [^1]: You can play this game with up to 5 people but if you have more than 3 players then the remaining players have sit out for a round.
 
@@ -30,13 +30,13 @@ You or your team want to win the most amount of points.
 Below is a list of what each card is valued at:
 
 | Card | Value |
-|---|---|
-| A | 11 |
-| 10 | 10 |
-| K | 4 | 
-| Q | 3 |
-| J | 2 |
-| <9 | 0 |
+|------|-------|
+| A    | 11    |
+| 10   | 10    |
+| K    | 4     |
+| Q    | 3     |
+| J    | 2     |
+| <9   | 0     |
 
 :::
 
@@ -44,11 +44,11 @@ If you're the Big you want to win 61+ points and if you're the Small team you wa
 
 ## Set-up
 
-This game requires a normal playing deck minus several cards. Keep only the following cards of all suits: **7, 8 ,9, 10, J, Q, K, A**. This means a game will only consist of 8 * 4 = **32 cards**.
+This game requires a normal playing deck minus several cards. The deck consists of all of the A, K, Q, J, tens, and nines, plus the 8 and 7 of diamonds; therefore, **26** cards are used for this game. 
 
 ### Dealing
 
-Deal out 10 cards to each player with 2 cards in the middle, faced down.
+Deal out 8 cards to each player with 2 cards in the middle, faced down.
 
 ::: {.callout-important}
 Since there are so few cards, shuffling is very important to avoid cards sticking together. Once the cards are shuffled, the player on the right needs to cut the deck.
@@ -58,9 +58,9 @@ You have the dealer, the first person left of the dealer (Player 1 or P1), and t
 
 You deal clockwise in the following order:
 
-1. [2 to P1, 2 to P2 & 2 to the dealer] * 2
+1. 4 to P1, 4 to P2 & 4 to the dealer
 2. Deal 2 to the centre
-3. [2 to P1, 2 to P2 & 2 to the dealer] * 2
+3. 4 to P1, 4 to P2 & 4 to the dealer
 
 Now that the cards are dealt, the roles have to be determined.
 
@@ -87,7 +87,7 @@ Like most trick-taking games, the play is determined by the first action. Theref
 
 ::: {.column-body}
 
-![](./images/zole_flow.png)
+![](./_images/zole_flow.png)
 
 :::
 
@@ -99,22 +99,22 @@ Like most trick-taking games, the play is determined by the first action. Theref
 
 Below is a list of the trumps cards, ranked in order of strength:
 
-| # | Card | Suit |
-|---|---|---|
-| 1 | Q | <span style="color:blue;">Club</span> |
-| 2 | Q | <span style="color:green;">Spade</span> |
-| 3 | Q | <span style="color:red;">Heart</span> |  
-| 4 | Q | <span style="color:orange;">Diamond</span> |
-| 5 | J | <span style="color:blue;">Club</span> |
-| 6 | J | <span style="color:green;">Spade</span> |
-| 7 | J | <span style="color:red;">Heart</span> |
-| 8 | J | <span style="color:orange;">Diamond</span> |
-| 9 | 10 | <span style="color:orange;">Diamond</span> |
-| 10 | A | <span style="color:orange;">Diamond</span> |
-| 11 | K | <span style="color:orange;">Diamond</span> |
-| 12 | 9 | <span style="color:orange;">Diamond</span> |
-| 13 | 8 | <span style="color:orange;">Diamond</span> |
-| 14 | 7 | <span style="color:orange;">Diamond</span> |
+| #  | Card                      |
+|----|---------------------------|
+| 1  | Q♣                        |
+| 2  | Q♠                        |
+| 3  | Q[♥]{style="color:red;"}  |
+| 4  | Q[♦]{style="color:red;"}  |
+| 5  | J♣                        |
+| 6  | J♠                        |
+| 7  | J[♥]{style="color:red;"}  |
+| 8  | J[♦]{style="color:red;"}  |
+| 9  | A[♦]{style="color:red;"}  |
+| 10 | 10[♦]{style="color:red;"} |
+| 11 | K[♦]{style="color:red;"}  |
+| 12 | 9[♦]{style="color:red;"}  |
+| 13 | 8[♦]{style="color:red;"}  |
+| 14 | 7[♦]{style="color:red;"}  |
 
 ::: {.callout-important}
 This order isn't a commonly seen order; note that the K is lower than the 10!
@@ -126,13 +126,13 @@ All other cards are non-trump.
 
 Below are the non-trump cards, ranked in order of strength:
 
-| # | Card |
-|---|---|
-| 1 | 10 |
-| 2 | K |
-| 3 | 9 |
-| 4 | 8 |
-| 5 | 7 |
+| # | Card                      |
+|---|---------------------------|
+| 1 | 10[♦]{style="color:red;"} |
+| 2 | K[♦]{style="color:red;"}  |
+| 3 | 9[♦]{style="color:red;"}  |
+| 4 | 8[♦]{style="color:red;"}  |
+| 5 | 7[♦]{style="color:red;"}  |
 
 ::: {.callout-note}
 This applies to all clubs, all spades, and all hearts (minus Q & J).
@@ -160,10 +160,10 @@ Ideally, you want to sandwich the Big. This is so one player can set the stage, 
 This section is a work in progress!
 :::
 
-| Latvian |  English |
-|---|---|
-|  | Butter the bread |
-|  |  |
+| Latvian | English          |
+|---------|------------------|
+|         | Butter the bread |
+|         |                  |
 
 ## Reference
 
@@ -172,45 +172,45 @@ This section is a work in progress!
 ### Values of cards
 
 | Card | Value |
-|---|---|
-| A | 11 |
-| 10 | 10 |
-| K | 4 | 
-| Q | 3 |
-| J | 2 |
-| <9 | 0 |
+|------|-------|
+| A    | 11    |
+| 10   | 10    |
+| K    | 4     |
+| Q    | 3     |
+| J    | 2     |
+| <9   | 0     |
 
 ### Trump cards
 
 Below is a list of the trumps cards, ranked in order of strength:
 
-| # | Card | Suit |
-|---|---|---|
-| 1 | Q | Club {{< fa clover >}} |
-| 2 | Q | Spade {{< fa spoon >}}|
-| 3 | Q | Heart {{< fa heart >}} |
-| 4 | Q | Diamond {{< fa diamond >}} |
-| 5 | J | Club {{< fa clover >}} |
-| 6 | J | Spade {{< fa spoon >}} |
-| 7 | J | Heart {{< fa heart >}} |
-| 8 | J | Diamond {{< fa diamond >}} |
-| 9 | 10 | Diamond {{< fa diamond >}} |
-| 10 | A | Diamond {{< fa diamond >}} |
-| 11 | K | Diamond {{< fa diamond >}} |
-| 12 | 9 | Diamond {{< fa diamond >}} |
-| 13 | 8 | Diamond {{< fa diamond >}} |
-| 14 | 7 | Diamond {{< fa diamond >}} |
+| #  | Card                      |
+|----|---------------------------|
+| 1  | Q♣                        |
+| 2  | Q♠                        |
+| 3  | Q[♥]{style="color:red;"}  |
+| 4  | Q[♦]{style="color:red;"}  |
+| 5  | J♣                        |
+| 6  | J♠                        |
+| 7  | J[♥]{style="color:red;"}  |
+| 8  | J[♦]{style="color:red;"}  |
+| 9  | A[♦]{style="color:red;"}  |
+| 10 | 10[♦]{style="color:red;"} |
+| 11 | K[♦]{style="color:red;"}  |
+| 12 | 9[♦]{style="color:red;"}  |
+| 13 | 8[♦]{style="color:red;"}  |
+| 14 | 7[♦]{style="color:red;"}  |
 
 ### Non-trump cards
 
 Below are the non-trump cards, ranked in order of strength:
 
-| # | Card |
-|---|---|
-| 1 | 10 |
-| 2 | K |
-| 3 | 9 |
-| 4 | 8 |
-| 5 | 7 |
+| # | Card                      |
+|---|---------------------------|
+| 1 | 10[♦]{style="color:red;"} |
+| 2 | K[♦]{style="color:red;"}  |
+| 3 | 9[♦]{style="color:red;"}  |
+| 4 | 8[♦]{style="color:red;"}  |
+| 5 | 7[♦]{style="color:red;"}  |
 
 :::

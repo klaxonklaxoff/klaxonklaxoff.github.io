@@ -21,10 +21,10 @@ library(ggridges)
 library(RColorBrewer)
 
 # Get data ----
-schedule <- read.csv("./data/schedule.csv")
-stats_goalie <- read.csv("./data/stats_goalie.csv")
-players <- read.csv("./data/players.csv")
-w_v_l <- read.csv("./data/w_v_l.csv")
+schedule <- read.csv("./_data/schedule.csv")
+stats_goalie <- read.csv("./_data/stats_goalie.csv")
+players <- read.csv("./_data/players.csv")
+w_v_l <- read.csv("./_data/w_v_l.csv")
 ```
 
 International Women’s Day takes place on March 8th, 2024. The theme for this year is “Invest in women: Accelerate progress”.

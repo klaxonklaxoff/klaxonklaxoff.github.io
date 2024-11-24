@@ -25,14 +25,14 @@ website:
         file: index.qmd
       - text: Analysis
         menu:
-          - text: New York Times crosswording
-            file: nyt.qmd
-          - text: PWHL
+          - file: nyt.qmd
+          - text: PWHL stats
             file: pwhl_dv.qmd
-      - text: Reference
+          - file: bobs-burgers.qmd
+      - text: Card games
         menu:
-          - text: Zole
-            file: zole.qmd
+          - file: pi-deng.qmd
+          - file: zole.qmd
 
     
 page-footer:  
@@ -46,7 +46,7 @@ lang: en
 format:
   html:
     theme: 
-      light: minty
+      light: zephyr
       dark: darkly
     css: styles.css
     toc: true

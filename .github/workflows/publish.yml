@@ -38,6 +38,8 @@ jobs:
             any::scales
             any::MetBrewer
             any::DiagrammeR
+            any::rvest
+            any::kableExtra
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

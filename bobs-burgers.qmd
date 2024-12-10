@@ -90,7 +90,7 @@ n_eps <-
 knitr::opts_chunk$set(echo =  FALSE, warning = FALSE, message = FALSE)
 ```
 
-Bob's Burgers is a great comfort of show of mine. There's something endearing about a show about a goofy family. Since I love this show so much, I figured why not mix in data analysis and get the best of both worlds? So get ready to go on this Bob's Burgers analysis in brief with me!
+Bob's Burgers is a great comfort show of mine. There's something endearing about a show about a goofy family. Since I love this show so much, I figured why not mix in data analysis and get the best of both worlds? So get ready to go on this Bob's Burgers analysis in brief with me!
 
 ::: {.callout-tip}
 So you don't need to watch the show to get this but it's a great show so I'd just recommend giving it a watch anyways.

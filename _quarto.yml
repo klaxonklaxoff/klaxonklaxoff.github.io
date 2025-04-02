@@ -29,6 +29,7 @@ website:
           - text: PWHL stats
             file: pwhl_dv.qmd
           - file: bobs-burgers.qmd
+          - file: action_movies.qmd
       - text: Card games
         menu:
           - file: pi-deng.qmd

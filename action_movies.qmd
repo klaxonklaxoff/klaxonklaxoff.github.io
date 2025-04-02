@@ -1,0 +1,404 @@
+---
+title: Accelerate into action (movies)
+format: 
+  closeread-html:
+    theme: journal
+    # cr-style:
+    #   narrative-background-color-overlay: white
+    #   narrative-text-color-overlay: "#FFFFFF"
+date: '`r format(as.Date("2025-03-27"), "%B %d, %Y")`'
+---
+
+What makes an action movie an action movie? An action movie can be defined as a "a fast-paced, pared down, goal-orientated, narrative structure".[^0] 
+
+[^0]: https://researchguides.dartmouth.edu/filmgenres/actionfilms
+
+```{r setup}
+#| include: false
+#| warning: false
+#| echo: false
+
+# Load libraries ----
+library(tidyverse)
+library(rvest) 
+# library(RColorBrewer)
+library(scales)
+library(ggridges)
+
+# Genre breakdown ----
+genre_share <-
+  read_html("https://www.the-numbers.com/market/genres") |>
+  html_nodes(xpath = '//*[@id="page_filling_chart"]/center/table') |>
+  html_table()
+genre_share <-
+  genre_share[[1]] |>
+  rename(box_office = `Total Box Office`) |> 
+  mutate(across(
+    c("Movies", "box_office", "Tickets"),
+    ~as.numeric(gsub("[[:punct:]]", "", .))
+  ),
+  Share = as.numeric(gsub("\\%", "", Share)))
+
+pie_df <- function(x) {
+  
+  a <- 
+    genre_share |>
+    mutate(
+      pie_temp = ifelse(median({{x}}) < {{x}}, TRUE, FALSE), 
+      Genre = ifelse(pie_temp == FALSE, "Other", Genre)) |> 
+    summarise(
+      n = sum({{x}}), .by = Genre
+    )
+  
+  return(
+    ggplot(a, aes(
+      x = "", y = n, fill = Genre
+    )) +
+      geom_bar(stat = "identity", width = 1) +
+      coord_polar("y", start = 0) +
+      theme_classic() +
+      theme(
+        panel.grid.major.x = element_blank(),
+        panel.border = element_blank(),
+        axis.title.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        panel.background = element_rect(fill = "lightgrey", color = "lightgrey"),
+        plot.background = element_rect(fill = "lightgrey", color = "lightgrey"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.background = element_rect(fill = "lightgrey"),
+        legend.box.background = element_rect(fill = "lightgrey")
+      )
+  )
+  
+}
+
+# 1995-2024 ----
+top_grossing <- 
+  read_html("https://www.the-numbers.com/market/genre/Action") |> 
+  html_nodes(xpath = '//*[@id="page_filling_chart"]/table[2]') |> 
+  html_table()
+top_grossing <- top_grossing[[1]] |>
+  filter(Year != 2025) |>
+  rename(adj_gross = `Inflation-AdjustedGross`, movie = `Top-Grossing Movie`) |>
+  mutate(
+    adj_gross = as.numeric(gsub("[[:punct:]]", "", adj_gross)),
+    fm_flag = ifelse(
+      movie %in% c('Twister', 'Wonder Woman'),
+      "Lead\nfemale character", 
+      "No lead\nfemale character")
+  )
+
+bar_df <- function(x, meets=FALSE)
+{
+  if (x == "year") {
+    var = desc(top_grossing$Year)
+  } else if (x == "gross") {
+    var = top_grossing$adj_gross
+  }
+  
+  if (meets == FALSE) {
+  return(
+  ggplot(
+      top_grossing,
+      aes(
+        x = fct_reorder(movie, var),
+        y = adj_gross / 100000000,
+        fill = "#f68060"
+      )
+    ) +
+    geom_bar(stat = "identity", position = "dodge") +
+    theme_classic() +
+    theme(
+      legend.position = "none",
+      panel.grid.major.x = element_blank(),
+      panel.border = element_blank(),
+      axis.ticks.x = element_blank(),
+      panel.background = element_rect(fill = "lightgrey", color = "lightgrey"),
+      plot.background = element_rect(fill = "lightgrey", color = "lightgrey"),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.background = element_rect(fill = "lightgrey"),
+      legend.box.background = element_rect(fill = "lightgrey")) +
+    scale_y_continuous(labels = label_dollar()) +
+    coord_flip() +
+    labs(x = "Movie title", y = "Adjusted gross (Millions)")
+  )
+  } else {
+  return(
+  ggplot(
+      top_grossing,
+      aes(
+        x = fct_reorder(movie, var),
+        y = adj_gross / 100000000,
+        fill = fm_flag
+      )
+    ) +
+    geom_bar(stat = "identity", position = "dodge") +
+    theme_classic() +
+    theme(
+      legend.position = "none",
+      panel.grid.major.x = element_blank(),
+      panel.border = element_blank(),
+      axis.ticks.x = element_blank(),
+      panel.background = element_rect(fill = "lightgrey", color = "lightgrey"),
+      plot.background = element_rect(fill = "lightgrey", color = "lightgrey"),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      legend.background = element_rect(fill = "lightgrey"),
+      legend.box.background = element_rect(fill = "lightgrey")) +
+    scale_y_continuous(labels = label_dollar()) +
+    scale_fill_manual( values = c("Lead\nfemale character" = "#00ff00","No lead\nfemale character" = "#f68060")) +
+    coord_flip() +
+    labs(x = "Movie title", y = "Adjusted gross (Millions)")
+    )
+  }
+
+}
+
+knitr::opts_chunk$set(echo =  FALSE, warning = FALSE, message = FALSE)
+```
+
+:::{.cr-section}
+
+From 1995-2025 action movies only made up of 1,332 movies, beaten out by drama, comedy, documentary, and thriller/suspense, respectively. @cr-pie1
+
+:::{#cr-pie1}
+```{r}
+#| out-width: 100%
+pie_df(Movies)
+```
+:::
+
+But in that same period, action movies grossed $60,465,518,435 making it second to adventure movies[^1] with $66,777,466,481. It's worth noting that drama is the third highest at $37,727,901,915 which is about two-thirds of what action movies made. @cr-pie2
+
+[^1]: [the very slight difference between action and adventure is that former is associated with a particular kind of scene or spectacle; whereas the latter implies a story.](https://www.encyclopedia.com/arts/encyclopedias-almanacs-transcripts-and-maps/action-and-adventure-films#:~:text=Action%20is%20associated%20with%20a,in%20such%20films%20as%20King)
+
+:::{#cr-pie2}
+```{r}
+#| out-width: 100%
+pie_df(box_office)
+```
+:::
+
+@cr-bar1 You can see here are the movies from 1995-2024, the top grossing action movies each year (in ascending order).
+
+:::{.callout-note}
+2025 was removed here because the year is not complete.
+:::
+
+:::{#cr-bar1}
+```{r}
+#| out-width: 100%
+bar_df("year")
+```
+:::
+
+:::{.callout-warning}
+It is most likely that 2020 is significantly lower due to the COVID-19 pandemic and overall closures in that period.
+:::
+
+@cr-bar2 Here is the same plot reorganized in descending adjusted gross. And we can see here that the top grossing action movies between 1995-2024 are Black Panther, Jurassic World, Gun: Maverick, Men in Black, and Wonder Woman.
+
+:::{#cr-bar2}
+```{r}
+#| out-width: 100%
+bar_df("gross")
+```
+:::
+
+@cr-bar3 And of these movies, only 2 have female leads. There are some with supporting female characters but they are (often) the only female representation in the main cast.
+
+:::{#cr-bar3}
+```{r}
+#| out-width: 100%
+bar_df("gross", meets=TRUE)
+```
+:::
+
+How do we tie this back to International Women's Day? Though actions movies overall is a boys' club there are some stand out female characters in action movies. 
+
+@cr-thegang Let's celebrate action movies with (kick-ass) female leads. A few come to mind ...
+
+:::{#cr-thegang}
+![](/_images/iwd_action/the_gang.png)
+:::
+
+[@cr-thegang]{pan-to="70%, 0%"} Michelle Yeoh is known for:
+
+- Everything Everywhere All At Once (2022)
+- Crouching Tiger, Hidden Dragon (2000)
+- Tomorrow Never Dies (1997)
+
+She's got **56** credited movies as an actress, **41** of which are action movies. Her earliest dated movie was in 1984 and she has 4 movies in various stages of production.
+
+[@cr-thegang]{pan-to="45%, 0%"}  Linda Hamilton is known for:
+
+- The Terminator (1984)
+- Terminator 2: Judgment Day (1991)
+- Terminator: Dark Fate (2019)
+
+She's got **43** credited movies as an actress, **12** of which are action movies. Her earliest dated movie was in 1979 and she has 3 movies in various stages of production.
+
+[@cr-thegang]{pan-to="0%, 0%"} Sigourney Weaver is known for:
+
+- Alien (1979)
+- Alien Ressurection (1997)
+- Avatar (2009)
+
+She's got **72** credited movies as an actress, **15** of which are action movies. Her earliest dated movie was in 1977 and she has 4 movies in various stages of production.
+
+[@cr-thegang]{pan-to="-45%, 0%"}  Charlize Theron is known for:
+
+- Mad Max: Fury Road (2015)
+- The Old Guard (2020)
+- Atomic Blonde (2017)
+
+She's got **57** credited movies as an actress, **23** of which are action movies. Her earliest dated movie was in 1995 and she has 5 movies in various stages of production.
+
+[@cr-thegang]{pan-to="-70%, 0%"} Uma Thurman is known for:
+
+- Kill Bill: Vol 1 (2003)
+- Kill Bill: Vol 2 (2004)
+- Batman and Robin (1997)
+
+She's got **58** credited movies as an actress, **23** of which are action movies. Her earliest dated movie was in 1984 and she has 3 movies in various stages of production.
+
+[@cr-ridge] This is a visualization of the count of action movies each actress has been in over her career.
+
+:::{#cr-ridge}
+```{r}
+#| out-width: 100%
+# FIXME: find a way to web-scrape this info
+rbind(
+    data.frame(
+      actress = "Michelle Yeoh",
+      year = c(
+        1984,
+        rep(1985, 2),
+        1986,
+        rep(1987, 2),
+        1992,
+        rep(1993, 6),
+        rep(1994, 6),
+        1996,
+        1997,
+        2000,
+        2002,
+        2004,
+        2006,
+        rep(2008, 2),
+        rep(2010, 2),
+        2011,
+        rep(2016, 3),
+        2017,
+        2018,
+        2020,
+        rep(2021, 1),
+        rep(2022, 3),
+        2023,
+        2024,
+        2025
+      )
+    ),
+    data.frame(
+      actress = "Linda Hamilton",
+      year = c(1982, 1984, rep(1986, 2), 1991, 1995, rep(1997, 2), 2019)
+    ),
+    data.frame(
+      actress = "Sigourney Weaver",
+      year = c(
+        1984,
+        1986,
+        1989,
+        1991,
+        1997,
+        2008,
+        2009,
+        2011,
+        2012,
+        2014,
+        2015,
+        rep(2016, 2),
+        2022,
+        2025
+      )
+    ),
+    data.frame(
+      actress = "Charlize Theron",
+      year = c(
+        1998,
+        2000,
+        2001,
+        2002,
+        2003,
+        2005,
+        2007,
+        2008,
+        2009,
+        2012,
+        2015,
+        rep(2016, 3),
+        rep(2017, 2),
+        2018,
+        2020,
+        2021,
+        rep(2022, 2),
+        2023,
+        2024
+      )
+    ), 
+    data.frame(actress = "Uma Thurman",
+               year = c(1991, 1997, 1998, rep(2003, 2), 2004, 2007, 2023))
+  ) |>
+  ggplot(aes(x = year, y = actress, fill = actress)) +
+  geom_density_ridges(alpha = 0.6, stat = "binline", bins = 10) +
+  theme_ridges() +
+  theme(
+    legend.position = "none",
+    panel.grid.major.x = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks.x = element_blank(),
+    panel.background = element_rect(fill = "lightgrey"),
+    plot.background = element_rect(fill = "lightgrey", color = NA),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.background = element_rect(fill = "lightgrey"),
+    legend.box.background = element_rect(fill = "lightgrey")
+  ) +
+  labs(
+    fill = "Actress",
+    x = "Year",
+    y = "Count of action movies"
+  )
+```
+:::
+
+
+::: 
+
+## Honourable mentions to:
+
+- Viola Davis (Woman King)
+- Angelina Jolie (Tomb Raider, Eternals, Salt, etc.)
+- Sandra Bullock (Miss Congeniality)
+- Jennifer Lawrence (Hunger Games)
+- Gal Gadot (Wonder Woman)
+
+## Future thoughts ...
+
+- Lead roles vs. in the cast
+- Director or other roles
+- Delve deeper into subgenres:
+    - Superheroes
+    - Book-to-movie
+- Intersectionality
+    - Bechdal test
+
+## Sources
+
+- IMBD, 2015-03-17

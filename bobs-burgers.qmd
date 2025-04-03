@@ -492,7 +492,7 @@ Ok, this makes me feel like I'm only off slightly. And that's fine! If we all fi
 
 ![](https://www.reddit.com/r/funny/comments/29j14p/dont_mess_with_tina/#lightbox)
 
-:::
+<!-- :::
 
 ```{r webscrape}
 #| include: false
@@ -832,8 +832,8 @@ ggplot(staff_writer, aes(x = n, y = reorder(name, n))) +
 ```
 
 ::: {.callout-note collapse="true"}
-Admittedly, I don't know te difference between a writer and a staff writer so that's on my to-do list but they were categorized differently so I figured I should separate them.
-:::
+Admittedly, I don't know the difference between a writer and a staff writer so that's on my to-do list but they were categorized differently so I figured I should separate them.
+::: -->
 
 :::
 

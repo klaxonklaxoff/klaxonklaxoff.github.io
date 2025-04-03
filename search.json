@@ -1,5 +1,194 @@
 [
   {
+    "objectID": "bobs-burgers.html",
+    "href": "bobs-burgers.html",
+    "title": "Bob’s Burgers analysis",
+    "section": "",
+    "text": "Bob’s Burgers is a great comfort show of mine. There’s something endearing about a show about a goofy family. Since I love this show so much, I figured why not mix in data analysis and get the best of both worlds? So get ready to go on this Bob’s Burgers analysis in brief with me!"
+  },
+  {
+    "objectID": "bobs-burgers.html#number-of-episodes-per-season",
+    "href": "bobs-burgers.html#number-of-episodes-per-season",
+    "title": "Bob’s Burgers analysis",
+    "section": "Number of episodes per season",
+    "text": "Number of episodes per season\n\n\n\n\n\n\n\n\n\nThis was just to take a quick peak at if we could compare the episodes over seasons. What jumps out is that seasons 1 & 2 are fairly short. It’s reasonable for pilot seasons to be shorter but a quick search shows that there were fewer episodes in season 2 due to a schedule conflict1. We also see a slight dip in season 14 and that’s likely a result of the SAG-AFTRA writer’s strike in 20232."
+  },
+  {
+    "objectID": "bobs-burgers.html#ratings",
+    "href": "bobs-burgers.html#ratings",
+    "title": "Bob’s Burgers analysis",
+    "section": "Ratings",
+    "text": "Ratings\n\nFrequency of ratings\n\nAll episodesBy season\n\n\n\n\n\n\n\n\n\n\n\n\nSummary\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  6.700   7.400   7.600   7.683   8.000   9.600 \n\n\nWe can see from the histogram and summary that most Bob’s Burgers episodes clock in at a 7.7/10 rating.\n\n\n\n\nFacet wrapRidgeline\n\n\n\n\n\n\n\n\n\n\n\nAnd of course, why not break down the ratings by season? But I find it kind of difficult to compare the rating of the seasons against one another … maybe there’s a better way to see it?\n\n\n\n\n\n\n\n\n\n\n\nNULL\n\n\nOh, look at that! In this kind of graph we can see that the distribution of ratings starts to move lower in the later seasons but we can also see very highly rated episodes in seasons 13 and 14.\n\n\n\n\n\n\n\n\nRatings over time\n\nBy release dateBy episode number and season\n\n\n\nLine graphScatter plot and averageScatter plot and trend\n\n\n\n\n\n\n\n\n\n\n\nThis graph looks a little too busy. The other downside with this graph is that it’s hard to tell when a season starts and ends.\n\n\n\n\n\n\n\n\n\n\n\nWe also love a scatter plot when there’s a lot of data points. Here, we see more clumps above the average in the earlier seasons and that they move more under the average in the later seasons. This aligns with the story we see in the ridgeline graph–which makes sense because it’s all the same data.\n\n\n\n\n\n\n\n\n\n\n\nAnd here, by adding a fitted linear model, the trend seen in the previous graph is made more apparent.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI figured changing the perspective from release date to episode might show some sort of pattern, e.g., season premieres or finales scoring higher–spoiler it doesn’t seem so. I also figured this would remove the space when there’s breaks between when episodes are released.\n\n\n\nOf the 14 seasons of Bob’s Burgers, there are 275 episodes. I’m going to now look at the bottom and top 25 episodes. I recognize that it’s only 9% of the episodes but for now this is just a quick look."
+  },
+  {
+    "objectID": "bobs-burgers.html#bottom-25-rated-episodes",
+    "href": "bobs-burgers.html#bottom-25-rated-episodes",
+    "title": "Bob’s Burgers analysis",
+    "section": "Bottom 25 rated episodes",
+    "text": "Bottom 25 rated episodes\n\n\n\n\n\n\n\n\n\nUnsurprisingly, from what we seen in the graphs above we have some repeate offenders from the later seasons showing up in the bottom 25 rated episodes."
+  },
+  {
+    "objectID": "bobs-burgers.html#top-25-rated-episodes",
+    "href": "bobs-burgers.html#top-25-rated-episodes",
+    "title": "Bob’s Burgers analysis",
+    "section": "Top 25 rated episodes",
+    "text": "Top 25 rated episodes\n\n\n\n\n\n\n\n\n\nHowever, it seems like a whole mixed bag in the top 25.\n\n\n\n\n\n\nHmmm …\n\n\n\n\n\nI do have some suspicions about the highest rated episode. In my opinion, this is by far not the best episode. Additionally, I would rank Thanksgiving episodes above the Christmas episodes. I might even rank the Halloween episodes above the Christmas ones … maybe this needs more investigation.\n\n\n\n\nWas this episode a season finale?\n\n\n\n\n\n\n\n\n\nI always just figured shows like to start off with a bang or end on a great note but maybe that’s not the case. This graph only particularly looked at whether the episode was a season finale and this was a surprising find to me. But it’s not like I’m right often enough anyways.\n\n\nCount of ratings\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThe reason is that it’s approximate is because you can’t see the raw rating counts. For example, you would see 2.7K instead of say 2,794 or whatever so take this graph with a grain of salt because that’s all that was available to me.\n\n\nSo my first thought see the top rated episode and that it was in a later season was that maybe there were fewer ratings and that skewered the average. But here, we see that it was the most rated episode!"
+  },
+  {
+    "objectID": "bobs-burgers.html#my-personal-top-25-episodes",
+    "href": "bobs-burgers.html#my-personal-top-25-episodes",
+    "title": "Bob’s Burgers analysis",
+    "section": "My personal top 25 episodes",
+    "text": "My personal top 25 episodes\nSo now that I’ve seen the top 25 top rated episodes, of course now I’m like … do I fit into an average rater of Bob’s Burgers? I picked my top 25 episodes, in no particular order and see how they compare.\n\nDo they fit into the top 25 rated episodes?Do they fit into the 3rd quantile?\n\n\n\n\n\n\n\n\n\n\n\nWhat?! Roughly only half of my top 25 is in the top 25 rated? Ok, but let’s be real Work Hard or Die Trying, Girl has the musical stylings of Carly Simon. CARLY SIMON. I may be blinded by my love of Working Girl and Die Hard and any Bob’s Burgers musical episodes but this hit home to me and is in my constant rerun rotation. If I don’t get off this rant we won’t get anywhere so let’s move on.\n\n\n\n\n\n\n\n\n\n\n\nOk, this makes me feel like I’m only off slightly. And that’s fine! If we all fit the same mould or all liked the same things we’d all be boring. But it is good to see I’m not out to lunch here. Realy quick though, Family Fracas is a great episode. How else would we have gotten this great gem:"
+  },
+  {
+    "objectID": "bobs-burgers.html#final-thoughts",
+    "href": "bobs-burgers.html#final-thoughts",
+    "title": "Bob’s Burgers analysis",
+    "section": "Final thoughts …",
+    "text": "Final thoughts …\nBy the end of the day, this is a skewed sample of people who would 1. Most likely enjoy watching Bob’s Burgers and 2. Rate episodes on IMDB so that’s something to keep in mind. It was fun nonetheless to work at some very basic webscraping to pull the data from IMDB, then clean it all up so it was easier to analyze and make these (in my opinion) very beautiful graphs. I guess … you just have to watch Bob’s Burgers to get your own opinion. Happy watching!"
+  },
+  {
+    "objectID": "bobs-burgers.html#footnotes",
+    "href": "bobs-burgers.html#footnotes",
+    "title": "Bob’s Burgers analysis",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWhy Bob’s Burgers Season 2 Is So Short↩︎\nFox Reveals Fall Premiere Dates, Including the Return of ‘9-1-1: Lone Star’ After Its Strike-Induced 15-Month Hiatus↩︎"
+  },
+  {
+    "objectID": "action_movies.html",
+    "href": "action_movies.html",
+    "title": "Accelerate into action (movies)",
+    "section": "",
+    "text": "What makes an action movie an action movie? An action movie can be defined as a “a fast-paced, pared down, goal-orientated, narrative structure”.1"
+  },
+  {
+    "objectID": "action_movies.html#honourable-mentions-to",
+    "href": "action_movies.html#honourable-mentions-to",
+    "title": "Accelerate into action (movies)",
+    "section": "Honourable mentions to:",
+    "text": "Honourable mentions to:\n\nViola Davis (Woman King)\nAngelina Jolie (Tomb Raider, Eternals, Salt, etc.)\nSandra Bullock (Miss Congeniality)\nJennifer Lawrence (Hunger Games)\nGal Gadot (Wonder Woman)"
+  },
+  {
+    "objectID": "action_movies.html#future-thoughts",
+    "href": "action_movies.html#future-thoughts",
+    "title": "Accelerate into action (movies)",
+    "section": "Future thoughts …",
+    "text": "Future thoughts …\n\nLead roles vs. in the cast\nDirector or other roles\nDelve deeper into subgenres:\n\nSuperheroes\nBook-to-movie\n\nIntersectionality\n\nBechdal test"
+  },
+  {
+    "objectID": "action_movies.html#sources",
+    "href": "action_movies.html#sources",
+    "title": "Accelerate into action (movies)",
+    "section": "Sources",
+    "text": "Sources\n\nIMBD, 2015-03-17"
+  },
+  {
+    "objectID": "action_movies.html#footnotes",
+    "href": "action_movies.html#footnotes",
+    "title": "Accelerate into action (movies)",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://researchguides.dartmouth.edu/filmgenres/actionfilms↩︎\nthe very slight difference between action and adventure is that former is associated with a particular kind of scene or spectacle; whereas the latter implies a story.↩︎"
+  },
+  {
+    "objectID": "zole.html",
+    "href": "zole.html",
+    "title": "Zole",
+    "section": "",
+    "text": "Legend\n\n\n\n\n\nI’ll be using the following shorthand in this document:\n\n\n\n1/Ace\nA\n\n\nKing\nK\n\n\nQueen\nQ\n\n\nJack\nJ\n\n\n\n\n\n\n\n\nThis is a 3-player1 Latvian trick-taking card game. The official rules and terminology were published by the Latvian Zole Game Federation in 1996.\n\n\n\nYou or your team want to win the most amount of points.\n\n\n\n\n\n\nTip\n\n\n\n\n\nBelow is a list of what each card is valued at:\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\n\nIf you’re the Big you want to win 61+ points and if you’re the Small team you want to win 60+ points. The total amount of winnable points is 120. Find out more information about roles of the Big and the Smalls here.\n\n\n\nThis game requires a normal playing deck minus several cards. The deck consists of all of the A, K, Q, J, tens, and nines, plus the 8 and 7 of diamonds; therefore, 26 cards are used for this game.\n\n\nDeal out 8 cards to each player with 2 cards in the middle, faced down.\n\n\n\n\n\n\nImportant\n\n\n\nSince there are so few cards, shuffling is very important to avoid cards sticking together. Once the cards are shuffled, the player on the right needs to cut the deck.\n\n\nYou have the dealer, the first person left of the dealer (Player 1 or P1), and the player right of the dealer (Player 2 or P2).\nYou deal clockwise in the following order:\n\n4 to P1, 4 to P2 & 4 to the dealer\nDeal 2 to the centre\n4 to P1, 4 to P2 & 4 to the dealer\n\nNow that the cards are dealt, the roles have to be determined.\n\n\n\n\n\n\nYou can play one of two roles:\n\nBig\nSmall\n\nThe Smalls team up together against the Big (i.e., 2 vs. 1).\nIdeally, if you think you can win on your own you take the role of the Big; otherwise you take the role of one of the two Smalls.\nStarting to the left of the dealer, P1 will decide if they will take on the role of Big. If they decline then it goes to P2 and if P2 declines it goes to the dealer. Once someone decides to be the Big then the roles are determined for that round. A playe signals that they have decided to be the Big if they collect the 2 cards in the centre. This player starts the game by adding 2 cards from their hand into their points pile, facedown.\n\n\n\nLike most trick-taking games, the play is determined by the first action. Therefore, if the first player puts down a trump then all players must follow suit, unless they are unable and in which case they can play any card. Whoever wins the trick gets to start off the next one and so on and so forth until all cards are played. If you win a trick then you get to collect those cards that were played. The Big has their own points and the Smalls pool their points together. Once all cards have been played then you collect and count your points.\n\n\n\n\n\n\n\n\n\n\nTrump cardsNon-trump cards\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis order isn’t a commonly seen order; note that the K is lower than the 10!\n\n\nAll other cards are non-trump.\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis applies to all clubs, all spades, and all hearts (minus Q & J).\n\n\n\n\n\n\n\n\n\nPlaying the BigPlaying the Smalls\n\n\nYou typically take this role if you feel like you can win against the other 2 players. You’ll probably want to take this role if you have the higher trumps.\n\n\nIdeally, you want to sandwich the Big. This is so one player can set the stage, the Big plays, and the second Small can react.\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThis section is a work in progress!\n\n\n\n\n\nLatvian\nEnglish\n\n\n\n\n\nButter the bread\n\n\n\n\n\n\n\n\n\n\n\nValues of cardsTrump cardsNon-trump cards\n\n\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦"
+  },
+  {
+    "objectID": "zole.html#what-is-zole",
+    "href": "zole.html#what-is-zole",
+    "title": "Zole",
+    "section": "",
+    "text": "This is a 3-player1 Latvian trick-taking card game. The official rules and terminology were published by the Latvian Zole Game Federation in 1996."
+  },
+  {
+    "objectID": "zole.html#the-goal",
+    "href": "zole.html#the-goal",
+    "title": "Zole",
+    "section": "",
+    "text": "You or your team want to win the most amount of points.\n\n\n\n\n\n\nTip\n\n\n\n\n\nBelow is a list of what each card is valued at:\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\n\nIf you’re the Big you want to win 61+ points and if you’re the Small team you want to win 60+ points. The total amount of winnable points is 120. Find out more information about roles of the Big and the Smalls here."
+  },
+  {
+    "objectID": "zole.html#set-up",
+    "href": "zole.html#set-up",
+    "title": "Zole",
+    "section": "",
+    "text": "This game requires a normal playing deck minus several cards. The deck consists of all of the A, K, Q, J, tens, and nines, plus the 8 and 7 of diamonds; therefore, 26 cards are used for this game.\n\n\nDeal out 8 cards to each player with 2 cards in the middle, faced down.\n\n\n\n\n\n\nImportant\n\n\n\nSince there are so few cards, shuffling is very important to avoid cards sticking together. Once the cards are shuffled, the player on the right needs to cut the deck.\n\n\nYou have the dealer, the first person left of the dealer (Player 1 or P1), and the player right of the dealer (Player 2 or P2).\nYou deal clockwise in the following order:\n\n4 to P1, 4 to P2 & 4 to the dealer\nDeal 2 to the centre\n4 to P1, 4 to P2 & 4 to the dealer\n\nNow that the cards are dealt, the roles have to be determined."
+  },
+  {
+    "objectID": "zole.html#how-to-play",
+    "href": "zole.html#how-to-play",
+    "title": "Zole",
+    "section": "",
+    "text": "You can play one of two roles:\n\nBig\nSmall\n\nThe Smalls team up together against the Big (i.e., 2 vs. 1).\nIdeally, if you think you can win on your own you take the role of the Big; otherwise you take the role of one of the two Smalls.\nStarting to the left of the dealer, P1 will decide if they will take on the role of Big. If they decline then it goes to P2 and if P2 declines it goes to the dealer. Once someone decides to be the Big then the roles are determined for that round. A playe signals that they have decided to be the Big if they collect the 2 cards in the centre. This player starts the game by adding 2 cards from their hand into their points pile, facedown.\n\n\n\nLike most trick-taking games, the play is determined by the first action. Therefore, if the first player puts down a trump then all players must follow suit, unless they are unable and in which case they can play any card. Whoever wins the trick gets to start off the next one and so on and so forth until all cards are played. If you win a trick then you get to collect those cards that were played. The Big has their own points and the Smalls pool their points together. Once all cards have been played then you collect and count your points.\n\n\n\n\n\n\n\n\n\n\nTrump cardsNon-trump cards\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis order isn’t a commonly seen order; note that the K is lower than the 10!\n\n\nAll other cards are non-trump.\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis applies to all clubs, all spades, and all hearts (minus Q & J).\n\n\n\n\n\n\n\n\n\nPlaying the BigPlaying the Smalls\n\n\nYou typically take this role if you feel like you can win against the other 2 players. You’ll probably want to take this role if you have the higher trumps.\n\n\nIdeally, you want to sandwich the Big. This is so one player can set the stage, the Big plays, and the second Small can react."
+  },
+  {
+    "objectID": "zole.html#fun-phrases",
+    "href": "zole.html#fun-phrases",
+    "title": "Zole",
+    "section": "",
+    "text": "Caution\n\n\n\nThis section is a work in progress!\n\n\n\n\n\nLatvian\nEnglish\n\n\n\n\n\nButter the bread"
+  },
+  {
+    "objectID": "zole.html#reference",
+    "href": "zole.html#reference",
+    "title": "Zole",
+    "section": "",
+    "text": "Values of cardsTrump cardsNon-trump cards\n\n\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦"
+  },
+  {
+    "objectID": "zole.html#footnotes",
+    "href": "zole.html#footnotes",
+    "title": "Zole",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nYou can play this game with up to 5 people but if you have more than 3 players then the remaining players have sit out for a round.↩︎"
+  },
+  {
+    "objectID": "nyt.html",
+    "href": "nyt.html",
+    "title": "New York Times crossword analysis",
+    "section": "",
+    "text": "My partner and I started doing crosswords sometime in 2017 and we’ve been hooked since. This led us to getting a New York Times (NYT) crossword subscription in 2018. The NYT app shows you when you complete a crossword with a gold or blue star, where the former means you solved it without revealing any answers and before the answers come out. The app also provides some stats but I wanted to see what else is the data telling us."
+  },
+  {
+    "objectID": "nyt.html#background",
+    "href": "nyt.html#background",
+    "title": "New York Times crossword analysis",
+    "section": "",
+    "text": "My partner and I started doing crosswords sometime in 2017 and we’ve been hooked since. This led us to getting a New York Times (NYT) crossword subscription in 2018. The NYT app shows you when you complete a crossword with a gold or blue star, where the former means you solved it without revealing any answers and before the answers come out. The app also provides some stats but I wanted to see what else is the data telling us."
+  },
+  {
+    "objectID": "nyt.html#the-data",
+    "href": "nyt.html#the-data",
+    "title": "New York Times crossword analysis",
+    "section": "The data",
+    "text": "The data\nI found a Python package by Matt Dodge that retrieves your NYT crossword stats and used this to pull in our stats. This data spans from January 01, 2018 to January 23, 2023."
+  },
+  {
+    "objectID": "nyt.html#the-analysis",
+    "href": "nyt.html#the-analysis",
+    "title": "New York Times crossword analysis",
+    "section": "The analysis",
+    "text": "The analysis\n\nI’m using the “Hiroshige” palette from the MetBrewer package.\n\n\nTotal solves\n\nBy check status and dayBy check status, day, and year\n\n\nLet’s start off by looking at total solves. ~I’ll note that these crosswords are mostly a team effort–at least in the beginning.~ If you’re unfamiiliar with crosswords, you’ll notice most solves are on Mondays and that’s because it’s the easiest day and it progressively gets harder with the hardest being the Sunday crossword. This plot also separates the solves which I refer to as “check status” here, meaning thatif it was solved without any reveals and within the time limit it’s a legit solve, otherwise we’ll refer to it as checked–which isn’t as fun.\n\n\n\n\n\n\nSo this plot is telling us that Mondays are the easiest solves with the highest count (by far) but it doesn’t really give us a fulsome picture. If we were to just take this as is, we’d see that about half the Mondays solves are legit, whereas the remaining solves needed an extra little nudge.\n\n\nLet’s look at our progress over the years.\n\n\n\n\n\n\n\n\n\nWe see we’re real keen early on, there’s a bit of a dip in 2020 but we’re up again in 2021 and 2022. Of course, we’re still early in 2023 so there’s always room for potential there. So it looks at a glance that the legit Monday solves are slowly increasing but we can confirm this by digging into the data a little bit more.\n\n\nSolved Monday crosswords\n\nWe’re omitting 2023 from these anlayses because they’ll throw off the mean and regression models since this year in incomplete.\n\n\nMeanLinear model\n\n\nThis line plot shows solved Mondays by their check status. The solid lines show the count of solved Mondays and the dotted lines show the average (or mean) per respective check status.\n\n\n\n\n\n\nWe see here we’re above the average in 2018, 2019, and 2022.\n\n\nThis line plot shows solved Mondays by their check status. The solid lines show the count of solved Mondays and the dotted lines show the regression line (using a linear model).\n\n\n\n\n\n\nThe legit line looks pretty steady here, which is at least that seeing that there is a decrease for the non-legit solves."
+  },
+  {
+    "objectID": "nyt.html#breakdown-by-day",
+    "href": "nyt.html#breakdown-by-day",
+    "title": "New York Times crossword analysis",
+    "section": "Breakdown by day",
+    "text": "Breakdown by day\nThe blue line indicates the time in seconds to complete a crossword, the red dotted line indicates the moving average (yearly), and the orange dashed line indicates the linear model regression. Ideally, and it’s what we’re seeing here, that the time to complete Monday crosswords is decreasing over time. Looking at the time completion is another take on the data to see if there’s any improvement in our crosswording.\n\nMondaysTuesdays\n\n\n\n\n\n\n\n\n\n\nThe data for Tuesdays isn’t as good as for the Mondays because it was only recently we graduated to being able to do Tuesdays consistently."
+  },
+  {
+    "objectID": "nyt.html#backtracking",
+    "href": "nyt.html#backtracking",
+    "title": "New York Times crossword analysis",
+    "section": "Backtracking",
+    "text": "Backtracking\nI wanted to take a peek at one more thing. So as we’ve become more comfortable with crosswords we’ve been going back into the archives–and sometimes I’ve gone into the archives on my own–to do Mondays. So for this last plot, we look at solved crosswords that weren’t checked or had the answers revealed. This plot supports and potentially explains some weird behaviours seen in the above plots. This plot also includes a dotted line to indicate the average number of solved crosswords that were not checked or revealed from 2018 to 2023.\n\n\n\n\n\n\nWhy this plot is important is to consider things outside of what you see in the data to explain the data. But this is only the beginning of data exploration!\nI hope you’ve enjoyed this brief analysis of our NYT crossword journey :smile:"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Landing page",
@@ -173,166 +362,5 @@
     "title": "PWHL data visualizations",
     "section": "Final output",
     "text": "Final output"
-  },
-  {
-    "objectID": "zole.html",
-    "href": "zole.html",
-    "title": "Zole",
-    "section": "",
-    "text": "Legend\n\n\n\n\n\nI’ll be using the following shorthand in this document:\n\n\n\n1/Ace\nA\n\n\nKing\nK\n\n\nQueen\nQ\n\n\nJack\nJ\n\n\n\n\n\n\n\n\nThis is a 3-player1 Latvian trick-taking card game. The official rules and terminology were published by the Latvian Zole Game Federation in 1996.\n\n\n\nYou or your team want to win the most amount of points.\n\n\n\n\n\n\nTip\n\n\n\n\n\nBelow is a list of what each card is valued at:\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\n\nIf you’re the Big you want to win 61+ points and if you’re the Small team you want to win 60+ points. The total amount of winnable points is 120. Find out more information about roles of the Big and the Smalls here.\n\n\n\nThis game requires a normal playing deck minus several cards. The deck consists of all of the A, K, Q, J, tens, and nines, plus the 8 and 7 of diamonds; therefore, 26 cards are used for this game.\n\n\nDeal out 8 cards to each player with 2 cards in the middle, faced down.\n\n\n\n\n\n\nImportant\n\n\n\nSince there are so few cards, shuffling is very important to avoid cards sticking together. Once the cards are shuffled, the player on the right needs to cut the deck.\n\n\nYou have the dealer, the first person left of the dealer (Player 1 or P1), and the player right of the dealer (Player 2 or P2).\nYou deal clockwise in the following order:\n\n4 to P1, 4 to P2 & 4 to the dealer\nDeal 2 to the centre\n4 to P1, 4 to P2 & 4 to the dealer\n\nNow that the cards are dealt, the roles have to be determined.\n\n\n\n\n\n\nYou can play one of two roles:\n\nBig\nSmall\n\nThe Smalls team up together against the Big (i.e., 2 vs. 1).\nIdeally, if you think you can win on your own you take the role of the Big; otherwise you take the role of one of the two Smalls.\nStarting to the left of the dealer, P1 will decide if they will take on the role of Big. If they decline then it goes to P2 and if P2 declines it goes to the dealer. Once someone decides to be the Big then the roles are determined for that round. A playe signals that they have decided to be the Big if they collect the 2 cards in the centre. This player starts the game by adding 2 cards from their hand into their points pile, facedown.\n\n\n\nLike most trick-taking games, the play is determined by the first action. Therefore, if the first player puts down a trump then all players must follow suit, unless they are unable and in which case they can play any card. Whoever wins the trick gets to start off the next one and so on and so forth until all cards are played. If you win a trick then you get to collect those cards that were played. The Big has their own points and the Smalls pool their points together. Once all cards have been played then you collect and count your points.\n\n\n\n\n\n\n\n\n\n\nTrump cardsNon-trump cards\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis order isn’t a commonly seen order; note that the K is lower than the 10!\n\n\nAll other cards are non-trump.\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis applies to all clubs, all spades, and all hearts (minus Q & J).\n\n\n\n\n\n\n\n\n\nPlaying the BigPlaying the Smalls\n\n\nYou typically take this role if you feel like you can win against the other 2 players. You’ll probably want to take this role if you have the higher trumps.\n\n\nIdeally, you want to sandwich the Big. This is so one player can set the stage, the Big plays, and the second Small can react.\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThis section is a work in progress!\n\n\n\n\n\nLatvian\nEnglish\n\n\n\n\n\nButter the bread\n\n\n\n\n\n\n\n\n\n\n\nValues of cardsTrump cardsNon-trump cards\n\n\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦"
-  },
-  {
-    "objectID": "zole.html#what-is-zole",
-    "href": "zole.html#what-is-zole",
-    "title": "Zole",
-    "section": "",
-    "text": "This is a 3-player1 Latvian trick-taking card game. The official rules and terminology were published by the Latvian Zole Game Federation in 1996."
-  },
-  {
-    "objectID": "zole.html#the-goal",
-    "href": "zole.html#the-goal",
-    "title": "Zole",
-    "section": "",
-    "text": "You or your team want to win the most amount of points.\n\n\n\n\n\n\nTip\n\n\n\n\n\nBelow is a list of what each card is valued at:\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\n\nIf you’re the Big you want to win 61+ points and if you’re the Small team you want to win 60+ points. The total amount of winnable points is 120. Find out more information about roles of the Big and the Smalls here."
-  },
-  {
-    "objectID": "zole.html#set-up",
-    "href": "zole.html#set-up",
-    "title": "Zole",
-    "section": "",
-    "text": "This game requires a normal playing deck minus several cards. The deck consists of all of the A, K, Q, J, tens, and nines, plus the 8 and 7 of diamonds; therefore, 26 cards are used for this game.\n\n\nDeal out 8 cards to each player with 2 cards in the middle, faced down.\n\n\n\n\n\n\nImportant\n\n\n\nSince there are so few cards, shuffling is very important to avoid cards sticking together. Once the cards are shuffled, the player on the right needs to cut the deck.\n\n\nYou have the dealer, the first person left of the dealer (Player 1 or P1), and the player right of the dealer (Player 2 or P2).\nYou deal clockwise in the following order:\n\n4 to P1, 4 to P2 & 4 to the dealer\nDeal 2 to the centre\n4 to P1, 4 to P2 & 4 to the dealer\n\nNow that the cards are dealt, the roles have to be determined."
-  },
-  {
-    "objectID": "zole.html#how-to-play",
-    "href": "zole.html#how-to-play",
-    "title": "Zole",
-    "section": "",
-    "text": "You can play one of two roles:\n\nBig\nSmall\n\nThe Smalls team up together against the Big (i.e., 2 vs. 1).\nIdeally, if you think you can win on your own you take the role of the Big; otherwise you take the role of one of the two Smalls.\nStarting to the left of the dealer, P1 will decide if they will take on the role of Big. If they decline then it goes to P2 and if P2 declines it goes to the dealer. Once someone decides to be the Big then the roles are determined for that round. A playe signals that they have decided to be the Big if they collect the 2 cards in the centre. This player starts the game by adding 2 cards from their hand into their points pile, facedown.\n\n\n\nLike most trick-taking games, the play is determined by the first action. Therefore, if the first player puts down a trump then all players must follow suit, unless they are unable and in which case they can play any card. Whoever wins the trick gets to start off the next one and so on and so forth until all cards are played. If you win a trick then you get to collect those cards that were played. The Big has their own points and the Smalls pool their points together. Once all cards have been played then you collect and count your points.\n\n\n\n\n\n\n\n\n\n\nTrump cardsNon-trump cards\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis order isn’t a commonly seen order; note that the K is lower than the 10!\n\n\nAll other cards are non-trump.\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis applies to all clubs, all spades, and all hearts (minus Q & J).\n\n\n\n\n\n\n\n\n\nPlaying the BigPlaying the Smalls\n\n\nYou typically take this role if you feel like you can win against the other 2 players. You’ll probably want to take this role if you have the higher trumps.\n\n\nIdeally, you want to sandwich the Big. This is so one player can set the stage, the Big plays, and the second Small can react."
-  },
-  {
-    "objectID": "zole.html#fun-phrases",
-    "href": "zole.html#fun-phrases",
-    "title": "Zole",
-    "section": "",
-    "text": "Caution\n\n\n\nThis section is a work in progress!\n\n\n\n\n\nLatvian\nEnglish\n\n\n\n\n\nButter the bread"
-  },
-  {
-    "objectID": "zole.html#reference",
-    "href": "zole.html#reference",
-    "title": "Zole",
-    "section": "",
-    "text": "Values of cardsTrump cardsNon-trump cards\n\n\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦"
-  },
-  {
-    "objectID": "zole.html#footnotes",
-    "href": "zole.html#footnotes",
-    "title": "Zole",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nYou can play this game with up to 5 people but if you have more than 3 players then the remaining players have sit out for a round.↩︎"
-  },
-  {
-    "objectID": "bobs-burgers.html",
-    "href": "bobs-burgers.html",
-    "title": "Bob’s Burgers analysis",
-    "section": "",
-    "text": "Bob’s Burgers is a great comfort show of mine. There’s something endearing about a show about a goofy family. Since I love this show so much, I figured why not mix in data analysis and get the best of both worlds? So get ready to go on this Bob’s Burgers analysis in brief with me!"
-  },
-  {
-    "objectID": "bobs-burgers.html#number-of-episodes-per-season",
-    "href": "bobs-burgers.html#number-of-episodes-per-season",
-    "title": "Bob’s Burgers analysis",
-    "section": "Number of episodes per season",
-    "text": "Number of episodes per season\n\n\n\n\n\n\n\n\n\nThis was just to take a quick peak at if we could compare the episodes over seasons. What jumps out is that seasons 1 & 2 are fairly short. It’s reasonable for pilot seasons to be shorter but a quick search shows that there were fewer episodes in season 2 due to a schedule conflict1. We also see a slight dip in season 14 and that’s likely a result of the SAG-AFTRA writer’s strike in 20232."
-  },
-  {
-    "objectID": "bobs-burgers.html#ratings",
-    "href": "bobs-burgers.html#ratings",
-    "title": "Bob’s Burgers analysis",
-    "section": "Ratings",
-    "text": "Ratings\n\nFrequency of ratings\n\nAll episodesBy season\n\n\n\n\n\n\n\n\n\n\n\n\nSummary\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  6.700   7.400   7.600   7.697   8.000   9.600 \n\n\nWe can see from the histogram and summary that most Bob’s Burgers episodes clock in at a 7.7/10 rating.\n\n\n\n\nFacet wrapRidgeline\n\n\n\n\n\n\n\n\n\n\n\nAnd of course, why not break down the ratings by season? But I find it kind of difficult to compare the rating of the seasons against one another … maybe there’s a better way to see it?\n\n\n\n\n\n\n\n\n\n\n\nNULL\n\n\nOh, look at that! In this kind of graph we can see that the distribution of ratings starts to move lower in the later seasons but we can also see very highly rated episodes in seasons 13 and 14.\n\n\n\n\n\n\n\n\nRatings over time\n\nBy release dateBy episode number and season\n\n\n\nLine graphScatter plot and averageScatter plot and trend\n\n\n\n\n\n\n\n\n\n\n\nThis graph looks a little too busy. The other downside with this graph is that it’s hard to tell when a season starts and ends.\n\n\n\n\n\n\n\n\n\n\n\nWe also love a scatter plot when there’s a lot of data points. Here, we see more clumps above the average in the earlier seasons and that they move more under the average in the later seasons. This aligns with the story we see in the ridgeline graph–which makes sense because it’s all the same data.\n\n\n\n\n\n\n\n\n\n\n\nAnd here, by adding a fitted linear model, the trend seen in the previous graph is made more apparent.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI figured changing the perspective from release date to episode might show some sort of pattern, e.g., season premieres or finales scoring higher–spoiler it doesn’t seem so. I also figured this would remove the space when there’s breaks between when episodes are released.\n\n\n\nOf the 14 seasons of Bob’s Burgers, there are 275 episodes. I’m going to now look at the bottom and top 25 episodes. I recognize that it’s only 9% of the episodes but for now this is just a quick look."
-  },
-  {
-    "objectID": "bobs-burgers.html#bottom-25-rated-episodes",
-    "href": "bobs-burgers.html#bottom-25-rated-episodes",
-    "title": "Bob’s Burgers analysis",
-    "section": "Bottom 25 rated episodes",
-    "text": "Bottom 25 rated episodes\n\n\n\n\n\n\n\n\n\nUnsurprisingly, from what we seen in the graphs above we have some repeate offenders from the later seasons showing up in the bottom 25 rated episodes."
-  },
-  {
-    "objectID": "bobs-burgers.html#top-25-rated-episodes",
-    "href": "bobs-burgers.html#top-25-rated-episodes",
-    "title": "Bob’s Burgers analysis",
-    "section": "Top 25 rated episodes",
-    "text": "Top 25 rated episodes\n\n\n\n\n\n\n\n\n\nHowever, it seems like a whole mixed bag in the top 25.\n\n\n\n\n\n\nHmmm …\n\n\n\n\n\nI do have some suspicions about the highest rated episode. In my opinion, this is by far not the best episode. Additionally, I would rank Thanksgiving episodes above the Christmas episodes. I might even rank the Halloween episodes above the Christmas ones … maybe this needs more investigation.\n\n\n\n\nWas this episode a season finale?\n\n\n\n\n\n\n\n\n\nI always just figured shows like to start off with a bang or end on a great note but maybe that’s not the case. This graph only particularly looked at whether the episode was a season finale and this was a surprising find to me. But it’s not like I’m right often enough anyways.\n\n\nCount of ratings\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThe reason is that it’s approximate is because you can’t see the raw rating counts. For example, you would see 2.7K instead of say 2,794 or whatever so take this graph with a grain of salt because that’s all that was available to me.\n\n\nSo my first thought see the top rated episode and that it was in a later season was that maybe there were fewer ratings and that skewered the average. But here, we see that it was the most rated episode!"
-  },
-  {
-    "objectID": "bobs-burgers.html#my-personal-top-25-episodes",
-    "href": "bobs-burgers.html#my-personal-top-25-episodes",
-    "title": "Bob’s Burgers analysis",
-    "section": "My personal top 25 episodes",
-    "text": "My personal top 25 episodes\nSo now that I’ve seen the top 25 top rated episodes, of course now I’m like … do I fit into an average rater of Bob’s Burgers? I picked my top 25 episodes, in no particular order and see how they compare.\n\nDo they fit into the top 25 rated episodes?Do they fit into the 3rd quantile?\n\n\n\n\n\n\n\n\n\n\n\nWhat?! Roughly only half of my top 25 is in the top 25 rated? Ok, but let’s be real Work Hard or Die Trying, Girl has the musical stylings of Carly Simon. CARLY SIMON. I may be blinded by my love of Working Girl and Die Hard and any Bob’s Burgers musical episodes but this hit home to me and is in my constant rerun rotation. If I don’t get off this rant we won’t get anywhere so let’s move on.\n\n\n\n\n\n\n\n\n\n\n\nOk, this makes me feel like I’m only off slightly. And that’s fine! If we all fit the same mould or all liked the same things we’d all be boring. But it is good to see I’m not out to lunch here. Realy quick though, Family Fracas is a great episode. How else would we have gotten this great gem:"
-  },
-  {
-    "objectID": "bobs-burgers.html#credits-appearances",
-    "href": "bobs-burgers.html#credits-appearances",
-    "title": "Bob’s Burgers analysis",
-    "section": "Credits appearances",
-    "text": "Credits appearances\nKind of speaking on biases though, maybe I just like these episodes because of a character or writer? Let’s look into that.\n\n\n\n\n\n\nNote\n\n\n\nI removed the main cast from these plots below because they would obviously all appear in all episodes.\n\n\n\nCharactersCastWritersStaff writers\n\n\n\n\n\n\n\n\n\n\n\nTo be fair though, Teddy does appear in a lot of episodes generally … but he is one of my favourite characters. I’m not super surprised at this graph.\n\n\n\n\n\n\n\n\n\n\n\nRecognizing that some of these folks play multiple voices, I thought H. Jon Benjamin would be higher because he does quite a few voices but I’m not surprised that Teddy’s voice actor would score high due to what we seen in the previous graph.\n\n\n\n\n\n\n\n\n\n\n\nLooking at the data, it looks like Wendy Molyneux and Lizzie Molyneux-Logelin write in the same episodes.\nHere’s a fun table to disply the episode they worked on:\n\n\n\n\n\nSeason\nEpisode\nTitle\n\n\n\n\n3\n3\nBob Fires the Kids\n\n\n3\n21\nBoyz 4 Now\n\n\n4\n5\nTurkey in a Can\n\n\n4\n12\nThe Frond Files\n\n\n5\n4\nDawn of the Peck\n\n\n7\n15\nAin't Miss Debatin'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nAdmittedly, I don’t know te difference between a writer and a staff writer so that’s on my to-do list but they were categorized differently so I figured I should separate them."
-  },
-  {
-    "objectID": "bobs-burgers.html#final-thoughts",
-    "href": "bobs-burgers.html#final-thoughts",
-    "title": "Bob’s Burgers analysis",
-    "section": "Final thoughts …",
-    "text": "Final thoughts …\nBy the end of the day, this is a skewed sample of people who would 1. Most likely enjoy watching Bob’s Burgers and 2. Rate episodes on IMDB so that’s something to keep in mind. It was fun nonetheless to work at some very basic webscraping to pull the data from IMDB, then clean it all up so it was easier to analyze and make these (in my opinion) very beautiful graphs. I guess … you just have to watch Bob’s Burgers to get your own opinion. Happy watching!"
-  },
-  {
-    "objectID": "bobs-burgers.html#footnotes",
-    "href": "bobs-burgers.html#footnotes",
-    "title": "Bob’s Burgers analysis",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nWhy Bob’s Burgers Season 2 Is So Short↩︎\nFox Reveals Fall Premiere Dates, Including the Return of ‘9-1-1: Lone Star’ After Its Strike-Induced 15-Month Hiatus↩︎"
-  },
-  {
-    "objectID": "nyt.html",
-    "href": "nyt.html",
-    "title": "New York Times crossword analysis",
-    "section": "",
-    "text": "My partner and I started doing crosswords sometime in 2017 and we’ve been hooked since. This led us to getting a New York Times (NYT) crossword subscription in 2018. The NYT app shows you when you complete a crossword with a gold or blue star, where the former means you solved it without revealing any answers and before the answers come out. The app also provides some stats but I wanted to see what else is the data telling us."
-  },
-  {
-    "objectID": "nyt.html#background",
-    "href": "nyt.html#background",
-    "title": "New York Times crossword analysis",
-    "section": "",
-    "text": "My partner and I started doing crosswords sometime in 2017 and we’ve been hooked since. This led us to getting a New York Times (NYT) crossword subscription in 2018. The NYT app shows you when you complete a crossword with a gold or blue star, where the former means you solved it without revealing any answers and before the answers come out. The app also provides some stats but I wanted to see what else is the data telling us."
-  },
-  {
-    "objectID": "nyt.html#the-data",
-    "href": "nyt.html#the-data",
-    "title": "New York Times crossword analysis",
-    "section": "The data",
-    "text": "The data\nI found a Python package by Matt Dodge that retrieves your NYT crossword stats and used this to pull in our stats. This data spans from January 01, 2018 to January 23, 2023."
-  },
-  {
-    "objectID": "nyt.html#the-analysis",
-    "href": "nyt.html#the-analysis",
-    "title": "New York Times crossword analysis",
-    "section": "The analysis",
-    "text": "The analysis\n\nI’m using the “Hiroshige” palette from the MetBrewer package.\n\n\nTotal solves\n\nBy check status and dayBy check status, day, and year\n\n\nLet’s start off by looking at total solves. ~I’ll note that these crosswords are mostly a team effort–at least in the beginning.~ If you’re unfamiiliar with crosswords, you’ll notice most solves are on Mondays and that’s because it’s the easiest day and it progressively gets harder with the hardest being the Sunday crossword. This plot also separates the solves which I refer to as “check status” here, meaning thatif it was solved without any reveals and within the time limit it’s a legit solve, otherwise we’ll refer to it as checked–which isn’t as fun.\n\n\n\n\n\n\nSo this plot is telling us that Mondays are the easiest solves with the highest count (by far) but it doesn’t really give us a fulsome picture. If we were to just take this as is, we’d see that about half the Mondays solves are legit, whereas the remaining solves needed an extra little nudge.\n\n\nLet’s look at our progress over the years.\n\n\n\n\n\n\n\n\n\nWe see we’re real keen early on, there’s a bit of a dip in 2020 but we’re up again in 2021 and 2022. Of course, we’re still early in 2023 so there’s always room for potential there. So it looks at a glance that the legit Monday solves are slowly increasing but we can confirm this by digging into the data a little bit more.\n\n\nSolved Monday crosswords\n\nWe’re omitting 2023 from these anlayses because they’ll throw off the mean and regression models since this year in incomplete.\n\n\nMeanLinear model\n\n\nThis line plot shows solved Mondays by their check status. The solid lines show the count of solved Mondays and the dotted lines show the average (or mean) per respective check status.\n\n\n\n\n\n\nWe see here we’re above the average in 2018, 2019, and 2022.\n\n\nThis line plot shows solved Mondays by their check status. The solid lines show the count of solved Mondays and the dotted lines show the regression line (using a linear model).\n\n\n\n\n\n\nThe legit line looks pretty steady here, which is at least that seeing that there is a decrease for the non-legit solves."
-  },
-  {
-    "objectID": "nyt.html#breakdown-by-day",
-    "href": "nyt.html#breakdown-by-day",
-    "title": "New York Times crossword analysis",
-    "section": "Breakdown by day",
-    "text": "Breakdown by day\nThe blue line indicates the time in seconds to complete a crossword, the red dotted line indicates the moving average (yearly), and the orange dashed line indicates the linear model regression. Ideally, and it’s what we’re seeing here, that the time to complete Monday crosswords is decreasing over time. Looking at the time completion is another take on the data to see if there’s any improvement in our crosswording.\n\nMondaysTuesdays\n\n\n\n\n\n\n\n\n\n\nThe data for Tuesdays isn’t as good as for the Mondays because it was only recently we graduated to being able to do Tuesdays consistently."
-  },
-  {
-    "objectID": "nyt.html#backtracking",
-    "href": "nyt.html#backtracking",
-    "title": "New York Times crossword analysis",
-    "section": "Backtracking",
-    "text": "Backtracking\nI wanted to take a peek at one more thing. So as we’ve become more comfortable with crosswords we’ve been going back into the archives–and sometimes I’ve gone into the archives on my own–to do Mondays. So for this last plot, we look at solved crosswords that weren’t checked or had the answers revealed. This plot supports and potentially explains some weird behaviours seen in the above plots. This plot also includes a dotted line to indicate the average number of solved crosswords that were not checked or revealed from 2018 to 2023.\n\n\n\n\n\n\nWhy this plot is important is to consider things outside of what you see in the data to explain the data. But this is only the beginning of data exploration!\nI hope you’ve enjoyed this brief analysis of our NYT crossword journey :smile:"
   }
 ]

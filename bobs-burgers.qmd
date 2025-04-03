@@ -494,6 +494,6 @@ Ok, this makes me feel like I'm only off slightly. And that's fine! If we all fi
 
 :::
 
-## Final thoughts ...
+## Final thoughts ... 
 
 By the end of the day, this is a skewed sample of people who would 1. Most likely enjoy watching Bob's Burgers and 2. Rate episodes on IMDB so that's something to keep in mind. It was fun nonetheless to work at some very basic webscraping to pull the data from IMDB, then clean it all up so it was easier to analyze and make these (in my opinion) very beautiful graphs. I guess ... you just have to watch Bob's Burgers to get your own opinion. Happy watching!

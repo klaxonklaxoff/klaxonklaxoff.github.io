@@ -1,101 +1,10 @@
 [
   {
-    "objectID": "bobs-burgers.html",
-    "href": "bobs-burgers.html",
-    "title": "Bob’s Burgers analysis",
-    "section": "",
-    "text": "Bob’s Burgers is a great comfort show of mine. There’s something endearing about a show about a goofy family. Since I love this show so much, I figured why not mix in data analysis and get the best of both worlds? So get ready to go on this Bob’s Burgers analysis in brief with me!"
-  },
-  {
-    "objectID": "bobs-burgers.html#number-of-episodes-per-season",
-    "href": "bobs-burgers.html#number-of-episodes-per-season",
-    "title": "Bob’s Burgers analysis",
-    "section": "Number of episodes per season",
-    "text": "Number of episodes per season\n\n\n\n\n\n\n\n\n\nThis was just to take a quick peak at if we could compare the episodes over seasons. What jumps out is that seasons 1 & 2 are fairly short. It’s reasonable for pilot seasons to be shorter but a quick search shows that there were fewer episodes in season 2 due to a schedule conflict1. We also see a slight dip in season 14 and that’s likely a result of the SAG-AFTRA writer’s strike in 20232."
-  },
-  {
-    "objectID": "bobs-burgers.html#ratings",
-    "href": "bobs-burgers.html#ratings",
-    "title": "Bob’s Burgers analysis",
-    "section": "Ratings",
-    "text": "Ratings\n\nFrequency of ratings\n\nAll episodesBy season\n\n\n\n\n\n\n\n\n\n\n\n\nSummary\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  6.700   7.400   7.600   7.683   8.000   9.600 \n\n\nWe can see from the histogram and summary that most Bob’s Burgers episodes clock in at a 7.7/10 rating.\n\n\n\n\nFacet wrapRidgeline\n\n\n\n\n\n\n\n\n\n\n\nAnd of course, why not break down the ratings by season? But I find it kind of difficult to compare the rating of the seasons against one another … maybe there’s a better way to see it?\n\n\n\n\n\n\n\n\n\n\n\nNULL\n\n\nOh, look at that! In this kind of graph we can see that the distribution of ratings starts to move lower in the later seasons but we can also see very highly rated episodes in seasons 13 and 14.\n\n\n\n\n\n\n\n\nRatings over time\n\nBy release dateBy episode number and season\n\n\n\nLine graphScatter plot and averageScatter plot and trend\n\n\n\n\n\n\n\n\n\n\n\nThis graph looks a little too busy. The other downside with this graph is that it’s hard to tell when a season starts and ends.\n\n\n\n\n\n\n\n\n\n\n\nWe also love a scatter plot when there’s a lot of data points. Here, we see more clumps above the average in the earlier seasons and that they move more under the average in the later seasons. This aligns with the story we see in the ridgeline graph–which makes sense because it’s all the same data.\n\n\n\n\n\n\n\n\n\n\n\nAnd here, by adding a fitted linear model, the trend seen in the previous graph is made more apparent.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI figured changing the perspective from release date to episode might show some sort of pattern, e.g., season premieres or finales scoring higher–spoiler it doesn’t seem so. I also figured this would remove the space when there’s breaks between when episodes are released.\n\n\n\nOf the 14 seasons of Bob’s Burgers, there are 275 episodes. I’m going to now look at the bottom and top 25 episodes. I recognize that it’s only 9% of the episodes but for now this is just a quick look."
-  },
-  {
-    "objectID": "bobs-burgers.html#bottom-25-rated-episodes",
-    "href": "bobs-burgers.html#bottom-25-rated-episodes",
-    "title": "Bob’s Burgers analysis",
-    "section": "Bottom 25 rated episodes",
-    "text": "Bottom 25 rated episodes\n\n\n\n\n\n\n\n\n\nUnsurprisingly, from what we seen in the graphs above we have some repeate offenders from the later seasons showing up in the bottom 25 rated episodes."
-  },
-  {
-    "objectID": "bobs-burgers.html#top-25-rated-episodes",
-    "href": "bobs-burgers.html#top-25-rated-episodes",
-    "title": "Bob’s Burgers analysis",
-    "section": "Top 25 rated episodes",
-    "text": "Top 25 rated episodes\n\n\n\n\n\n\n\n\n\nHowever, it seems like a whole mixed bag in the top 25.\n\n\n\n\n\n\nHmmm …\n\n\n\n\n\nI do have some suspicions about the highest rated episode. In my opinion, this is by far not the best episode. Additionally, I would rank Thanksgiving episodes above the Christmas episodes. I might even rank the Halloween episodes above the Christmas ones … maybe this needs more investigation.\n\n\n\n\nWas this episode a season finale?\n\n\n\n\n\n\n\n\n\nI always just figured shows like to start off with a bang or end on a great note but maybe that’s not the case. This graph only particularly looked at whether the episode was a season finale and this was a surprising find to me. But it’s not like I’m right often enough anyways.\n\n\nCount of ratings\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThe reason is that it’s approximate is because you can’t see the raw rating counts. For example, you would see 2.7K instead of say 2,794 or whatever so take this graph with a grain of salt because that’s all that was available to me.\n\n\nSo my first thought see the top rated episode and that it was in a later season was that maybe there were fewer ratings and that skewered the average. But here, we see that it was the most rated episode!"
-  },
-  {
-    "objectID": "bobs-burgers.html#my-personal-top-25-episodes",
-    "href": "bobs-burgers.html#my-personal-top-25-episodes",
-    "title": "Bob’s Burgers analysis",
-    "section": "My personal top 25 episodes",
-    "text": "My personal top 25 episodes\nSo now that I’ve seen the top 25 top rated episodes, of course now I’m like … do I fit into an average rater of Bob’s Burgers? I picked my top 25 episodes, in no particular order and see how they compare.\n\nDo they fit into the top 25 rated episodes?Do they fit into the 3rd quantile?\n\n\n\n\n\n\n\n\n\n\n\nWhat?! Roughly only half of my top 25 is in the top 25 rated? Ok, but let’s be real Work Hard or Die Trying, Girl has the musical stylings of Carly Simon. CARLY SIMON. I may be blinded by my love of Working Girl and Die Hard and any Bob’s Burgers musical episodes but this hit home to me and is in my constant rerun rotation. If I don’t get off this rant we won’t get anywhere so let’s move on.\n\n\n\n\n\n\n\n\n\n\n\nOk, this makes me feel like I’m only off slightly. And that’s fine! If we all fit the same mould or all liked the same things we’d all be boring. But it is good to see I’m not out to lunch here. Realy quick though, Family Fracas is a great episode. How else would we have gotten this great gem:"
-  },
-  {
-    "objectID": "bobs-burgers.html#final-thoughts",
-    "href": "bobs-burgers.html#final-thoughts",
-    "title": "Bob’s Burgers analysis",
-    "section": "Final thoughts …",
-    "text": "Final thoughts …\nBy the end of the day, this is a skewed sample of people who would 1. Most likely enjoy watching Bob’s Burgers and 2. Rate episodes on IMDB so that’s something to keep in mind. It was fun nonetheless to work at some very basic webscraping to pull the data from IMDB, then clean it all up so it was easier to analyze and make these (in my opinion) very beautiful graphs. I guess … you just have to watch Bob’s Burgers to get your own opinion. Happy watching!"
-  },
-  {
-    "objectID": "bobs-burgers.html#footnotes",
-    "href": "bobs-burgers.html#footnotes",
-    "title": "Bob’s Burgers analysis",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nWhy Bob’s Burgers Season 2 Is So Short↩︎\nFox Reveals Fall Premiere Dates, Including the Return of ‘9-1-1: Lone Star’ After Its Strike-Induced 15-Month Hiatus↩︎"
-  },
-  {
-    "objectID": "action_movies.html",
-    "href": "action_movies.html",
-    "title": "Accelerate into action (movies)",
-    "section": "",
-    "text": "What makes an action movie an action movie? An action movie can be defined as a “a fast-paced, pared down, goal-orientated, narrative structure”.1"
-  },
-  {
-    "objectID": "action_movies.html#honourable-mentions-to",
-    "href": "action_movies.html#honourable-mentions-to",
-    "title": "Accelerate into action (movies)",
-    "section": "Honourable mentions to:",
-    "text": "Honourable mentions to:\n\nViola Davis (Woman King)\nAngelina Jolie (Tomb Raider, Eternals, Salt, etc.)\nSandra Bullock (Miss Congeniality)\nJennifer Lawrence (Hunger Games)\nGal Gadot (Wonder Woman)"
-  },
-  {
-    "objectID": "action_movies.html#future-thoughts",
-    "href": "action_movies.html#future-thoughts",
-    "title": "Accelerate into action (movies)",
-    "section": "Future thoughts …",
-    "text": "Future thoughts …\n\nLead roles vs. in the cast\nDirector or other roles\nDelve deeper into subgenres:\n\nSuperheroes\nBook-to-movie\n\nIntersectionality\n\nBechdal test"
-  },
-  {
-    "objectID": "action_movies.html#sources",
-    "href": "action_movies.html#sources",
-    "title": "Accelerate into action (movies)",
-    "section": "Sources",
-    "text": "Sources\n\nIMBD, 2015-03-17"
-  },
-  {
-    "objectID": "action_movies.html#footnotes",
-    "href": "action_movies.html#footnotes",
-    "title": "Accelerate into action (movies)",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nhttps://researchguides.dartmouth.edu/filmgenres/actionfilms↩︎\nthe very slight difference between action and adventure is that former is associated with a particular kind of scene or spectacle; whereas the latter implies a story.↩︎"
-  },
-  {
     "objectID": "zole.html",
     "href": "zole.html",
     "title": "Zole",
     "section": "",
-    "text": "Legend\n\n\n\n\n\nI’ll be using the following shorthand in this document:\n\n\n\n1/Ace\nA\n\n\nKing\nK\n\n\nQueen\nQ\n\n\nJack\nJ\n\n\n\n\n\n\n\n\nThis is a 3-player1 Latvian trick-taking card game. The official rules and terminology were published by the Latvian Zole Game Federation in 1996.\n\n\n\nYou or your team want to win the most amount of points.\n\n\n\n\n\n\nTip\n\n\n\n\n\nBelow is a list of what each card is valued at:\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\n\nIf you’re the Big you want to win 61+ points and if you’re the Small team you want to win 60+ points. The total amount of winnable points is 120. Find out more information about roles of the Big and the Smalls here.\n\n\n\nThis game requires a normal playing deck minus several cards. The deck consists of all of the A, K, Q, J, tens, and nines, plus the 8 and 7 of diamonds; therefore, 26 cards are used for this game.\n\n\nDeal out 8 cards to each player with 2 cards in the middle, faced down.\n\n\n\n\n\n\nImportant\n\n\n\nSince there are so few cards, shuffling is very important to avoid cards sticking together. Once the cards are shuffled, the player on the right needs to cut the deck.\n\n\nYou have the dealer, the first person left of the dealer (Player 1 or P1), and the player right of the dealer (Player 2 or P2).\nYou deal clockwise in the following order:\n\n4 to P1, 4 to P2 & 4 to the dealer\nDeal 2 to the centre\n4 to P1, 4 to P2 & 4 to the dealer\n\nNow that the cards are dealt, the roles have to be determined.\n\n\n\n\n\n\nYou can play one of two roles:\n\nBig\nSmall\n\nThe Smalls team up together against the Big (i.e., 2 vs. 1).\nIdeally, if you think you can win on your own you take the role of the Big; otherwise you take the role of one of the two Smalls.\n\n\n\n\n\n\nFun fact\n\n\n\n\n\nThe pile in the middle is referred to as the ‘lielais’.\n\n\n\nStarting to the left of the dealer, P1 will decide if they will take on the role of Big. If they decline then it goes to P2 and if P2 declines it goes to the dealer. Once someone decides to be the Big then the roles are determined for that round. A playe signals that they have decided to be the Big if they collect the 2 cards in the centre. This player starts the game by adding 2 cards from their hand into their points pile, facedown.\n\n\n\n\n\n\nWhat happens when no one picks the centre deck?\n\n\n\nWhen this happens, we being what’s called ‘Reverse Zole’ where now the goal is to get the lowest points. Starting from the last player they will first decide whether to take the pile or let it go to the second player. If the last and second player decide not to pick up the centre pile then the first player is forced to take it. After, the game is played as normal aside from the goal of getting the least amount of points.\n\n\n\n\n\nLike most trick-taking games, the play is determined by the first action. Therefore, if the first player puts down a trump then all players must follow suit, unless they are unable and in which case they can play any card. Whoever wins the trick gets to start off the next one and so on and so forth until all cards are played. If you win a trick then you get to collect those cards that were played. The Big has their own points and the Smalls pool their points together. Once all cards have been played then you collect and count your points.\n\n\n\n\n\n\n\n\n\n\nTrump cardsNon-trump cards\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis order isn’t a commonly seen order; note that the K is lower than the 10!\n\n\nAll other cards are non-trump.\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis applies to all clubs, all spades, and all hearts (minus Q & J).\n\n\n\n\n\n\n\n\n\nPlaying the BigPlaying the Smalls\n\n\nYou typically take this role if you feel like you can win against the other 2 players. You’ll probably want to take this role if you have the higher trumps.\n\n\nIdeally, you want to sandwich the Big. This is so one player can set the stage, the Big plays, and the second Small can react.\n\n\n\n\n\n\n\nThe game is concluded when all cards have been played. If you are playing standard zole, you or you and your teammate need to score at least 61 points to win. If it’s a tie, then the win goes to the Big. If you’re playing reverse then you or you and your teammate want to score less than 60.\nIf playing multiple games, points are allocated x.\nAdditionally, if there is a difference of 30 points because the winner party and the losing party then x.\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThis section is a work in progress!\n\n\n\n\n\nLatvian\nEnglish\n\n\n\n\n\nButter the bread\n\n\n\n\n\n\n\n\n\n\n\nValues of cardsTrump cardsNon-trump cards\n\n\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦"
+    "text": "NoteLegend\n\n\n\n\n\nI’ll be using the following shorthand in this document:\n\n\n\n1/Ace\nA\n\n\nKing\nK\n\n\nQueen\nQ\n\n\nJack\nJ\n\n\n\n\n\n\n\n\nThis is a 3-player1 Latvian trick-taking card game. The official rules and terminology were published by the Latvian Zole Game Federation in 1996.\n\n\n\n\nYou or your team want to win the most amount of points. You can find the values listed here\nIf you’re the Big you want to win 61+ points and if you’re the Small team you want to win 60+ points. The total amount of winnable points is 120. Find out more information about roles of the Big and the Smalls here.\n\n\n\nThis game requires a normal playing deck minus several cards. The deck consists of all of the A, K, Q, J, tens, and nines, plus the 8 and 7 of diamonds; therefore, 26 cards are used for this game.\n\n\nDeal out 8 cards to each player with 2 cards in the middle, faced down.\n\n\n\n\n\n\nImportant\n\n\n\nSince there are so few cards, shuffling is very important to avoid cards sticking together. Once the cards are shuffled, the player on the right needs to cut the deck. Additionally, when counting points at the end, try to avoid grouping similar cards together as this might also stick cards together.\n\n\nYou have the dealer, the first person left of the dealer (Player 1 or P1), and the player right of the dealer (Player 2 or P2).\nYou deal clockwise in the following order:\n\n4 to P1, 4 to P2 & 4 to the dealer\nDeal 2 to the centre\n2 to P1, 42 to P2 & 2 to the dealer\n2 to P1, 42 to P2 & 2 to the dealer\n\nNow that the cards are dealt, the roles have to be determined. Dealing is done clockwise; therefore, the dealer for the next game is left of the previous dealer.\n\n\n\n\n\n\nYou can play one of two roles:\n\nBig\nSmall\n\nThe Smalls team up together against the Big (i.e., 2 vs. 1).\nIdeally, if you think you can win on your own you take the role of the Big; otherwise you take the role of one of the two Smalls.\n\n\n\n\n\n\nTipFun fact\n\n\n\n\n\nThe pile in the middle is referred to as the lielais.\n\n\n\nStarting to the left of the dealer, P1 will decide if they will take on the role of Big. If they decline then it goes to P2 and if P2 declines it goes to the dealer.\nOnce someone decides to be the Big then the roles are determined for that round. A player signals that they have decided to be the Big if they collect the 2 cards in the centre. This player starts the game by adding 2 cards from their hand into their points pile, facedown.\nAfter the big has placed their 2 cards facedown, the player to the left of the dealer starts the first round.\n\n\n\n\n\n\nNoteWhat if no one chooses to be the Big?\n\n\n\n\n\nThis variant is called Reverse Zole.\nThe rules change and instead of wanting the most points, you want to win the least amount of hands, as the player with the least amount of hands wins. In this variant, all players are playing independently–meaning there are no teams in this round. The first 2 rounds will include the middle cards. As per usual, the player left of the dealer will start. Once all the cards in this round have been played, you can check which player has the winning card. Flip one of the cards from the middle pile. If this beats the highest card, then that pile is put off to the side and no one takes the round. If the winning player still has the highest card that round goes into their pile. You can think of this as the first 2 rounds have a wild card to potentially save the winning player from taking the round.\nWhen you win a pile you want to group the cards into separate piles for each round so other players can see how many rounds you’ve won. The game finishes when all the cards have been played. The player with the most amount of rounds won loses this round.\nIf there is a tie of the number of rounds, the tiebreaker is determined by the values of the points of the cards won.\n\n\n\n\n\n\nLike most trick-taking games, the play is determined by the first action. Therefore, if the first player puts down a trump then all players must follow suit, unless they are unable and in which case they can play any card. Whoever wins the trick gets to start off the next one and so on and so forth until all cards are played. If you win a trick then you get to collect those cards that were played.\n\n\n\n\n\n\nImportant\n\n\n\nYou can only look back at the last 3 cards. This means you’ll have to remember what cards where played!\n\n\nThe Big has their own points and the Smalls pool their points together. Once all cards have been played then you collect and count your points.\n\n\n\n\n\n\n\n\n\n\nPlaying the BigPlaying the Smalls\n\n\nYou typically take this role if you feel like you can win against the other 2 players. You’ll probably want to take this role if you have the higher trumps.\nWhen you’re the Big, you know what cards are shared by the other two. If you watch how they play you can guess who might have the higher scoring cards or who might have the trumps between the two of them. While, the 2 Smalls don’t know what cards the other has–and there is no table-talking between them during the game. Let’s imagine you’re the third and last player to decide to take the middle pile. In this scenario, you have a little more than half the trumps. If the other two quickly decided they didn’t want the pile, it may be because they don’t have strong cards or trumps. You can deduce that it the remaining is equally split between the 2. If this is the case you may decide to start with (low) trumps to flush out the trumps in their hands. Even if they start with a non-trump and you only have trumps you would still win the hands despite the round not starting with a trump. Though it may not be a great play to start with trumps as a Small, it could be a strategy as a Big.\nWhen burying cards, it’s best to secure higher-scoring cards. However, it is noteworthy that the A♦ is a high-scoring card but it’s also a trump. So it may be worth holding onto it and using it to trump and score within the game–but this is a gamble!\n\n\nIdeally, you want to sandwich the Big. This is so one player can set the stage, the Big plays, and the second Small can react. For example, the first Small could play a high-scoring card, force the Big to try to take it and the Second Small can gauge whether they can take it or not.\nThere are ways that you can signal to your partner what kind of cards you have which would not be considered as table talk. E.g., if you keep playing trump it might signal that you should be the anchor and may have the better chance to beat the Big if the first Small plays a high-scoring card.\nWhen first starting, it may not be a good idea to play a trump. This is moreso true for a Small because it then forces all players to follow suit and your partner may want to keep their trump for a future round.\n\n\n\n\n\n\n\nThe game is concluded when all cards have been played. If you are playing standard zole, you or you and your teammate need to score at least 61 points to win. If it’s a tie, then the win goes to the Big. If you’re playing reverse then you or you and your teammate want to score less than 60.\n\n\n\n\nRemember that Q♣ is the strongest card and 7♦ is the weakest trump card.\nIt might make it easier to learn and remember the cards if you separate the trumps from non-trumps in your hand.\nIf you think you’re going to lose the round, you might as well dump a low scoring card–if possible. This works the other way for Reverse Zole, where if you see another player play a high card it would be good to sneak your highest card so that you’re not at risk in future rounds.\n\n\n\n\n\n\n\n\nThis version is called Student Zole.\n\n\n\nThe extra player deals (and bartends) in rotation.\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThis section is a work in progress!\n\n\n\n\n\n\n\n\n\n\nLatvian\nEnglish\nMeaning\n\n\n\n\nTrumps prasi, trumps jāliek\nTrump is called, trump has to be laid\nIf a trump is played then it must be followed suit\n\n\nSviesta maizīte\nButtered bread\nCashing in a lot of points\n\n\n\n\n\n\n\nEnglishLatvian\n\n\n\nValues of cardsTrump cardsNon-trump cards\n\n\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;=9\n0\n\n\n\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis order isn’t a commonly seen order; note that the K is lower than the 10!\n\n\nAll other cards are non-trump.\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nA\n\n\n2\n10\n\n\n3\nK\n\n\n4\n9\n\n\n5\n8\n\n\n6\n7\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis applies to all clubs, all spades, and all hearts (minus Q & J).\n\n\n\n\n\n\n\n\nValues of cardsTrump cardsNon-trump cards\n\n\n\n\n\nCard\nValue\n\n\n\n\n1\n11\n\n\n10\n10\n\n\nK\n4\n\n\nD\n3\n\n\nS\n2\n\n\n&lt;=9\n0\n\n\n\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nD♣\n\n\n2\nD♠\n\n\n3\nD♥\n\n\n4\nD♦\n\n\n5\nS♣\n\n\n6\nS♠\n\n\n7\nS♥\n\n\n8\nS♦\n\n\n9\n1♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis order isn’t a commonly seen order; note that the K is lower than the 10!\n\n\nAll other cards are non-trump.\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n1\n\n\n2\n10\n\n\n3\nK\n\n\n4\n9\n\n\n5\n8\n\n\n6\n7\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis applies to all clubs, all spades, and all hearts (minus Q & J)."
   },
   {
     "objectID": "zole.html#what-is-zole",
@@ -109,42 +18,56 @@
     "href": "zole.html#the-goal",
     "title": "Zole",
     "section": "",
-    "text": "You or your team want to win the most amount of points.\n\n\n\n\n\n\nTip\n\n\n\n\n\nBelow is a list of what each card is valued at:\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\n\nIf you’re the Big you want to win 61+ points and if you’re the Small team you want to win 60+ points. The total amount of winnable points is 120. Find out more information about roles of the Big and the Smalls here."
+    "text": "You or your team want to win the most amount of points. You can find the values listed here\nIf you’re the Big you want to win 61+ points and if you’re the Small team you want to win 60+ points. The total amount of winnable points is 120. Find out more information about roles of the Big and the Smalls here."
   },
   {
     "objectID": "zole.html#set-up",
     "href": "zole.html#set-up",
     "title": "Zole",
     "section": "",
-    "text": "This game requires a normal playing deck minus several cards. The deck consists of all of the A, K, Q, J, tens, and nines, plus the 8 and 7 of diamonds; therefore, 26 cards are used for this game.\n\n\nDeal out 8 cards to each player with 2 cards in the middle, faced down.\n\n\n\n\n\n\nImportant\n\n\n\nSince there are so few cards, shuffling is very important to avoid cards sticking together. Once the cards are shuffled, the player on the right needs to cut the deck.\n\n\nYou have the dealer, the first person left of the dealer (Player 1 or P1), and the player right of the dealer (Player 2 or P2).\nYou deal clockwise in the following order:\n\n4 to P1, 4 to P2 & 4 to the dealer\nDeal 2 to the centre\n4 to P1, 4 to P2 & 4 to the dealer\n\nNow that the cards are dealt, the roles have to be determined."
+    "text": "This game requires a normal playing deck minus several cards. The deck consists of all of the A, K, Q, J, tens, and nines, plus the 8 and 7 of diamonds; therefore, 26 cards are used for this game.\n\n\nDeal out 8 cards to each player with 2 cards in the middle, faced down.\n\n\n\n\n\n\nImportant\n\n\n\nSince there are so few cards, shuffling is very important to avoid cards sticking together. Once the cards are shuffled, the player on the right needs to cut the deck. Additionally, when counting points at the end, try to avoid grouping similar cards together as this might also stick cards together.\n\n\nYou have the dealer, the first person left of the dealer (Player 1 or P1), and the player right of the dealer (Player 2 or P2).\nYou deal clockwise in the following order:\n\n4 to P1, 4 to P2 & 4 to the dealer\nDeal 2 to the centre\n2 to P1, 42 to P2 & 2 to the dealer\n2 to P1, 42 to P2 & 2 to the dealer\n\nNow that the cards are dealt, the roles have to be determined. Dealing is done clockwise; therefore, the dealer for the next game is left of the previous dealer."
   },
   {
     "objectID": "zole.html#how-to-play",
     "href": "zole.html#how-to-play",
     "title": "Zole",
     "section": "",
-    "text": "You can play one of two roles:\n\nBig\nSmall\n\nThe Smalls team up together against the Big (i.e., 2 vs. 1).\nIdeally, if you think you can win on your own you take the role of the Big; otherwise you take the role of one of the two Smalls.\n\n\n\n\n\n\nFun fact\n\n\n\n\n\nThe pile in the middle is referred to as the ‘lielais’.\n\n\n\nStarting to the left of the dealer, P1 will decide if they will take on the role of Big. If they decline then it goes to P2 and if P2 declines it goes to the dealer. Once someone decides to be the Big then the roles are determined for that round. A playe signals that they have decided to be the Big if they collect the 2 cards in the centre. This player starts the game by adding 2 cards from their hand into their points pile, facedown.\n\n\n\n\n\n\nWhat happens when no one picks the centre deck?\n\n\n\nWhen this happens, we being what’s called ‘Reverse Zole’ where now the goal is to get the lowest points. Starting from the last player they will first decide whether to take the pile or let it go to the second player. If the last and second player decide not to pick up the centre pile then the first player is forced to take it. After, the game is played as normal aside from the goal of getting the least amount of points.\n\n\n\n\n\nLike most trick-taking games, the play is determined by the first action. Therefore, if the first player puts down a trump then all players must follow suit, unless they are unable and in which case they can play any card. Whoever wins the trick gets to start off the next one and so on and so forth until all cards are played. If you win a trick then you get to collect those cards that were played. The Big has their own points and the Smalls pool their points together. Once all cards have been played then you collect and count your points.\n\n\n\n\n\n\n\n\n\n\nTrump cardsNon-trump cards\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis order isn’t a commonly seen order; note that the K is lower than the 10!\n\n\nAll other cards are non-trump.\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis applies to all clubs, all spades, and all hearts (minus Q & J).\n\n\n\n\n\n\n\n\n\nPlaying the BigPlaying the Smalls\n\n\nYou typically take this role if you feel like you can win against the other 2 players. You’ll probably want to take this role if you have the higher trumps.\n\n\nIdeally, you want to sandwich the Big. This is so one player can set the stage, the Big plays, and the second Small can react."
+    "text": "You can play one of two roles:\n\nBig\nSmall\n\nThe Smalls team up together against the Big (i.e., 2 vs. 1).\nIdeally, if you think you can win on your own you take the role of the Big; otherwise you take the role of one of the two Smalls.\n\n\n\n\n\n\nTipFun fact\n\n\n\n\n\nThe pile in the middle is referred to as the lielais.\n\n\n\nStarting to the left of the dealer, P1 will decide if they will take on the role of Big. If they decline then it goes to P2 and if P2 declines it goes to the dealer.\nOnce someone decides to be the Big then the roles are determined for that round. A player signals that they have decided to be the Big if they collect the 2 cards in the centre. This player starts the game by adding 2 cards from their hand into their points pile, facedown.\nAfter the big has placed their 2 cards facedown, the player to the left of the dealer starts the first round.\n\n\n\n\n\n\nNoteWhat if no one chooses to be the Big?\n\n\n\n\n\nThis variant is called Reverse Zole.\nThe rules change and instead of wanting the most points, you want to win the least amount of hands, as the player with the least amount of hands wins. In this variant, all players are playing independently–meaning there are no teams in this round. The first 2 rounds will include the middle cards. As per usual, the player left of the dealer will start. Once all the cards in this round have been played, you can check which player has the winning card. Flip one of the cards from the middle pile. If this beats the highest card, then that pile is put off to the side and no one takes the round. If the winning player still has the highest card that round goes into their pile. You can think of this as the first 2 rounds have a wild card to potentially save the winning player from taking the round.\nWhen you win a pile you want to group the cards into separate piles for each round so other players can see how many rounds you’ve won. The game finishes when all the cards have been played. The player with the most amount of rounds won loses this round.\nIf there is a tie of the number of rounds, the tiebreaker is determined by the values of the points of the cards won.\n\n\n\n\n\n\nLike most trick-taking games, the play is determined by the first action. Therefore, if the first player puts down a trump then all players must follow suit, unless they are unable and in which case they can play any card. Whoever wins the trick gets to start off the next one and so on and so forth until all cards are played. If you win a trick then you get to collect those cards that were played.\n\n\n\n\n\n\nImportant\n\n\n\nYou can only look back at the last 3 cards. This means you’ll have to remember what cards where played!\n\n\nThe Big has their own points and the Smalls pool their points together. Once all cards have been played then you collect and count your points.\n\n\n\n\n\n\n\n\n\n\nPlaying the BigPlaying the Smalls\n\n\nYou typically take this role if you feel like you can win against the other 2 players. You’ll probably want to take this role if you have the higher trumps.\nWhen you’re the Big, you know what cards are shared by the other two. If you watch how they play you can guess who might have the higher scoring cards or who might have the trumps between the two of them. While, the 2 Smalls don’t know what cards the other has–and there is no table-talking between them during the game. Let’s imagine you’re the third and last player to decide to take the middle pile. In this scenario, you have a little more than half the trumps. If the other two quickly decided they didn’t want the pile, it may be because they don’t have strong cards or trumps. You can deduce that it the remaining is equally split between the 2. If this is the case you may decide to start with (low) trumps to flush out the trumps in their hands. Even if they start with a non-trump and you only have trumps you would still win the hands despite the round not starting with a trump. Though it may not be a great play to start with trumps as a Small, it could be a strategy as a Big.\nWhen burying cards, it’s best to secure higher-scoring cards. However, it is noteworthy that the A♦ is a high-scoring card but it’s also a trump. So it may be worth holding onto it and using it to trump and score within the game–but this is a gamble!\n\n\nIdeally, you want to sandwich the Big. This is so one player can set the stage, the Big plays, and the second Small can react. For example, the first Small could play a high-scoring card, force the Big to try to take it and the Second Small can gauge whether they can take it or not.\nThere are ways that you can signal to your partner what kind of cards you have which would not be considered as table talk. E.g., if you keep playing trump it might signal that you should be the anchor and may have the better chance to beat the Big if the first Small plays a high-scoring card.\nWhen first starting, it may not be a good idea to play a trump. This is moreso true for a Small because it then forces all players to follow suit and your partner may want to keep their trump for a future round."
   },
   {
     "objectID": "zole.html#ending-the-game",
     "href": "zole.html#ending-the-game",
     "title": "Zole",
     "section": "",
-    "text": "The game is concluded when all cards have been played. If you are playing standard zole, you or you and your teammate need to score at least 61 points to win. If it’s a tie, then the win goes to the Big. If you’re playing reverse then you or you and your teammate want to score less than 60.\nIf playing multiple games, points are allocated x.\nAdditionally, if there is a difference of 30 points because the winner party and the losing party then x."
+    "text": "The game is concluded when all cards have been played. If you are playing standard zole, you or you and your teammate need to score at least 61 points to win. If it’s a tie, then the win goes to the Big. If you’re playing reverse then you or you and your teammate want to score less than 60."
+  },
+  {
+    "objectID": "zole.html#tips",
+    "href": "zole.html#tips",
+    "title": "Zole",
+    "section": "",
+    "text": "Remember that Q♣ is the strongest card and 7♦ is the weakest trump card.\nIt might make it easier to learn and remember the cards if you separate the trumps from non-trumps in your hand.\nIf you think you’re going to lose the round, you might as well dump a low scoring card–if possible. This works the other way for Reverse Zole, where if you see another player play a high card it would be good to sneak your highest card so that you’re not at risk in future rounds."
+  },
+  {
+    "objectID": "zole.html#variants",
+    "href": "zole.html#variants",
+    "title": "Zole",
+    "section": "",
+    "text": "This version is called Student Zole.\n\n\n\nThe extra player deals (and bartends) in rotation."
   },
   {
     "objectID": "zole.html#fun-phrases",
     "href": "zole.html#fun-phrases",
     "title": "Zole",
     "section": "",
-    "text": "Caution\n\n\n\nThis section is a work in progress!\n\n\n\n\n\nLatvian\nEnglish\n\n\n\n\n\nButter the bread"
+    "text": "Caution\n\n\n\nThis section is a work in progress!\n\n\n\n\n\n\n\n\n\n\nLatvian\nEnglish\nMeaning\n\n\n\n\nTrumps prasi, trumps jāliek\nTrump is called, trump has to be laid\nIf a trump is played then it must be followed suit\n\n\nSviesta maizīte\nButtered bread\nCashing in a lot of points"
   },
   {
     "objectID": "zole.html#reference",
     "href": "zole.html#reference",
     "title": "Zole",
     "section": "",
-    "text": "Values of cardsTrump cardsNon-trump cards\n\n\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;9\n0\n\n\n\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n10♦\n\n\n2\nK♦\n\n\n3\n9♦\n\n\n4\n8♦\n\n\n5\n7♦"
+    "text": "EnglishLatvian\n\n\n\nValues of cardsTrump cardsNon-trump cards\n\n\n\n\n\nCard\nValue\n\n\n\n\nA\n11\n\n\n10\n10\n\n\nK\n4\n\n\nQ\n3\n\n\nJ\n2\n\n\n&lt;=9\n0\n\n\n\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nQ♣\n\n\n2\nQ♠\n\n\n3\nQ♥\n\n\n4\nQ♦\n\n\n5\nJ♣\n\n\n6\nJ♠\n\n\n7\nJ♥\n\n\n8\nJ♦\n\n\n9\nA♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis order isn’t a commonly seen order; note that the K is lower than the 10!\n\n\nAll other cards are non-trump.\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nA\n\n\n2\n10\n\n\n3\nK\n\n\n4\n9\n\n\n5\n8\n\n\n6\n7\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis applies to all clubs, all spades, and all hearts (minus Q & J).\n\n\n\n\n\n\n\n\nValues of cardsTrump cardsNon-trump cards\n\n\n\n\n\nCard\nValue\n\n\n\n\n1\n11\n\n\n10\n10\n\n\nK\n4\n\n\nD\n3\n\n\nS\n2\n\n\n&lt;=9\n0\n\n\n\n\n\nBelow is a list of the trumps cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\nD♣\n\n\n2\nD♠\n\n\n3\nD♥\n\n\n4\nD♦\n\n\n5\nS♣\n\n\n6\nS♠\n\n\n7\nS♥\n\n\n8\nS♦\n\n\n9\n1♦\n\n\n10\n10♦\n\n\n11\nK♦\n\n\n12\n9♦\n\n\n13\n8♦\n\n\n14\n7♦\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis order isn’t a commonly seen order; note that the K is lower than the 10!\n\n\nAll other cards are non-trump.\n\n\nBelow are the non-trump cards, ranked in order of strength:\n\n\n\n#\nCard\n\n\n\n\n1\n1\n\n\n2\n10\n\n\n3\nK\n\n\n4\n9\n\n\n5\n8\n\n\n6\n7\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis applies to all clubs, all spades, and all hearts (minus Q & J)."
   },
   {
     "objectID": "zole.html#footnotes",
@@ -156,44 +79,79 @@
   {
     "objectID": "nyt.html",
     "href": "nyt.html",
-    "title": "New York Times crossword analysis",
+    "title": "New York Times crossword analysis (revised)",
     "section": "",
     "text": "My partner and I started doing crosswords sometime in 2017 and we’ve been hooked since. This led us to getting a New York Times (NYT) crossword subscription in 2018. The NYT app shows you when you complete a crossword with a gold or blue star, where the former means you solved it without revealing any answers and before the answers come out. The app also provides some stats but I wanted to see what else is the data telling us."
   },
   {
     "objectID": "nyt.html#background",
     "href": "nyt.html#background",
-    "title": "New York Times crossword analysis",
+    "title": "New York Times crossword analysis (revised)",
     "section": "",
     "text": "My partner and I started doing crosswords sometime in 2017 and we’ve been hooked since. This led us to getting a New York Times (NYT) crossword subscription in 2018. The NYT app shows you when you complete a crossword with a gold or blue star, where the former means you solved it without revealing any answers and before the answers come out. The app also provides some stats but I wanted to see what else is the data telling us."
   },
   {
     "objectID": "nyt.html#the-data",
     "href": "nyt.html#the-data",
-    "title": "New York Times crossword analysis",
+    "title": "New York Times crossword analysis (revised)",
     "section": "The data",
     "text": "The data\nI found a Python package by Matt Dodge that retrieves your NYT crossword stats and used this to pull in our stats. This data spans from January 01, 2018 to January 23, 2023."
   },
   {
     "objectID": "nyt.html#the-analysis",
     "href": "nyt.html#the-analysis",
-    "title": "New York Times crossword analysis",
+    "title": "New York Times crossword analysis (revised)",
     "section": "The analysis",
-    "text": "The analysis\n\nI’m using the “Hiroshige” palette from the MetBrewer package.\n\n\nTotal solves\n\nBy check status and dayBy check status, day, and year\n\n\nLet’s start off by looking at total solves. ~I’ll note that these crosswords are mostly a team effort–at least in the beginning.~ If you’re unfamiiliar with crosswords, you’ll notice most solves are on Mondays and that’s because it’s the easiest day and it progressively gets harder with the hardest being the Sunday crossword. This plot also separates the solves which I refer to as “check status” here, meaning thatif it was solved without any reveals and within the time limit it’s a legit solve, otherwise we’ll refer to it as checked–which isn’t as fun.\n\n\n\n\n\n\nSo this plot is telling us that Mondays are the easiest solves with the highest count (by far) but it doesn’t really give us a fulsome picture. If we were to just take this as is, we’d see that about half the Mondays solves are legit, whereas the remaining solves needed an extra little nudge.\n\n\nLet’s look at our progress over the years.\n\n\n\n\n\n\n\n\n\nWe see we’re real keen early on, there’s a bit of a dip in 2020 but we’re up again in 2021 and 2022. Of course, we’re still early in 2023 so there’s always room for potential there. So it looks at a glance that the legit Monday solves are slowly increasing but we can confirm this by digging into the data a little bit more.\n\n\nSolved Monday crosswords\n\nWe’re omitting 2023 from these anlayses because they’ll throw off the mean and regression models since this year in incomplete.\n\n\nMeanLinear model\n\n\nThis line plot shows solved Mondays by their check status. The solid lines show the count of solved Mondays and the dotted lines show the average (or mean) per respective check status.\n\n\n\n\n\n\nWe see here we’re above the average in 2018, 2019, and 2022.\n\n\nThis line plot shows solved Mondays by their check status. The solid lines show the count of solved Mondays and the dotted lines show the regression line (using a linear model).\n\n\n\n\n\n\nThe legit line looks pretty steady here, which is at least that seeing that there is a decrease for the non-legit solves."
+    "text": "The analysis\n\n\n\n\n\n\nTipPsst…\n\n\n\n\n\nI’m using the “Hiroshige” palette from the MetBrewer package.\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThis is a work in progress.\n\n\nAs of December 2025, we’ve completed 791 NYT crossword puzzles.\n🎉🎉🎉\nFor the time being, here are my plots so far:"
   },
   {
-    "objectID": "nyt.html#breakdown-by-day",
-    "href": "nyt.html#breakdown-by-day",
-    "title": "New York Times crossword analysis",
-    "section": "Breakdown by day",
-    "text": "Breakdown by day\nThe blue line indicates the time in seconds to complete a crossword, the red dotted line indicates the moving average (yearly), and the orange dashed line indicates the linear model regression. Ideally, and it’s what we’re seeing here, that the time to complete Monday crosswords is decreasing over time. Looking at the time completion is another take on the data to see if there’s any improvement in our crosswording.\n\nMondaysTuesdays\n\n\n\n\n\n\n\n\n\n\nThe data for Tuesdays isn’t as good as for the Mondays because it was only recently we graduated to being able to do Tuesdays consistently."
+    "objectID": "nyt.html#how-are-we-doing-so-far",
+    "href": "nyt.html#how-are-we-doing-so-far",
+    "title": "New York Times crossword analysis (revised)",
+    "section": "How are we doing so far?",
+    "text": "How are we doing so far?\n\nAll daysLet’s focus on some days\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou can see that we’re pretty comfortable in the Monday to Wednesday range. Typically, Mondays are the easiest and the difficulty increases as you continue in the week. Depending on who you ask Wednesdays and Thursdays could be a toss-up for difficulty. Wednesdays normally have a theme which I feel helps me solve the puzzle easier than if it didn’t have a theme. I also just love a theme."
   },
   {
-    "objectID": "nyt.html#backtracking",
-    "href": "nyt.html#backtracking",
-    "title": "New York Times crossword analysis",
-    "section": "Backtracking",
-    "text": "Backtracking\nI wanted to take a peek at one more thing. So as we’ve become more comfortable with crosswords we’ve been going back into the archives–and sometimes I’ve gone into the archives on my own–to do Mondays. So for this last plot, we look at solved crosswords that weren’t checked or had the answers revealed. This plot supports and potentially explains some weird behaviours seen in the above plots. This plot also includes a dotted line to indicate the average number of solved crosswords that were not checked or revealed from 2018 to 2023.\n\n\n\n\n\n\nWhy this plot is important is to consider things outside of what you see in the data to explain the data. But this is only the beginning of data exploration!\nI hope you’ve enjoyed this brief analysis of our NYT crossword journey :smile:"
+    "objectID": "nyt.html#what-are-we-solving-here",
+    "href": "nyt.html#what-are-we-solving-here",
+    "title": "New York Times crossword analysis (revised)",
+    "section": "What are we solving here?",
+    "text": "What are we solving here?\nHere we’re looking at the number of solved crosswords.\n\nDensity plotsDay of the week and yearDay of the weekYear\n\n\n\nBy weekdayBy year"
+  },
+  {
+    "objectID": "nyt.html#gotta-go-fast",
+    "href": "nyt.html#gotta-go-fast",
+    "title": "New York Times crossword analysis (revised)",
+    "section": "Gotta go fast",
+    "text": "Gotta go fast\n\nDay of the week and yearDay of the weekYear"
+  },
+  {
+    "objectID": "nyt.html#a-for-effort",
+    "href": "nyt.html#a-for-effort",
+    "title": "New York Times crossword analysis (revised)",
+    "section": "A for effort",
+    "text": "A for effort\n\nDonutLine chart"
+  },
+  {
+    "objectID": "nyt.html#section",
+    "href": "nyt.html#section",
+    "title": "New York Times crossword analysis (revised)",
+    "section": "⭐",
+    "text": "⭐\n\nBarDonutLine chart"
+  },
+  {
+    "objectID": "onepiece.html",
+    "href": "onepiece.html",
+    "title": "Double secret",
+    "section": "",
+    "text": "Got you! ☜(ﾟヮﾟ☜)\nYou should watch\nAnd here’s why."
+  },
+  {
+    "objectID": "onepiece.html#footnotes",
+    "href": "onepiece.html#footnotes",
+    "title": "Double secret",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nFiltering on anime-animation as a keyword↩︎\nSource↩︎\nSource↩︎\nI probably should have noted that canon means that it was in the manga because One Piece started originally in this format.↩︎"
   },
   {
     "objectID": "index.html",
@@ -214,49 +172,7 @@
     "href": "index.html#playing-with",
     "title": "Landing page",
     "section": "Playing with …",
-    "text": "Playing with …\n\nPlots\nI took the data from my NYT crosswords and made some interactive plots showing things such as solve stats by year and by day to see any patterns or trends over time.\nI am currently working on web-scraping data from IMDB on Bob’s Burgers, a cartoon series I enjoy. I want to pull these data and see if there’s any patterns in my favourite episodes or other general trends such as ratings over the many seasons.\n\n\nDocumentation\nI took the (complicated) rules of a Latvian card game, Zole, and made the information easier to access and reference using some fun Quarto functionalities.\n\n\nSlides\nMy submission for the 2024 RLadies International Women’s Day Data challenge is a Quarto presentation that looks into some PWHL data."
-  },
-  {
-    "objectID": "pi-deng.html",
-    "href": "pi-deng.html",
-    "title": "Pi deng",
-    "section": "",
-    "text": "I can’t seem to find anything about this game on the internet but I swear it’s a game that me and my family played. And when we had family friends over they all played this game–so it’s not like my parents made it up for us. It might also be a lost in translation situation where I’m not quite googling the right thing because I only know the phonetic name of the game in English, nor can I write it out in Laos.\nPi deng means “red card” and sometimes my parents called it “Make 10”. Neither of these were helpful to find the game I was thinking of so we’re going to push forward.\nPi deng is a 2-player card game. There is a 3-player variant where the main difference is the card distribution but otherwise the gameplay is the same.\n\n\n\nYou win by scoring 105 points or higher at the end of the round.\n\n\n\nYou use a normal 52-card deck. Remove jokers. Shuffle and get the other player to cut the deck before dealing the cards.\n\n\n\n\n\n\nTip\n\n\n\nIt is important that you thoroughly shuffle and cut to deck as it is perninent to ensure that the colours are all mixed in inbetween rounds.\n\n\n\n\nYou deal 10 cards to each player. The dealer always starts with the other player, alternating dealing, and 12 cards are dealt face-up in a communal pile in the middle. These cards in the middle are free to both players.\n\nOnce the cards are deal, the reminder of the deck is placed in the middle (face-down)–let’s call this the draw pile.\n\n\n\n\n\n\n\n\n\n\nBefore starting!\n\n\n\nSince 10s and face cards match each other, if you start a game and there’s 3 of a face card or 3 10s in the communal pile, they immediately go to the first player. This is because there is nothing to win a pair. However, after this whatever is left at the end of the game goes to the last player (AKA the dealer).\n\n\nStarting left of the dealer, this player will put a card in the middle–attempting to make 10, or match face cards or 10s with the cards in the communal pile. If there is a match then both cards need to be removed into that player’s win pile (a spot off to the side away from the communal pile). Then, that player flips a card from the draw pile. If this card matches, the player must take that match as well, if not that card remains in the communal pile. Therefore, on each turn a player can have up to 2 matches on a turn. If you cannot make a match you must still put a card into the communal pile–this means that that card is now available to the other player so discard carefully! Once a player draws a card from the draw pile and takes a match, if applicable, their turn ends and it is now the next player’s turn. In sum, a typical turn will consist of:\n\nputting a card into the communal pile–aiming to get a match but this is not guaranteed\nremoving matches, if applicable\ndrawing from the draw pile,\nremoving matches, if applicable\n\n\n\n\nThe game ends when the draw pile is exhausted, this should be on the dealer’s turn.\n\n\nLike the name entails, only red cards are counted for points in the end. Separate your red cards from your black cards.\nAll number cards are worth their value, e.g., a 3 is worth 3 points and all face cards are worth 10 points. The exception is that standalone aces are worth 20 points and aces that are paired with a 9 are worth 30 points. Therefore, the highest scoring combination is an ace and a 9–which do not need to be won in the same play."
-  },
-  {
-    "objectID": "pi-deng.html#what-is-pi-deng",
-    "href": "pi-deng.html#what-is-pi-deng",
-    "title": "Pi deng",
-    "section": "",
-    "text": "I can’t seem to find anything about this game on the internet but I swear it’s a game that me and my family played. And when we had family friends over they all played this game–so it’s not like my parents made it up for us. It might also be a lost in translation situation where I’m not quite googling the right thing because I only know the phonetic name of the game in English, nor can I write it out in Laos.\nPi deng means “red card” and sometimes my parents called it “Make 10”. Neither of these were helpful to find the game I was thinking of so we’re going to push forward.\nPi deng is a 2-player card game. There is a 3-player variant where the main difference is the card distribution but otherwise the gameplay is the same."
-  },
-  {
-    "objectID": "pi-deng.html#the-goal",
-    "href": "pi-deng.html#the-goal",
-    "title": "Pi deng",
-    "section": "",
-    "text": "You win by scoring 105 points or higher at the end of the round."
-  },
-  {
-    "objectID": "pi-deng.html#set-up",
-    "href": "pi-deng.html#set-up",
-    "title": "Pi deng",
-    "section": "",
-    "text": "You use a normal 52-card deck. Remove jokers. Shuffle and get the other player to cut the deck before dealing the cards.\n\n\n\n\n\n\nTip\n\n\n\nIt is important that you thoroughly shuffle and cut to deck as it is perninent to ensure that the colours are all mixed in inbetween rounds.\n\n\n\n\nYou deal 10 cards to each player. The dealer always starts with the other player, alternating dealing, and 12 cards are dealt face-up in a communal pile in the middle. These cards in the middle are free to both players.\n\nOnce the cards are deal, the reminder of the deck is placed in the middle (face-down)–let’s call this the draw pile."
-  },
-  {
-    "objectID": "pi-deng.html#how-to-play",
-    "href": "pi-deng.html#how-to-play",
-    "title": "Pi deng",
-    "section": "",
-    "text": "Before starting!\n\n\n\nSince 10s and face cards match each other, if you start a game and there’s 3 of a face card or 3 10s in the communal pile, they immediately go to the first player. This is because there is nothing to win a pair. However, after this whatever is left at the end of the game goes to the last player (AKA the dealer).\n\n\nStarting left of the dealer, this player will put a card in the middle–attempting to make 10, or match face cards or 10s with the cards in the communal pile. If there is a match then both cards need to be removed into that player’s win pile (a spot off to the side away from the communal pile). Then, that player flips a card from the draw pile. If this card matches, the player must take that match as well, if not that card remains in the communal pile. Therefore, on each turn a player can have up to 2 matches on a turn. If you cannot make a match you must still put a card into the communal pile–this means that that card is now available to the other player so discard carefully! Once a player draws a card from the draw pile and takes a match, if applicable, their turn ends and it is now the next player’s turn. In sum, a typical turn will consist of:\n\nputting a card into the communal pile–aiming to get a match but this is not guaranteed\nremoving matches, if applicable\ndrawing from the draw pile,\nremoving matches, if applicable"
-  },
-  {
-    "objectID": "pi-deng.html#ending-the-game",
-    "href": "pi-deng.html#ending-the-game",
-    "title": "Pi deng",
-    "section": "",
-    "text": "The game ends when the draw pile is exhausted, this should be on the dealer’s turn.\n\n\nLike the name entails, only red cards are counted for points in the end. Separate your red cards from your black cards.\nAll number cards are worth their value, e.g., a 3 is worth 3 points and all face cards are worth 10 points. The exception is that standalone aces are worth 20 points and aces that are paired with a 9 are worth 30 points. Therefore, the highest scoring combination is an ace and a 9–which do not need to be won in the same play."
+    "text": "Playing with …\n\nPlots & slides\nI took the data from my NYT crosswords and made some interactive plots showing things such as solve stats by year and by day to see any patterns or trends over time. I’ve just updated this with new data as of 2026.\nMy submission for the 2024 RLadies International Women’s Day Data challenge is a Quarto presentation that looks into some PWHL data.\nI used to have a Bob’s Burger analysis page but I’ve now learnt I should make a copy of my data instead of pulling from sources–especially if they like to change things around ～(　TロT)σ So I might come back to this when I have more enthusiasm for web-scraping.\n\n\n\nDocumentation\nI took the (complicated) rules of a Latvian card game, Zole, and made the information easier to access and reference using some fun Quarto functionalities.\nI also have the rules for a card game I used to play with my family growing up, called Pi deng or ‘Red card’ in Laos.\n\n\nOhhh, what is this section?\nYou should just go there and check it out for yourself 〜(￣▽￣〜)"
   },
   {
     "objectID": "pwhl_dv.html#investing-in-women",
@@ -369,5 +285,47 @@
     "title": "PWHL data visualizations",
     "section": "Final output",
     "text": "Final output"
+  },
+  {
+    "objectID": "pi-deng.html",
+    "href": "pi-deng.html",
+    "title": "Pi deng",
+    "section": "",
+    "text": "I can’t seem to find anything about this game on the internet but I swear it’s a game that me and my family played. And when we had family friends over they all played this game–so it’s not like my parents made it up for us. It might also be a lost in translation situation where I’m not quite googling the right thing because I only know the phonetic name of the game in English, nor can I write it out in Laos.\nPi deng means “red card” and sometimes my parents called it “Make 10”. Neither of these were helpful to find the game I was thinking of so we’re going to push forward.\nPi deng is a 2-player card game. There is a 3-player variant where the main difference is the card distribution but otherwise the gameplay is the same.\n\n\n\nYou win by scoring 105 points or higher at the end of the round.\n\n\n\nYou use a normal 52-card deck. Remove jokers. Shuffle and get the other player to cut the deck before dealing the cards.\n\n\n\n\n\n\nTip\n\n\n\nIt is important that you thoroughly shuffle and cut to deck as it is perninent to ensure that the colours are all mixed in inbetween rounds.\n\n\n\n\nYou deal 10 cards to each player. The dealer always starts with the other player, alternating dealing, and 12 cards are dealt face-up in a communal pile in the middle. These cards in the middle are free to both players.\n\nOnce the cards are deal, the reminder of the deck is placed in the middle (face-down)–let’s call this the draw pile.\n\n\n\n\n\n\n\n\n\n\nImportantBefore starting!\n\n\n\nSince 10s and face cards match each other, if you start a game and there’s 3 of a face card or 3 10s in the communal pile, they immediately go to the first player. This is because there is nothing to win a pair. However, after this whatever is left at the end of the game goes to the last player (AKA the dealer).\n\n\nStarting left of the dealer, this player will put a card in the middle–attempting to make 10, or match face cards or 10s with the cards in the communal pile. If there is a match then both cards need to be removed into that player’s win pile (a spot off to the side away from the communal pile). Then, that player flips a card from the draw pile. If this card matches, the player must take that match as well, if not that card remains in the communal pile. Therefore, on each turn a player can have up to 2 matches on a turn. If you cannot make a match you must still put a card into the communal pile–this means that that card is now available to the other player so discard carefully! Once a player draws a card from the draw pile and takes a match, if applicable, their turn ends and it is now the next player’s turn. In sum, a typical turn will consist of:\n\nputting a card into the communal pile–aiming to get a match but this is not guaranteed\nremoving matches, if applicable\ndrawing from the draw pile,\nremoving matches, if applicable\n\n\n\n\nThe game ends when the draw pile is exhausted, this should be on the dealer’s turn.\n\n\nLike the name entails, only red cards are counted for points in the end. Separate your red cards from your black cards.\nAll number cards are worth their value, e.g., a 3 is worth 3 points and all face cards are worth 10 points. The exception is that standalone aces are worth 20 points and aces that are paired with a 9 are worth 30 points. Therefore, the highest scoring combination is an ace and a 9–which do not need to be won in the same play."
+  },
+  {
+    "objectID": "pi-deng.html#what-is-pi-deng",
+    "href": "pi-deng.html#what-is-pi-deng",
+    "title": "Pi deng",
+    "section": "",
+    "text": "I can’t seem to find anything about this game on the internet but I swear it’s a game that me and my family played. And when we had family friends over they all played this game–so it’s not like my parents made it up for us. It might also be a lost in translation situation where I’m not quite googling the right thing because I only know the phonetic name of the game in English, nor can I write it out in Laos.\nPi deng means “red card” and sometimes my parents called it “Make 10”. Neither of these were helpful to find the game I was thinking of so we’re going to push forward.\nPi deng is a 2-player card game. There is a 3-player variant where the main difference is the card distribution but otherwise the gameplay is the same."
+  },
+  {
+    "objectID": "pi-deng.html#the-goal",
+    "href": "pi-deng.html#the-goal",
+    "title": "Pi deng",
+    "section": "",
+    "text": "You win by scoring 105 points or higher at the end of the round."
+  },
+  {
+    "objectID": "pi-deng.html#set-up",
+    "href": "pi-deng.html#set-up",
+    "title": "Pi deng",
+    "section": "",
+    "text": "You use a normal 52-card deck. Remove jokers. Shuffle and get the other player to cut the deck before dealing the cards.\n\n\n\n\n\n\nTip\n\n\n\nIt is important that you thoroughly shuffle and cut to deck as it is perninent to ensure that the colours are all mixed in inbetween rounds.\n\n\n\n\nYou deal 10 cards to each player. The dealer always starts with the other player, alternating dealing, and 12 cards are dealt face-up in a communal pile in the middle. These cards in the middle are free to both players.\n\nOnce the cards are deal, the reminder of the deck is placed in the middle (face-down)–let’s call this the draw pile."
+  },
+  {
+    "objectID": "pi-deng.html#how-to-play",
+    "href": "pi-deng.html#how-to-play",
+    "title": "Pi deng",
+    "section": "",
+    "text": "ImportantBefore starting!\n\n\n\nSince 10s and face cards match each other, if you start a game and there’s 3 of a face card or 3 10s in the communal pile, they immediately go to the first player. This is because there is nothing to win a pair. However, after this whatever is left at the end of the game goes to the last player (AKA the dealer).\n\n\nStarting left of the dealer, this player will put a card in the middle–attempting to make 10, or match face cards or 10s with the cards in the communal pile. If there is a match then both cards need to be removed into that player’s win pile (a spot off to the side away from the communal pile). Then, that player flips a card from the draw pile. If this card matches, the player must take that match as well, if not that card remains in the communal pile. Therefore, on each turn a player can have up to 2 matches on a turn. If you cannot make a match you must still put a card into the communal pile–this means that that card is now available to the other player so discard carefully! Once a player draws a card from the draw pile and takes a match, if applicable, their turn ends and it is now the next player’s turn. In sum, a typical turn will consist of:\n\nputting a card into the communal pile–aiming to get a match but this is not guaranteed\nremoving matches, if applicable\ndrawing from the draw pile,\nremoving matches, if applicable"
+  },
+  {
+    "objectID": "pi-deng.html#ending-the-game",
+    "href": "pi-deng.html#ending-the-game",
+    "title": "Pi deng",
+    "section": "",
+    "text": "The game ends when the draw pile is exhausted, this should be on the dealer’s turn.\n\n\nLike the name entails, only red cards are counted for points in the end. Separate your red cards from your black cards.\nAll number cards are worth their value, e.g., a 3 is worth 3 points and all face cards are worth 10 points. The exception is that standalone aces are worth 20 points and aces that are paired with a 9 are worth 30 points. Therefore, the highest scoring combination is an ace and a 9–which do not need to be won in the same play."
   }
 ]

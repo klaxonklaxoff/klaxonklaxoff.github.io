@@ -16,16 +16,22 @@ I'm trying to play around with Quarto since it's something that's new and fun. I
 
 ## Playing with ...
 
-### Plots
+### Plots & slides
 
-I took the data from my NYT crosswords and made some interactive plots showing things such as solve stats by year and by day to see any patterns or trends over time.
+I took the data from my NYT crosswords and made some interactive plots showing things such as solve stats by year and by day to see any patterns or trends over time. I've just updated this with new data as of 2026.
 
-I am currently working on web-scraping data from IMDB on Bob's Burgers, a cartoon series I enjoy. I want to pull these data and see if there's any patterns in my favourite episodes or other general trends such as ratings over the many seasons.
+My submission for the [2024 RLadies International Women's Day Data challenge](https://rladies-ottawa.github.io/events/2024/iwd.html) is a Quarto presentation that looks into some PWHL data.
+
+I used to have a Bob's Burger analysis page but I've now learnt I should make a copy of my data instead of pulling from sources--especially if they like to change things around ～(　TロT)σ So I might come back to this when I have more enthusiasm for web-scraping.
+
+<!-- I am currently working on web-scraping data from IMDB on Bob's Burgers, a cartoon series I enjoy. I want to pull these data and see if there's any patterns in my favourite episodes or other general trends such as ratings over the many seasons. -->
 
 ### Documentation
 
 I took the (complicated) rules of a Latvian card game, Zole, and made the information easier to access and reference using some fun Quarto functionalities.
 
-### Slides
+I also have the rules for a card game I used to play with my family growing up, called Pi deng or 'Red card' in Laos.
 
-My submission for the [2024 RLadies International Women's Day Data challenge](https://rladies-ottawa.github.io/events/2024/iwd.html) is a Quarto presentation that looks into some PWHL data.
+### Ohhh, what is this section?
+
+You should just go there and check it out for yourself 〜(￣▽￣〜)

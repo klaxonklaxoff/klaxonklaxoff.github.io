@@ -28,13 +28,15 @@ website:
           - file: nyt.qmd
           - text: PWHL stats
             file: pwhl_dv.qmd
-          - file: bobs-burgers.qmd
-          - file: action_movies.qmd
+          # - file: bobs-burgers.qmd
+          # - file: action_movies.qmd  # TODO: need to fix code
       - text: Card games
         menu:
           - file: pi-deng.qmd
           - file: zole.qmd
-
+      - text: Secret
+        menu:
+          - file: onepiece.qmd
     
 page-footer:  
   - icon: github

@@ -1,162 +1,118 @@
 ---
-title: New York Times crossword analysis
-date: '`r format(as.Date("2023-03-08"), "%B %d, %Y")`'
+title: New York Times crossword analysis (revised)
+date: '`r format(as.Date("2026-02-05"), "%B %d, %Y")`'
+format: 
+  html: 
+    page-layout: full
 ---
 ```{r setup, include = FALSE, warning = FALSE, echo = FALSE}
 # Load in libraries ----
-library(dplyr)
-library(ggplot2)
+library(tidyverse)
 library(plotly)
 library(scales)
 library(MetBrewer)
+library(ggridges)
 
 # Read in data file ----
 nyt <-
-  read.csv("./_data/nyt_data.csv") %>%
-  mutate(date = as.Date(date),
-         year = as.integer(format(date, "%Y"))) %>%
-  group_by(year, day) %>%
-  mutate(avg_elapsed_seconds = round(mean(elapsed_seconds), 2)) %>%
-  ungroup()
+  bind_rows(read.csv("./_data/nyt_data_1.csv"),
+            read.csv("./_data/nyt_data_2.csv")) |>
+  distinct() |>
+  select(-c(editor, format_type, publish_type, title, version)) |>
+  filter(!is.na(solving_seconds)) |>
+  mutate(
+    date = as.Date(print_date),
+    year = as.integer(format(date , "%Y")),
+    day_of_week_name = fct_reorder(day_of_week_name, day_of_week_integer),
+    solving_minutes = solving_seconds / 60,
+    finished = ifelse(percent_filled != 100, "Unfinished", "Complete"),
+    star = ifelse(star == "", "Not gold", star)
+  ) |>
+  filter(year != 2026) # NOTE: this year just started
 
-theme_pal <- "Hiroshige"
+theme_pal <- "Hiroshige" # NOTE: 10
 
-# Analysis ----
-## By the books ----
-### Total solved ----
-solved_total <-
-  nyt %>%
-  filter(solved == 1) %>%
-  group_by(day, checked) %>%
-  count() %>%
-  mutate(checked = ifelse(checked == 1, "Checked", "Legit"))
-
-ggplotly({
-  ggplot(solved_total,
-         aes(
-           x = reorder(day, -n),
-           y = n,
-           fill = checked,
-           text = paste0("Day: ", day,
-                         "<br>",
-                         "Solve status: ", checked,
-                         "<br>",
-                         "Count: ", n)
-         )) +
+plot_func <- function(df, x, y, fillcolour, title, xlab, ylab) {
+  ggplot(df, aes(x = x, y = y)) +
     geom_bar(stat = "identity",
-             position = "stack") +
-    theme_minimal() +
-    scale_fill_manual(values = c(
-      met.brewer(theme_pal)[1],
-      met.brewer(theme_pal, direction = -1)[1]
-    )) +
-    labs(
-      title = "Distribution of solved crosswords by solve status",
-      x = "Day",
-      y = "Solved crosswords",
-      fill = "Solve\nstatus"
-    )
-}, tooltip = "text") %>%
-  layout(hovermode = "x unified")
+             position = "stack",
+             fill = fillcolour) +
+    theme_classic() +
+    labs(title = title, x = xlab, y = ylab)
+}
+
+## Part 1 ----
+nyt_mtw <-
+  nyt |>
+  filter(day_of_week_integer %in% c(1, 2, 3))
+
+## Breakdown by day & year ----
+solved_day_year <-
+  nyt |>
+  filter(solved == "True") |>
+  group_by(day_of_week_name, year) |>
+  count()
+
+### Breakdown by day ----
+solved_day <-
+  nyt |>
+  filter(solved == "True") |>
+  group_by(day_of_week_name) |>
+  count()
 
 ### Breakdown by year ----
 solved_year <-
-  nyt %>%
-  filter(solved == 1) %>%
-  group_by(year, day, checked) %>%
-  count() %>%
-  mutate(checked = ifelse(checked == 1, "Checked", "Legit"))
+  nyt |>
+  filter(solved == "True") |>
+  group_by(year) |>
+  count()
+
+## Progress by day & year ----
+progress_day_year <-
+  nyt |>
+  filter(solved == "True") |>
+  summarise(avg = round(mean(solving_minutes), 2),
+            .by = c("day_of_week_name", "year"))
+
+### Progress by day ----
+progress_day <-
+  nyt |>
+  filter(solved == "True") |>
+  summarise(avg = round(mean(solving_minutes), 2), .by = c("day_of_week_name"))
 
 ### Progress by year ----
 progress_year <-
-  nyt %>%
-  filter(solved == 1,
-         year != 2023) %>%
-  group_by(year, checked) %>%
-  count() %>%
-  mutate(checked = ifelse(checked == 1, "Checked", "Legit")) %>%
-  ungroup() %>%
-  group_by(checked) %>%
-  mutate(avg = mean(n)) %>%
+  nyt |>
+  filter(solved == "True") |>
+  summarise(avg = round(mean(solving_minutes), 2), .by = c("year"))
+
+## Attempts ----
+attempts <-
+  nyt |>
+  count(year, finished) |>
+  group_by(year) |>
+  mutate(
+    fraction = n / sum(n),
+    ymax = cumsum(fraction),
+    ymin = c(0, head(ymax, n = -1))
+  ) |>
   ungroup()
 
-## Mondays attempts ----
-mondays <-
-  nyt %>%
-  filter(day == "Mon", solved == 1, checked == 0, revealed == 0)
+## Gold ----
+gold <-
+  nyt |>
+  count(year, star) |>
+  group_by(year) |>
+  mutate(
+    fraction = n / sum(n),
+    ymax = cumsum(fraction),
+    ymin = c(0, head(ymax, n = -1))
+  ) |>
+  ungroup()
 
-## Tuesday attempts ----
-tuesdays <-
-  nyt %>%
-  filter(day == "Tue", solved == 1, checked == 0, revealed == 0)
-
-## Backtracking ----
-backtrack <-
-  nyt %>%
-  filter(year != 2023, solved == 1, checked == 0, revealed == 0) %>%
-  group_by(year) %>%
-  count() %>%
-  ungroup() %>%
-  mutate(avg = round(mean(n)))
-
-## Streaks ----
-streaks <-
-  nyt %>%
-  select(-c(elapsed_seconds, avg_elapsed_seconds)) %>%
-  group_by(grp = with(rle(streak_eligible),
-    rep(seq_along(lengths), lengths))) %>%
-    mutate(counter = seq_along(grp)) %>%
-  ungroup() %>%
-  select(-grp) %>%
-  filter(solved == 1, streak_eligible == 1) %>%
-  mutate(key = as.integer(format(date, "%Y%W")))
-
-max_streaks_temp <-
-  streaks %>%
-  filter(counter == max(counter))
-
-max_streaks <-
-  streaks %>%
-  filter(key %in% max_streaks_temp$key)
-
-# Functions ----
-plot_line <- function(df, df_lab) {
-  ggplotly({
-    ggplot(df,
-           aes(x = date, y = elapsed_seconds)) +
-      geom_line(
-        group = 1,
-        size = 1,
-        colour = met.brewer(name = theme_pal)[10]
-      ) +
-      geom_line(
-        aes(x = date,
-        y = avg_elapsed_seconds),
-        colour = met.brewer(name = theme_pal)[1],
-        size = 1,
-        linetype = "dotted"
-      ) +
-      geom_smooth(
-        method = lm,
-        se = FALSE,
-        fullrange = TRUE,
-        aes(color = elapsed_seconds),
-        colour = met.brewer(name = theme_pal)[3],
-        size = 1,
-        linetype = "dashed"
-      ) +
-      theme_minimal() +
-      scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
-      labs(
-        title =
-        paste0("Elapsed time (seconds) of solved crosswords on ",
-        df_lab),
-        x = "Reference period",
-        y = "Elapsed time (seconds)"
-      )
-  },
-  tooltip = NULL)
-}
+gold_all <-
+  nyt |>
+  count(year, day_of_week_name, star)
 
 knitr::opts_chunk$set(echo =  FALSE, warning = FALSE, message = FALSE)
 ```
@@ -171,212 +127,299 @@ I found a Python package by [Matt Dodge](https://github.com/mattdodge/nyt-crossw
 
 ## The analysis
 
-> I'm using the "Hiroshige" palette from the [`MetBrewer`](https://github.com/BlakeRMills/MetBrewer) package.
-
-### Total solves 
-
-::: {.panel-tabset}
-
-#### By check status and day
-
-Let's start off by looking at total solves. ~I'll note that these crosswords are mostly a team effort--at least in the beginning.~ If you're unfamiiliar with crosswords, you'll notice most solves are on Mondays and that's because it's the easiest day and it progressively gets harder with the hardest being the Sunday crossword. This plot also separates the solves which I refer to as "check status" here, meaning thatif it was solved without any reveals and within the time limit it's a **legit** solve, otherwise we'll refer to it as checked--which isn't as fun.
-
-```{r total_solves}
-## Total Solved ----
-ggplotly({
-  ggplot(solved_total,
-         aes(
-           x = reorder(day, -n),
-           y = n,
-           fill = checked,
-           text = paste0("Day: ", day,
-                         "<br>",
-                         "Check status: ", checked,
-                         "<br>",
-                         "Count: ", n)
-         )) +
-    geom_bar(stat = "identity", position = "stack") +
-    theme_minimal() +
-    scale_fill_manual(values = c(
-      met.brewer(theme_pal)[1],
-      met.brewer(theme_pal, direction = -1)[1]
-    )) +    
-    labs(
-      title = "Solved crosswords by check status",
-      x = "Date",
-      y = "Count of solved crosswords",
-      fill = "Check\nstatus"
-    )
-}, tooltip = "text") %>%
-  layout(hovermode = "x unified")
-```
-
-So this plot is telling us that Mondays are the easiest solves with the highest count (by far) but it doesn't really give us a fulsome picture. If we were to just take this as is, we'd see that about half the Mondays solves are legit, whereas the remaining solves needed an extra little nudge. 
-
-#### By check status, day, and year
-
-Let's look at our progress over the years.
-
-```{r solve_year}
-## Solved by year ----
-ggplotly({
-  ggplot(solved_year,
-         aes(
-           x = reorder(day, -n),
-           y = n,
-           fill = checked,
-           text = paste0("Day: ", day,
-                         "<br>",
-                         "Check status: ", checked,
-                         "<br>",
-                         "Count: ", n)
-         )) +
-    geom_bar(stat = "identity", position = "stack") +
-    theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, vjust = 0.5, hjust = 1)) +
-    scale_fill_manual(values = c(
-      met.brewer(theme_pal)[1],
-      met.brewer(theme_pal, direction = -1)[1]
-    )) +
-    labs(
-      title = "Solved crosswords by solve status and year",
-      x = "Day",
-      y = "Solved crosswords",
-      fill = "Check\nstatus"
-    ) +
-    facet_wrap(facets = ~year, nrow = 1)
-}, tooltip = "text") %>%
-   layout(hovermode = "x unified")
-```
-
+::: {.callout-tip collapse="true"}
+## Psst...
+I'm using the "Hiroshige" palette from the [`MetBrewer`](https://github.com/BlakeRMills/MetBrewer) package.
 :::
 
-We see we're real keen early on, there's a bit of a dip in 2020 but we're up again in 2021 and 2022. Of course, we're still early in 2023 so there's always room for potential there. So it looks at a glance that the legit Monday solves are slowly increasing but we can confirm this by digging into the data a little bit more.
+::: {.callout-caution}
+This is a work in progress.
+:::
 
-### Solved Monday crosswords
+```{r totalcompletes}
+solves <- nyt |> filter(finished=='Complete') |> count()
+```
 
-> We're omitting 2023 from these anlayses because they'll throw off the mean and regression models since this year in incomplete.
+As of December 2025, we've completed `{r} solves` NYT crossword puzzles.
+
+🎉🎉🎉
+
+For the time being, here are my plots so far:
+
+## How are we doing so far?
 
 ::: {.panel-tabset}
 
-#### Mean
-
-This line plot shows solved Mondays by their check status. The solid lines show the count of solved Mondays and the dotted lines show the average (or mean) per respective check status.
-
-```{r progress_year}
-## Progress by year ----
-ggplotly({
-  ggplot(progress_year, aes(x = year, colour = checked)) +
-    geom_line(aes(y = n), size = 1) +
-    geom_line(aes(y = avg), size = 1, linetype = "dotted") +
-    theme_minimal() +
-    scale_colour_manual(
-      values = c(
-        met.brewer(theme_pal)[3],
-        met.brewer(theme_pal, direction = -1)[3]
-    )) +
-    labs(
-      title = "Solved Monday crosswords",
-      x = "Reference period",
-      y = "Count of solved crosswords",
-      colour = "Check\nstatus"
-    )
-  }, tooltip = NULL)
+### All days
+```{r alldays}
+#| fig-width: 12
+ggplot(nyt, aes(x = solving_minutes, y = day_of_week_name, colour=met.brewer(theme_pal)[1])) +
+  geom_point(alpha = 0.5) +
+  scale_y_discrete(limits = rev) +
+  theme_classic() +
+  theme(legend.position = "none") +
+  labs(title = "How long does it take us to solve a puzzle?", x = "Minutes to solve", y = "Day of the week")
 ```
 
-We see here we're above the average in 2018, 2019, and 2022.
+### Let's focus on some days
+```{r somedays}
+#| fig-width: 12
+ggplot(nyt_mtw,
+       aes(x = solving_minutes, y = day_of_week_name, size = solving_minutes, colour=met.brewer(theme_pal)[2])) +
+  geom_point(alpha = 0.25) +
+  scale_y_discrete(limits = rev) +
+  theme_classic() +
+  theme(legend.position = "none") +
+  labs(title = "How long does it take us to solve a puzzle?", x = "Minutes to solve", y = "Day of the week")
+```
+:::
 
-#### Linear model
+You can see that we're pretty comfortable in the Monday to Wednesday range. Typically, Mondays are the easiest and the difficulty increases as you continue in the week. Depending on who you ask Wednesdays and Thursdays could be a toss-up for difficulty. Wednesdays normally have a theme which I feel helps me solve the puzzle easier than if it didn't have a theme. I also just love a theme. 
 
-This line plot shows solved Mondays by their check status. The solid lines show the count of solved Mondays and the dotted lines show the regression line (using a linear model).
+## What are we solving here?
 
-```{r linear}
-## Progress by year ----
-ggplotly({
-  ggplot(progress_year,
-         aes(
-           x = year,
-           y = n,
-           colour = checked
-         )) +
-  geom_line(size = 1) +
-  geom_smooth(
-    method = lm,
-    se = FALSE,
-    fullrange = TRUE,
-    aes(colour = checked),
-    linetype = "dotted"
+Here we're looking at the number of solved crosswords.
+
+::: {.panel-tabset}
+
+### Density plots
+
+::: {.panel-tabset}
+
+### By weekday
+
+```{r solveggridges}
+#| fig-width: 12
+ggplot({nyt |>
+    filter(solved == "True")},
+       aes(y = day_of_week_name, x = solving_minutes, fill = day_of_week_name)) +
+  geom_density_ridges(alpha = 0.6, stat = "binline", bins = 20) +
+  theme_ridges() +
+  theme(
+    legend.position = "none",
+    panel.spacing = unit(0.1, "lines"),
+    strip.text.x = element_text(size = 8),
+    axis.title.y = element_blank()
   ) +
-  theme_minimal() +
-  scale_colour_manual(values = c(
-      met.brewer(theme_pal)[1],
-      met.brewer(theme_pal, direction = -1)[1]
-    )) +
-  labs(title = "Solved Monday crosswords",
-       x = "Reference period",
-       y = "Count of solved crosswords",
-       colour = "Check\nstatus")
-}, tooltip = NULL)
+  scale_fill_manual(values = met.brewer(theme_pal)[1:7]) +
+  scale_y_discrete(limits = rev) +
+  labs(title = "Time to finish a crossword", x = "Solve time (in minutes)")
 ```
 
-The legit line looks pretty steady here, which is at least that seeing that there is a decrease for the non-legit solves.
+### By year
+
+```{r solveggridges2}
+#| fig-width: 12
+ggplot({nyt |>
+    filter(solved == "True") |> 
+    mutate(year = as.character(year))},
+    aes(y = year, x = solving_minutes, fill = year)) +
+  geom_density_ridges(alpha = 0.6, stat = "binline", bins = 20) +
+  theme_ridges() +
+  theme(
+    legend.position = "none",
+    panel.spacing = unit(0.1, "lines"),
+    strip.text.x = element_text(size = 8),
+    axis.title.y = element_blank()
+  ) +
+  scale_fill_manual(values = met.brewer(theme_pal)[1:8]) +
+  scale_y_discrete(limits = rev) +
+  labs(title = "Time to finish a crossword", x = "Solve time (in minutes)")
+```
 
 :::
 
-## Breakdown by day
+### Day of the week and year
 
-The blue line indicates the time in seconds to complete a crossword, the red dotted line indicates the moving average (yearly), and the orange dashed line indicates the linear model regression. Ideally, and it's what we're seeing here, that the time to complete Monday crosswords is decreasing over time. Looking at the time completion is another take on the data to see if there's any improvement in our crosswording.
+```{r solveweekyear}
+#| fig-width: 12
+ggplot(solved_day_year, 
+       aes(x = year, 
+           y = n)) +
+  geom_bar(stat = "identity",
+           position = "stack",
+           fill = met.brewer(theme_pal)[4]) +
+  theme_classic() +
+  labs(title = "Distribution of solved crosswords by solve status", 
+       x = "Year",
+       y = "Count of solved crosswords") +
+  facet_wrap(
+    vars(day_of_week_name), 
+    strip.position = "top") +
+  theme(strip.background = element_blank(), strip.placement = "outside")
+```
+
+### Day of the week
+```{r solveweek}
+#| fig-width: 12
+plot_func(
+  solved_day,
+  solved_day$day_of_week_name,
+  solved_day$n,
+  met.brewer(theme_pal)[5],
+  "Distribution of solved crosswords by solve status",
+  "Day",
+  "Solved crosswords"
+)
+```
+
+### Year
+```{r solveyear}
+#| fig-width: 12
+plot_func(
+  solved_year,
+  solved_year$year,
+  solved_year$n,
+  met.brewer(theme_pal)[6],
+  "Distribution of solved crosswords by solve status",
+  "Year",
+  "Solved crosswords"
+)
+```
+
+:::
+
+## Gotta go fast
 
 ::: {.panel-tabset}
 
-### Mondays
+### Day of the week and year
 
-```{r mondays}
-plot_line(df = mondays, df_lab = "Mondays")
+```{r timeweekyear}
+#| fig-width: 12
+ggplot(progress_day_year, 
+       aes(x = year, 
+           y = avg)) +
+  geom_bar(stat = "identity",
+           position = "stack",
+           fill = met.brewer(theme_pal)[7]) +
+  theme_classic() +
+  labs(title = "Average time to finish a crossword", 
+       x = "Year",
+       y = "Average solving time (in minutes)") +
+  facet_wrap(
+    vars(day_of_week_name), 
+    strip.position = "top") +
+  theme(strip.background = element_blank(), strip.placement = "outside")
 ```
 
-### Tuesdays
+### Day of the week
 
-The data for Tuesdays isn't as good as for the Mondays because it was only recently we graduated to being able to do Tuesdays consistently.
+```{r timeweek}
+#| fig-width: 12
+plot_func(
+  progress_day,
+  progress_day$day_of_week_name,
+  progress_day$avg,
+  met.brewer(theme_pal)[8],
+  "Average time to finish a crossword",
+  "Day",
+  "Average solving time (in minutes)"
+)
+```
 
-```{r tuesdays}
-plot_line(df = tuesdays, df_lab = "Tuesday")
+### Year
+```{r timeyear}
+#| fig-width: 12
+plot_func(
+  progress_year,
+  progress_year$year,
+  progress_year$avg,
+  met.brewer(theme_pal)[9],
+  "Average time to finish a crossword",
+  "Year",
+  "Average solving time (in minutes)"
+)
 ```
 
 :::
 
-## Backtracking
+## A for effort
 
-I wanted to take a peek at one more thing. So as we've become more comfortable with crosswords we've been going back into the archives--and sometimes I've gone into the archives on my own--to do Mondays. So for this last plot, we look at solved crosswords that weren't checked or had the answers revealed. This plot supports and potentially explains some weird behaviours seen in the above plots. This plot also includes a dotted line to indicate the average number of solved crosswords that were not checked or revealed from 2018 to 2023.
+::: {.panel-tabset}
 
-```{r backtrack}
-ggplotly({
-  ggplot(backtrack) +
-    geom_bar(stat = "identity",
-             position = "dodge",
-             aes(
-               x = year,
-               y = n,
-               fill = factor(year),
-               text = paste0("Year: ", year,
-                             "<br>",
-                             "Count: ", n)
-             )) +
-    geom_line(aes(x = year,
-                  y = avg),
-              group = 1,
-              stat = "identity",
-              size = 1,
-              linetype = "dotted") +
-    theme_minimal() +
-    theme(legend.position = "none") +
-    scale_fill_manual(values = met.brewer("Hiroshige")) +
-    labs(title = "Solved crosswords that weren't checked or revealed",
-         x = "Year",
-         y = "Count of solved crosswords")
-}, tooltip = "text")
+### Donut
+```{r attemptsdonut}
+#| fig-width: 12
+ggplot(attempts,
+       aes(
+         ymax = ymax,
+         ymin = ymin,
+         xmax = 4,
+         xmin = 3,
+         fill = finished
+       )) +
+  geom_rect() +
+  coord_polar(theta = "y") + # Try to remove that to understand how the chart is built initially
+  xlim(c(2, 4)) + # Try to remove that to see how to make a pie chart
+  theme_void() +
+  scale_fill_manual(values = c(met.brewer(theme_pal)[10], met.brewer(theme_pal)[1])) +
+  labs(title = "Percentage of crosswords by completion status", fill = "Completion status") +
+  facet_wrap( ~ year, nrow = 2, ncol = 4)
 ```
 
-Why this plot is important is to consider things outside of what you see in the data to explain the data. But this is only the beginning of data exploration!
+### Line chart
 
-I hope you've enjoyed this brief analysis of our NYT crossword journey :smile:
+```{r attemptsline}
+#| fig-width: 12
+ggplot(attempts, aes(x = year, y = n, colour = finished)) +
+  geom_line(size = 2) +
+  theme_classic() +
+  labs(title = "Count of crosswords attempted by completion status", x = "Year", y = "Number of crosswords", colour ="Completion status") +
+  scale_fill_manual(values = c(met.brewer(theme_pal)[9], met.brewer(theme_pal)[2]))
+```
+
+:::
+
+## ⭐
+
+::: {.panel-tabset}
+
+### Bar
+
+```{r goldbar}
+#| fig-width: 12
+ggplot(gold_all, aes(x = year, y = n, fill = star)) +
+  geom_bar(stat = "identity", position = position_dodge(preserve = "single")) +
+  theme_classic() +
+  labs(title = "Count of crosswords attempted by year, weekday, and star status", x = "Year", y = "Number of crosswords", fill = "Star status") +
+  scale_fill_manual(values = c(met.brewer(theme_pal)[1], met.brewer(theme_pal)[10])) +
+  facet_wrap(
+    ~ day_of_week_name,
+    strip.position = "top"
+  ) +
+  theme(strip.background = element_blank(), strip.placement = "outside")
+```
+
+### Donut
+```{r golddonut}
+#| fig-width: 12
+ggplot(gold,
+       aes(
+         ymax = ymax,
+         ymin = ymin,
+         xmax = 4,
+         xmin = 3,
+         fill = star
+       )) +
+  geom_rect() +
+  coord_polar(theta = "y") + # Try to remove that to understand how the chart is built initially
+  xlim(c(2, 4)) + # Try to remove that to see how to make a pie chart
+  theme_void() +
+  scale_fill_manual(values = c(met.brewer(theme_pal)[8], met.brewer(theme_pal)[3])) +
+  labs(title = "Percentage of crosswords by star status", fill = "Star status") +
+  facet_wrap( ~ year, nrow = 2, ncol = 4)
+```
+
+### Line chart
+
+```{r goldline}
+#| fig-width: 12
+ggplot(attempts, aes(x = year, y = n, colour = finished)) +
+  geom_line(size = 2) +
+  theme_classic() +
+  labs(title = "Count of crosswords attempted by star status", x = "Year", y = "Number of crosswords", colour ="Star status") +
+  scale_fill_manual(values = c(met.brewer(theme_pal)[7], met.brewer(theme_pal)[4]))
+```
+
+:::

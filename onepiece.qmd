@@ -1,0 +1,172 @@
+---
+title: Double secret
+format: closeread-html
+---
+
+Got you! ☜(ﾟヮﾟ☜)
+
+You should watch 
+
+![](./_images/op_logo.png)
+
+And here's why.
+
+::::{.cr-section}
+
+
+:::{focus-on="cr-mylist"}
+
+First, let's look at the top 3 most popular animation series[^0] according to [IMDB](https://www.imdb.com/search/title/?title_type=tv_series,tv_miniseries&keywords=anime-animation&count=100&interests=in0000026).
+
+:::
+
+:::{#cr-mylist}
+
+We got:
+
+1. Jujutsu Kaisen
+2. Attack on Titan
+3. One Piece
+
+:::
+
+Jujutsu Kaisen ... is really just Naruto + Demon Slayer
+<br>
+Yuji = Naruto<br>
+Megumi = Sasuke<br>
+Nobara = Sakura<br>
+Saturo = Kakashi
+<br>
+and don't try to convince me otherwise.
+<br><br>
+You can't honestly tell me after watching 5 seasons of Attack on Titan that you were satisified with that ending.
+<br><br>
+One Piece on the other hand--S tier.
+
+:::{focus-on="cr-filler"}
+
+Oh, but Brittny there's too many episodes. I don't have time.
+
+First off, One Piece has a disgustingly low amount of filler episodes.[^1]
+
+:::
+
+:::{#cr-filler}
+```{r}
+# Load ggplot2
+library(ggplot2)
+
+# Create Data
+data <- data.frame(
+  group=c('Filler', 'Canon/Mixed'),
+  value=c(94, 1061)
+)
+
+# Basic piechart
+ggplot(data, aes(x="", y=value, fill=group)) +
+  geom_bar(stat="identity", width=1, color="white") +
+  scale_fill_manual(values=c("#2596be", "#ed1b16")) +
+  coord_polar("y", start=0) +
+  labs(fill="Episode type") +
+  theme_void() # remove background, grid, numeric labels
+```
+:::
+
+Therefore, there's a high percentage of events that are important to the main storyline. What you watch is related to the overall theme and message. Not like Naruto, which has a total of **220** with **90** filler episodes making it **42%** filler.[^2] 
+
+Don't get me wrong I also like Naruto but my point is if you're going to invest so much time into a series, it's worth noting that they're not wasting your time by padding the series unnecessarily.
+
+:::{focus-on="cr-toomany"}
+
+Oh, but Brittny that doesn't help that there's still 1155 episodes and counting (because the series is still ongoing).
+
+:::
+
+Let's do some math here. In this scenario you want to hammer out One Piece as fast as you can so we're only considering canon[^3] episodes. An average episode has a 24 minute run-time. @cr-epmath1
+
+:::{#cr-epmath1}
+
+1,061*24 = 25,464 minutes 
+
+25,464/60 = 424.4 hours
+
+424.4/24 = 17.683 days
+
+That's just over 2.5 weeks--what else are you really doing? 
+
+:::
+
+... but we can be even more realistic about the time.
+
+Normally, an episode starts with an intro and a recap--this can mean the episode really starts like 5 minutes in. Let's also not forget we have an outro and a preview for the next episode which also takes about 5 minutes. So if we're being real about it. That runtime can be cut down by 10 minutes but let's round it down to 8 to be conservative. This can take into account watching each new intro and outro.
+
+Let's redo the math with that in mind, where an average episode would be about 16 minutes in length. @cr-epmath2
+
+:::{#cr-epmath2}
+
+1,061*16 = 16,976 minutes 
+
+25,464/60 = 282.93 hours
+
+424.4/24 = 11.789 days
+
+Now, we're at about 1.5 weeks!
+
+:::
+
+:::{focus-on="cr-commute"}
+
+Here's a scenario. My commute is 1 hour in the morning and 1.5 hours in the evening. This means I could watch 9 episodes during this time.
+
+:::
+
+:::{#cr-commute}
+```{r}
+# Load ggplot2
+# library(ggplot2)
+
+# # Create Data
+# data <- data.frame(
+#   x=c(seq(9, to=1061, by=9))
+# )
+
+# print(head(data, 5))
+
+# # Basic linechart
+# ggplot(data, aes(x="", y=value, fill=group)) +
+#   geom_bar(stat="identity", width=1, color="white") +
+#   scale_fill_manual(values=c("#2596be", "#ed1b16")) +
+#   coord_polar("y", start=0) +
+#   labs(fill="Episode type") +
+#   theme_void() # remove background, grid, numeric labels
+```
+:::
+
+
+<!-- ---
+title: My First Closeread
+format: closeread-html
+---
+
+Hello World! Please read my Closeread story below.
+
+:::{.cr-section}
+
+Closeread enables scrollytelling.
+
+Draw your readers attention with: @cr-features
+
+:::{#cr-features}
+1. Highlighting
+2. Zooming
+3. Panning
+:::
+
+::: -->
+
+::::
+
+[^0]: Filtering on anime-animation as a keyword
+[^1]: [Source](https://www.animefillerlist.com/shows/one-piece)
+[^2]: [Source](https://www.animefillerlist.com/shows/naruto)
+[^3]: I probably should have noted that canon means that it was in the manga because One Piece started originally in this format.

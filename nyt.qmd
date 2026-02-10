@@ -41,11 +41,6 @@ plot_func <- function(df, x, y, fillcolour, title, xlab, ylab) {
     labs(title = title, x = xlab, y = ylab)
 }
 
-## Part 1 ----
-nyt_mtw <-
-  nyt |>
-  filter(day_of_week_integer %in% c(1, 2, 3))
-
 ## Breakdown by day & year ----
 solved_day_year <-
   nyt |>
@@ -98,6 +93,10 @@ attempts <-
   ) |>
   ungroup()
 
+attempts_all <-
+  nyt |>
+  count(year, day_of_week_name, finished)
+
 ## Gold ----
 gold <-
   nyt |>
@@ -132,61 +131,89 @@ I found a Python package by [Matt Dodge](https://github.com/mattdodge/nyt-crossw
 I'm using the "Hiroshige" palette from the [`MetBrewer`](https://github.com/BlakeRMills/MetBrewer) package.
 :::
 
-::: {.callout-caution}
-This is a work in progress.
-:::
-
 ```{r totalcompletes}
 solves <- nyt |> filter(finished=='Complete') |> count()
 ```
 
-As of December 2025, we've completed `{r} solves` NYT crossword puzzles.
+From January 1, 2018 to December 31, 2025, we've completed `{r} solves` NYT crossword puzzles.
 
 🎉🎉🎉
 
-For the time being, here are my plots so far:
+Let's looks at some plots that describe our crossword journey so far ...
 
-## How are we doing so far?
-
-::: {.panel-tabset}
-
-### All days
-```{r alldays}
-#| fig-width: 12
-ggplot(nyt, aes(x = solving_minutes, y = day_of_week_name, colour=met.brewer(theme_pal)[1])) +
-  geom_point(alpha = 0.5) +
-  scale_y_discrete(limits = rev) +
-  theme_classic() +
-  theme(legend.position = "none") +
-  labs(title = "How long does it take us to solve a puzzle?", x = "Minutes to solve", y = "Day of the week")
-```
-
-### Let's focus on some days
-```{r somedays}
-#| fig-width: 12
-ggplot(nyt_mtw,
-       aes(x = solving_minutes, y = day_of_week_name, size = solving_minutes, colour=met.brewer(theme_pal)[2])) +
-  geom_point(alpha = 0.25) +
-  scale_y_discrete(limits = rev) +
-  theme_classic() +
-  theme(legend.position = "none") +
-  labs(title = "How long does it take us to solve a puzzle?", x = "Minutes to solve", y = "Day of the week")
-```
-:::
-
-You can see that we're pretty comfortable in the Monday to Wednesday range. Typically, Mondays are the easiest and the difficulty increases as you continue in the week. Depending on who you ask Wednesdays and Thursdays could be a toss-up for difficulty. Wednesdays normally have a theme which I feel helps me solve the puzzle easier than if it didn't have a theme. I also just love a theme. 
-
-## What are we solving here?
+## Solved crosswords
 
 Here we're looking at the number of solved crosswords.
 
 ::: {.panel-tabset}
 
-### Density plots
+### Day of the week and year
+
+```{r solveweekyear}
+#| fig-width: 12
+#| fig-height: 15
+ggplot(solved_day_year, 
+       aes(x = year, 
+           y = n)) +
+  geom_bar(stat = "identity",
+           position = "stack",
+           fill = met.brewer(theme_pal)[1]) +
+  theme_classic() +
+  labs(title = "Distribution of solved crosswords", 
+       x = "Year",
+       y = "Count of solved crosswords") +
+  facet_wrap(
+    vars(day_of_week_name), 
+    strip.position = "top",
+    ncol = 1) +
+  theme(strip.background = element_blank(), strip.placement = "outside")
+```
+
+### Day of the week
+```{r solveweek}
+#| fig-width: 12
+plot_func(
+  solved_day,
+  solved_day$day_of_week_name,
+  solved_day$n,
+  met.brewer(theme_pal)[2],
+  "Distribution of solved crosswords",
+  "Day",
+  "Solved crosswords"
+)
+```
+
+### Year
+```{r solveyear}
+#| fig-width: 12
+plot_func(
+  solved_year,
+  solved_year$year,
+  solved_year$n,
+  met.brewer(theme_pal)[3],
+  "Distribution of solved crosswords",
+  "Year",
+  "Solved crosswords"
+)
+```
+
+:::
+
+Unlike Garfield, we love Mondays. Mostly, because they're the easiest so they're good for the ego--unless you can't get it then it's the pits. You can see we like to stick within our Monday to Wednesday range. We dabbled a little in Friday, Saturday, and Sunday but they proved to be so difficult and lowkey soul-crushing. However, to be fair we didn't Google until 2025 for answers whch I feel like now is a valid learning tool. We were not for Googling answers but when you have a across and down clue with names--Come on. Also, how you supposed to get better otherwise? So we try to get hints before fully getting the answer at least. We tend to use this [one](https://word.tips/todays-nyt-mini-crossword-clues-answers/) because it gives you levels of clues. We do Thursdays when we're on a good gold streak. Our longest streak so far (across days) was from Monday to Thursday and after that we tried a Friday. The hard days are hard though. You can also see how keen we were to start out with because we were just getting into crosswords in 2018. Then, we fell off a bit--not sure if we were being complacent but then we picked it up back in 2025. It'll probably drop off again because we were doing the crossword on our IPad and now it's no longer compatible with the latest version of the NYT app so it doesn't work anymore. How did this even happen??? The app shouldn't even be that complicated??? Why do I need iOS 18 or above to play crosswords on my IPad??? Y'all should go fix yourselves NYT games after trying to sell me Crossplay which is literally just Scrabble.
+
+😡😡😡
+
+## Gotta go fast
+
+## Let's look at all the crosswords we be solving
 
 ::: {.panel-tabset}
 
-### By weekday
+### Histogram
+
+::: {.panel-tabset}
+
+#### Day of the week
 
 ```{r solveggridges}
 #| fig-width: 12
@@ -206,7 +233,7 @@ ggplot({nyt |>
   labs(title = "Time to finish a crossword", x = "Solve time (in minutes)")
 ```
 
-### By year
+#### Year
 
 ```{r solveggridges2}
 #| fig-width: 12
@@ -229,57 +256,40 @@ ggplot({nyt |>
 
 :::
 
-### Day of the week and year
+### Scatterplot
 
-```{r solveweekyear}
+::: {.panel-tabset}
+
+#### Day of the week
+```{r solvescatter1}
 #| fig-width: 12
-ggplot(solved_day_year, 
-       aes(x = year, 
-           y = n)) +
-  geom_bar(stat = "identity",
-           position = "stack",
-           fill = met.brewer(theme_pal)[4]) +
+ggplot(nyt, aes(x = solving_minutes, y = day_of_week_name, colour=met.brewer(theme_pal)[4])) +
+  geom_point(alpha = 0.5) +
+  scale_y_discrete(limits = rev) +
   theme_classic() +
-  labs(title = "Distribution of solved crosswords by solve status", 
-       x = "Year",
-       y = "Count of solved crosswords") +
-  facet_wrap(
-    vars(day_of_week_name), 
-    strip.position = "top") +
-  theme(strip.background = element_blank(), strip.placement = "outside")
+  theme(legend.position = "none") +
+  labs(title = "How long does it take us to solve a puzzle?", x = "Minutes to solve", y = "Day of the week")
+  
 ```
 
-### Day of the week
-```{r solveweek}
-#| fig-width: 12
-plot_func(
-  solved_day,
-  solved_day$day_of_week_name,
-  solved_day$n,
-  met.brewer(theme_pal)[5],
-  "Distribution of solved crosswords by solve status",
-  "Day",
-  "Solved crosswords"
-)
-```
+#### Year
 
-### Year
-```{r solveyear}
+```{r solvescatter2}
 #| fig-width: 12
-plot_func(
-  solved_year,
-  solved_year$year,
-  solved_year$n,
-  met.brewer(theme_pal)[6],
-  "Distribution of solved crosswords by solve status",
-  "Year",
-  "Solved crosswords"
-)
+ggplot(nyt, aes(
+  x = solving_minutes,
+  y = as.character(year),
+  colour = met.brewer(theme_pal)[5]
+)) +
+  geom_point(alpha = 0.5) +
+  theme_classic() +
+  theme(legend.position = "none") +
+  labs(title = "How long does it take us to solve a puzzle?", x = "Minutes to solve", y = "Year")
 ```
 
 :::
 
-## Gotta go fast
+### Bar chart
 
 ::: {.panel-tabset}
 
@@ -287,19 +297,21 @@ plot_func(
 
 ```{r timeweekyear}
 #| fig-width: 12
+#| fig-height: 15
 ggplot(progress_day_year, 
        aes(x = year, 
            y = avg)) +
   geom_bar(stat = "identity",
            position = "stack",
-           fill = met.brewer(theme_pal)[7]) +
+           fill = met.brewer(theme_pal)[6]) +
   theme_classic() +
   labs(title = "Average time to finish a crossword", 
        x = "Year",
        y = "Average solving time (in minutes)") +
   facet_wrap(
     vars(day_of_week_name), 
-    strip.position = "top") +
+    strip.position = "top",
+    ncol = 1) +
   theme(strip.background = element_blank(), strip.placement = "outside")
 ```
 
@@ -311,7 +323,7 @@ plot_func(
   progress_day,
   progress_day$day_of_week_name,
   progress_day$avg,
-  met.brewer(theme_pal)[8],
+  met.brewer(theme_pal)[7],
   "Average time to finish a crossword",
   "Day",
   "Average solving time (in minutes)"
@@ -325,7 +337,7 @@ plot_func(
   progress_year,
   progress_year$year,
   progress_year$avg,
-  met.brewer(theme_pal)[9],
+  met.brewer(theme_pal)[8],
   "Average time to finish a crossword",
   "Year",
   "Average solving time (in minutes)"
@@ -333,6 +345,12 @@ plot_func(
 ```
 
 :::
+
+:::
+
+You can see that we're pretty comfortable in the Monday to Wednesday range. Typically, Mondays are the easiest and the difficulty increases as you continue in the week. Depending on who you ask Wednesdays and Thursdays could be a toss-up for difficulty. Wednesdays normally have a theme which I feel helps me solve the puzzle easier than if it didn't have a theme. I also just love a theme.
+
+You can't really tell if we've improved if you're looking at day of the week but if you look at the breakdown by year you can notice that the clusters are slowly moving to the left as the years go by (indicating less time spent solving a puzzle).
 
 ## A for effort
 
@@ -358,6 +376,24 @@ ggplot(attempts,
   facet_wrap( ~ year, nrow = 2, ncol = 4)
 ```
 
+### Bar chart
+
+```{r attemptsbar}
+#| fig-width: 12
+#| fig-height: 15
+ggplot(attempts_all, aes(x = year, y = n, fill = finished)) +
+  geom_bar(stat = "identity", position = position_dodge(preserve = "single")) +
+  theme_classic() +
+  labs(title = "Count of crosswords attempted by year, weekday, and completion status", x = "Year", y = "Number of crosswords", fill = "Completion status") +
+  scale_fill_manual(values = c(met.brewer(theme_pal)[9], met.brewer(theme_pal)[2])) +
+  facet_wrap(
+    ~ day_of_week_name,
+    strip.position = "top",
+    ncol = 1
+  ) +
+  theme(strip.background = element_blank(), strip.placement = "outside")
+```
+
 ### Line chart
 
 ```{r attemptsline}
@@ -366,30 +402,20 @@ ggplot(attempts, aes(x = year, y = n, colour = finished)) +
   geom_line(size = 2) +
   theme_classic() +
   labs(title = "Count of crosswords attempted by completion status", x = "Year", y = "Number of crosswords", colour ="Completion status") +
-  scale_fill_manual(values = c(met.brewer(theme_pal)[9], met.brewer(theme_pal)[2]))
+  scale_color_manual(values = c(met.brewer(theme_pal)[8], met.brewer(theme_pal)[3]))
 ```
 
 :::
 
-## ⭐
+So we don't always finish a crossword. Sometimes life happens, sometimes you feel like it's too hard, or sometimes you don't like the vibes of the puzzle. You can see over the years that we've come around to trying to finish them more than when we started. This could also be linked to us committing to the days that we think we can do though. At this point we know we can finish Mondays to Wednesdays so we normally stick to them. We'll still do a Thursday here and there but unless we think we can continue that star streak the will isn't always there to suffer.
+
+## ⭐⭐⭐
+
+So you get a blue star if you finish a crossword but if you finish them in a row (either day after day or the same day over weeks) you get awarded a gold star--and it's great. The gold star can only be achieved if you don't take any clues and you finish the crossword before I think the answers go out--so there's a time limit to it. So not only do you need to finish it without getting any answers but you have to finish it between when the crossword is released to like the next day--which isn't so bad for Mondays but when you get to the Thursdays, we're taking a break here and there to get out of our slump or we need some time away before we get back into it.
+
+This is the peak in crosswords. That's when you know you're going places.
 
 ::: {.panel-tabset}
-
-### Bar
-
-```{r goldbar}
-#| fig-width: 12
-ggplot(gold_all, aes(x = year, y = n, fill = star)) +
-  geom_bar(stat = "identity", position = position_dodge(preserve = "single")) +
-  theme_classic() +
-  labs(title = "Count of crosswords attempted by year, weekday, and star status", x = "Year", y = "Number of crosswords", fill = "Star status") +
-  scale_fill_manual(values = c(met.brewer(theme_pal)[1], met.brewer(theme_pal)[10])) +
-  facet_wrap(
-    ~ day_of_week_name,
-    strip.position = "top"
-  ) +
-  theme(strip.background = element_blank(), strip.placement = "outside")
-```
 
 ### Donut
 ```{r golddonut}
@@ -406,20 +432,52 @@ ggplot(gold,
   coord_polar(theta = "y") + # Try to remove that to understand how the chart is built initially
   xlim(c(2, 4)) + # Try to remove that to see how to make a pie chart
   theme_void() +
-  scale_fill_manual(values = c(met.brewer(theme_pal)[8], met.brewer(theme_pal)[3])) +
+  scale_fill_manual(values = c(met.brewer(theme_pal)[7], met.brewer(theme_pal)[4])) +
   labs(title = "Percentage of crosswords by star status", fill = "Star status") +
   facet_wrap( ~ year, nrow = 2, ncol = 4)
+```
+
+### Bar chart
+
+```{r goldbar}
+#| fig-width: 12
+#| fig-height: 15
+ggplot(gold_all, aes(x = year, y = n, fill = star)) +
+  geom_bar(stat = "identity", position = position_dodge(preserve = "single")) +
+  theme_classic() +
+  labs(title = "Count of crosswords attempted by year, weekday, and star status", x = "Year", y = "Number of crosswords", fill = "Star status") +
+  scale_fill_manual(values = c(met.brewer(theme_pal)[5], met.brewer(theme_pal)[6])) +
+  facet_wrap(
+    ~ day_of_week_name,
+    strip.position = "top",
+    ncol = 1
+  ) +
+  theme(strip.background = element_blank(), strip.placement = "outside")
 ```
 
 ### Line chart
 
 ```{r goldline}
 #| fig-width: 12
-ggplot(attempts, aes(x = year, y = n, colour = finished)) +
+ggplot(gold, aes(x = year, y = n, colour = star)) +
   geom_line(size = 2) +
   theme_classic() +
   labs(title = "Count of crosswords attempted by star status", x = "Year", y = "Number of crosswords", colour ="Star status") +
-  scale_fill_manual(values = c(met.brewer(theme_pal)[7], met.brewer(theme_pal)[4]))
+  scale_color_manual(values = c(met.brewer(theme_pal)[1], met.brewer(theme_pal)[10]))
 ```
 
 :::
+
+You can see over the years that our gold stars increase over the years. At this point, we're consistently getting the Monday which is normally an easy gold star--I can even do those on my own now. Tuesdays I can mostly do by myself too. It's normally sports or American history that I need some help from my partner. Wednesdays is the one we normally do together and we can often get the gold star for this one too. So at this point we got multiple Monday gold stars and Monday to Wednesday gold stars by the time we roll into 2025.
+
+## Next steps
+
+I want to look more into the gold star streak. I think there could be sometime interesting there. I.e., when was our best streaks and maybe the time associated to those streaks. I did a quick glance at the authors and there weren't a lot of repeating names from 2018 to 2025. The top 3 authors had 21, 20, and 20 crosswords which I think is a bit too small of a sample to look at. Maybe if we continue to do crosswords for a couple more years.
+
+I also want to look at the solve times for our gold star crosswords. This could be another way to gauge improvement over the years--assuming it's been getting better.
+
+What would also be great would be to look at the other NYT games like Wordle or Connections.
+
+That's our crossword journey for now. Stay tuned for more data and more updates. Until next time!
+
+🎊🎊🎊

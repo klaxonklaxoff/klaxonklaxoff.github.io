@@ -34,9 +34,9 @@ website:
         menu:
           - file: pi-deng.qmd
           - file: zole.qmd
-      - text: Secret
-        menu:
-          - file: onepiece.qmd
+      # - text: Secret
+      #   menu:
+      #     - file: onepiece.qmd
     
 page-footer:  
   - icon: github

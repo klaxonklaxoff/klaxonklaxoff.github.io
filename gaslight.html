@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>gaslight – My site</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0fc23d8bb9b3a07421687167b01037d1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="false">
+
+
+<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">My site</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Landing page</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-analysis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Analysis</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-analysis">    
+        <li>
+    <a class="dropdown-item" href="./nyt.html">
+ <span class="dropdown-text">New York Times crossword analysis (revised)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./pwhl_dv.html">
+ <span class="dropdown-text">PWHL stats</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./gaslight.html">
+ <span class="dropdown-text">The code behind it all</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-card-games" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Card games</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-card-games">    
+        <li>
+    <a class="dropdown-item" href="./pi-deng.html">
+ <span class="dropdown-text">Pi deng</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./zole.html">
+ <span class="dropdown-text">Zole</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/klaxonklaxoff/klaxonklaxoff.github.io">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/klaxonklaxoff/klaxonklaxoff.github.io/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+      <!-- user-provided yaml closeread style options -->
+      <style>
+        :root {
+          --cr-narrative-text-color-sidebar: #fdfdfd;
+--cr-section-background-color: #55499b;
+        }
+      </style>
+    
+
+
+
+
+<blockquote class="blockquote">
+<p>Photo from <a href="https://stock.adobe.com/ca">Adobe Stock</a>.</p>
+</blockquote>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-ok" data-scale-by="10">
+<div class="narrative">
+<p>Not <em>clinically</em>, but something is up for real.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>So I’ve walked, biked, skedaddled around Ottawa–like most who live in the city. I’ve also noticed that sometimes at night, some areas aren’t as well lit as others. This was only a hunch until I decided to use what we learnt from the R-Ladies Ottawa <a href="https://www.meetup.com/rladies-ottawa/events/311779727/">Custom city maps in R workshop</a> and put some pen to paper. I’d made some modifications to the original template because I want to specifically look at streetlamps as an indicator that an area is lit.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-gtriangle_unlit">
+<div class="narrative">
+<p>First, I thought I’d take a look at the Golden Triangle–which consists of Centretown, the Glebe, and Sandy Hill. This is a dense area so I’d expect to see a lot of streetlamps.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-gtriangle_lit">
+<div class="narrative">
+<p>Which seems to be the case.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-east_unlit">
+<div class="narrative">
+<p>So I was like OK … maybe things are different in the East side of Ottawa? Maybe we might see some sort of disparity between Vanier and Rockliffe?</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-east_lit">
+<div class="narrative">
+<p>And then I’m seeing the streetlamps and they look plentiful here too??? Am I imagining that Ottawa is not good at lighting up its streets at night???</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-west_unlit">
+<div class="narrative">
+<p>But as a former resident of Hintonburg, I felt it in my heart that the streets could have been lit better when I was either walking or biking home at night.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-west_lit">
+<div class="narrative">
+<p>And then here again, Open Street Maps or WHOEVER is telling AND showing me that I’m wrong. The streets are lit.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-ok" data-scale-by="10">
+<div class="narrative">
+<p>But I won’t go down without a fight. I know <strong>FOR A FACT</strong> that I hit a Personal Record (PR) at night because I was scared of the dark so I decided to look at that segment in my Strava. I remember thinking that I was out later than expected and didn’t have my headlamp so I was pumping down the strip like my life depended on it.was this segment you ask?</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-riverpath_unlit">
+<div class="narrative">
+<p>Look at this cute little scenic route.much nice.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-riverpath_lit">
+<div class="narrative">
+<p>Just kidding!</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-riverpath_lit" data-scale-by="1.5">
+<div class="narrative">
+<p>And what</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-pan-to="25px" data-focus-on="cr-riverpath_lit" data-scale-by="2">
+<div class="narrative">
+<p>do we</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-pan-to="50px" data-focus-on="cr-riverpath_lit" data-scale-by="2.5">
+<div class="narrative">
+<p>have here?</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Look at this cute little stretch of <strong>NOTHING</strong>–which I love at night, by the river /s</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-pr">
+<div class="narrative">
+<p>Anyways, here’s my PR for that segment. <br><br> For a mostly casual, bike-to-get-around-the-city kind of person, it’s not too shabby. However, I don’t want to be hitting my PRs out of fear. I want to be hitting them because I want to, on my own terms. <br><br> So Ottawa/National Capital Commission, put more lights around when people be walking/biking/getting around.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-ok" data-scale-by="10">
+<div class="narrative">
+<p>EDIT: I drove along the Kichi Zibi Mikan recently and noticed there weren’t any lights PERIOD so …</p>
+</div>
+</div>
+<section id="the-code-behind-it-all" class="level2 narrative trigger">
+<h2 class="narrative anchored" data-anchor-id="the-code-behind-it-all">The code behind it all</h2>
+</section>
+<div class="trigger new-trigger" data-focus-on="cr-event">
+<div class="narrative">
+<p>Like I mentioned earlier, I took the code used from our <a href="https://www.meetup.com/rladies-ottawa/events/311779727/">Custom city maps in R workshop</a>.this project, I was interested specifically in lit areas and to find the appropriate keys I used the <a href="https://wiki.openstreetmap.org/wiki/Map_features">wiki</a>. I was debating between using lit or highway: streetlamp but I ended up using the latter because lit only looks at street lighting and I was more interested in lighting for pedestrian or bike paths. You can find the full code <a href="">here</a>. It’s essentially broken up into 2 parts: <br><br> 1. The function <br> 2. Setting the parameters for the outputs <br><br> This might come from my <em>Python influence</em> 🐍 but it’s set up similar to your functions and <code>main.py</code>.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapcode1">
+<div class="narrative">
+<p>The code starts by asking you to enter the parameters for OpenStreetMap to know what area you want to focus in on. Next, you have to tell it what attributes you want. For the most part I wanted to show the the basic infracture of the city.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapcode1" data-highlight="3,4">
+<div class="narrative">
+<p>This is a section I added to add a layer of street lamps on top of the map.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapcode1" data-highlight="7">
+<div class="narrative">
+<p>We see from the wiki that this is a node so we use <code>osm_points</code> instead of <code>osm_multipolygons</code>, <code>osm_polygons</code>, or <code>osm_lines</code> which were used for water, vegetation, or roads resepectively.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapcode1" data-highlight="9">
+<div class="narrative">
+<p>And we assign a nice yellow to indicate street lamp locations.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapcode2" data-highlight="1-27">
+<div class="narrative">
+<p>Further down the code, the next big modification I made was to output 2 maps. The first being the unlit version of my map.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapcode2" data-highlight="29">
+<div class="narrative">
+<p>Then, we export this map.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapcode2" data-highlight="31-38">
+<div class="narrative">
+<p>After this, I overlay the streetlamps on top of this map.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapcode2" data-highlight="40">
+<div class="narrative">
+<p>And then we export this map.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapoutput">
+<div class="narrative">
+<p>Here is the code for the map outputs.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapoutput" data-highlight="1">
+<div class="narrative">
+<p>The first step is that it calls the function we talked about earlier.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapoutput" data-highlight="4">
+<div class="narrative">
+<p>I have the list I want to re-iterate over.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapoutput" data-highlight="5-19">
+<div class="narrative">
+<p>Then, because we essentially want to do the same thing 4 times, I’ve made this into a loop.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-mapoutput" data-highlight="21-25">
+<div class="narrative">
+<p>Each section of the city has different query parameters but most of the code if repeated with minor differences.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-error">
+<div class="narrative">
+<p>In the full code, you’ll see the for loop broken down though and that’s because I kept getting this annoying AF error. Due to this, I was getting impatient and running just chunks of the code even though what you see above is what I imagine an ideal look of the what the code should be doing. <br><br> BUT WHATEVER.</p>
+</div>
+</div>
+<section id="next-steps" class="level2 narrative trigger">
+<h2 class="narrative anchored" data-anchor-id="next-steps">Next steps</h2>
+</section>
+<div class="trigger new-trigger" data-focus-on="cr-ok" data-scale-by="10">
+<div class="narrative">
+<p>I’ve got some Strava data to look at and compare all the times I’ve gone through this segment but that will take some time to parse through the data because geospatial data is fairly new to me.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-heart" data-scale-by="10">
+<div class="narrative">
+<p>Thanks for listening to my Ted Talk!</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-ok" class="sticky">
+<p>👀</p>
+</div>
+<div id="cr-gtriangle_unlit" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/2026_unlit_centretown-map.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Golden Triangle without streetlamps</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-gtriangle_lit" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/2026_lit_centretown-map.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Golden Triangle with streetlamps</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-east_unlit" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/2026_unlit_east-map.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Vanier &amp; Rockcliffe without streetlamps</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-east_lit" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/2026_lit_east-map.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Vanier &amp; Rockcliffe with streetlamps</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-west_unlit" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/2026_unlit_west-map.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Hintonburg &amp; Westboro without streetlamps</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-west_lit" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/2026_lit_west-map.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Hintonburg &amp; Westboro with streetlamps</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-riverpath_unlit" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/2026_unlit_riverpath-map.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Ottawa river pathway without streetlamps</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-riverpath_lit" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/2026_lit_riverpath-map.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Ottawa river pathway with streetlamps</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-pr" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/segment.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>PR for Bayview MUP Intersection to Portage Bridge Turnoff</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-event" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/event-flyer.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Custom city maps in R workshop</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-mapcode1" class="sticky">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>street_lamps <span class="ot">&lt;-</span> query <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>    <span class="fu">add_osm_feature</span>(</span>
+<span id="cb1-3"><a href="#cb1-3"></a>      <span class="at">key =</span> <span class="st">"highway"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4"></a>      <span class="at">value =</span> <span class="st">"street_lamp"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="fu">osmdata_sf</span>()</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a>street_lamps_cropped <span class="ot">&lt;-</span> <span class="fu">st_crop</span>(rec<span class="sc">$</span>osm_points, bbox_sf)</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a>street_lamp_colour <span class="ot">&lt;-</span> <span class="st">"#ffab00"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="cr-mapcode2" class="sticky">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>plt <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="co"># rivers</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="fu">geom_sf</span>(<span class="at">data =</span> water_a_cropped,</span>
+<span id="cb2-4"><a href="#cb2-4"></a>            <span class="at">fill =</span> water_colour,</span>
+<span id="cb2-5"><a href="#cb2-5"></a>            <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="co"># other bodies of water</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="fu">geom_sf</span>(<span class="at">data =</span> water_b_cropped,</span>
+<span id="cb2-8"><a href="#cb2-8"></a>            <span class="at">fill =</span> water_colour,</span>
+<span id="cb2-9"><a href="#cb2-9"></a>            <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>    <span class="co"># natural vegetation</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>    <span class="fu">geom_sf</span>(<span class="at">data =</span> natural_cropped,</span>
+<span id="cb2-12"><a href="#cb2-12"></a>            <span class="at">fill =</span> natural_colour,</span>
+<span id="cb2-13"><a href="#cb2-13"></a>            <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>    <span class="co"># recreational spaces</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="fu">geom_sf</span>(<span class="at">data =</span> rec_cropped,</span>
+<span id="cb2-16"><a href="#cb2-16"></a>            <span class="at">fill =</span> rec_colour,</span>
+<span id="cb2-17"><a href="#cb2-17"></a>            <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>    <span class="co"># minor roads</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a>    <span class="fu">geom_sf</span>(</span>
+<span id="cb2-20"><a href="#cb2-20"></a>      <span class="at">data =</span> roads_b_cropped,</span>
+<span id="cb2-21"><a href="#cb2-21"></a>      <span class="at">colour =</span> roads_b_colour,</span>
+<span id="cb2-22"><a href="#cb2-22"></a>      <span class="at">size =</span> <span class="fl">0.5</span>,</span>
+<span id="cb2-23"><a href="#cb2-23"></a>      <span class="at">alpha =</span> <span class="fl">0.7</span></span>
+<span id="cb2-24"><a href="#cb2-24"></a>    ) <span class="sc">+</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a>    <span class="fu">coord_sf</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="co"># remove margins</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span> <span class="co"># remove gridlines, etc.</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a>    <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> bkgd_colour))</span>
+<span id="cb2-28"><a href="#cb2-28"></a>  </span>
+<span id="cb2-29"><a href="#cb2-29"></a><span class="fu">ggsave</span>(filename_lamp_false)</span>
+<span id="cb2-30"><a href="#cb2-30"></a>  </span>
+<span id="cb2-31"><a href="#cb2-31"></a>plt <span class="ot">&lt;-</span> plt <span class="sc">+</span></span>
+<span id="cb2-32"><a href="#cb2-32"></a>    <span class="co"># street lamps</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a>    <span class="fu">geom_sf</span>(</span>
+<span id="cb2-34"><a href="#cb2-34"></a>      <span class="at">data =</span> street_lamps_cropped,</span>
+<span id="cb2-35"><a href="#cb2-35"></a>      <span class="at">colour =</span> street_lamp_colour,</span>
+<span id="cb2-36"><a href="#cb2-36"></a>      <span class="at">size =</span> <span class="fl">0.8</span>,</span>
+<span id="cb2-37"><a href="#cb2-37"></a>      <span class="at">alpha =</span> <span class="fl">0.7</span></span>
+<span id="cb2-38"><a href="#cb2-38"></a>    )</span>
+<span id="cb2-39"><a href="#cb2-39"></a></span>
+<span id="cb2-40"><a href="#cb2-40"></a><span class="fu">ggsave</span>(filename_lamp_true)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="cr-mapoutput" class="sticky">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">source</span>(<span class="st">'./map_function_lights.R'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co"># For loop ----</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="cf">for</span> (x <span class="cf">in</span> <span class="fu">c</span>(<span class="st">'centretown'</span>, <span class="st">'west'</span>, <span class="st">'east'</span>, <span class="st">'riverpath'</span>)) {</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  </span>
+<span id="cb3-6"><a href="#cb3-6"></a>  filepath_start <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">'./outputs/'</span>, <span class="fu">format</span>(<span class="fu">Sys.Date</span>(), <span class="st">"%Y"</span>), <span class="st">'_'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7"></a>  filepath_end <span class="ot">=</span> <span class="st">'-map.png'</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>  </span>
+<span id="cb3-9"><a href="#cb3-9"></a>  <span class="cf">if</span> (x <span class="sc">==</span> <span class="st">'centretown'</span>) { <span class="co"># Golden Triangle</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>    query_params <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">75.66851</span>, <span class="fl">45.39212</span>, <span class="sc">-</span><span class="fl">75.73073</span>, <span class="fl">45.43508</span>)</span>
+<span id="cb3-11"><a href="#cb3-11"></a>  } <span class="cf">else</span> <span class="cf">if</span> (x <span class="sc">==</span> <span class="st">'west'</span>) { <span class="co"># Hintonburg &amp; Westboro</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a>    query_params <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">75.76953</span>, <span class="fl">45.41400</span>, <span class="sc">-</span><span class="fl">75.70799</span>, <span class="fl">45.37120</span>)</span>
+<span id="cb3-13"><a href="#cb3-13"></a>  } <span class="cf">else</span> <span class="cf">if</span> (x <span class="sc">==</span> <span class="st">'east'</span>) { <span class="co"># Vanier &amp; Rockcliffe</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>    query_params <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">75.68816</span>, <span class="fl">45.46103</span>, <span class="sc">-</span><span class="fl">75.62259</span>, <span class="fl">45.41562</span>)</span>
+<span id="cb3-15"><a href="#cb3-15"></a>  } <span class="cf">else</span> <span class="cf">if</span> (x <span class="sc">==</span> <span class="st">'riverpath'</span>) { <span class="co"># Ottawa River Pathway</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>    query_params <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">75.72552</span>, <span class="fl">45.42114</span>, <span class="sc">-</span><span class="fl">75.71101</span>, <span class="fl">45.41110</span>)</span>
+<span id="cb3-17"><a href="#cb3-17"></a>  } <span class="cf">else</span> {</span>
+<span id="cb3-18"><a href="#cb3-18"></a>    <span class="cn">NULL</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a>  }</span>
+<span id="cb3-20"><a href="#cb3-20"></a>  </span>
+<span id="cb3-21"><a href="#cb3-21"></a>  <span class="fu">make_map</span>(</span>
+<span id="cb3-22"><a href="#cb3-22"></a>    query_params,</span>
+<span id="cb3-23"><a href="#cb3-23"></a>    <span class="fu">paste0</span>(filepath_start, <span class="st">'unlit_'</span>, x, filepath_end),</span>
+<span id="cb3-24"><a href="#cb3-24"></a>    <span class="fu">paste0</span>(filepath_start, <span class="st">'lit_'</span>, x, filepath_end)</span>
+<span id="cb3-25"><a href="#cb3-25"></a>  )</span>
+<span id="cb3-26"><a href="#cb3-26"></a>  </span>
+<span id="cb3-27"><a href="#cb3-27"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="cr-error" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/error_nightmare.png" class="img-fluid figure-img"></p>
+<figcaption>So annoying.</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-error" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./_images/gaslight/error_nightmare.png" class="img-fluid figure-img"></p>
+<figcaption>So annoying.</figcaption>
+</figure>
+</div>
+</div>
+<div id="cr-heart" class="sticky">
+<p>❤️🔥</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/klaxonklaxoff\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

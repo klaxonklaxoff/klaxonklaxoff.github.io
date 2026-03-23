@@ -28,6 +28,7 @@ website:
           - file: nyt.qmd
           - text: PWHL stats
             file: pwhl_dv.qmd
+          - file: gaslight.qmd
           # - file: bobs-burgers.qmd
           # - file: action_movies.qmd  # TODO: need to fix code
       - text: Card games

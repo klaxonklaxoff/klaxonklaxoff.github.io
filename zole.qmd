@@ -151,6 +151,90 @@ The game is concluded when all cards have been played. If you are playing standa
 
 This version is called **Student Zole**.
 
+In this variant, the layout is different. Below are the steps to set up:
+
+1. P1 shuffles
+2. P2 cuts the deck
+3. (P1 deals 2 cards to P2 then 2 cards to themself) * 2
+4. (P1 places 1 face down card in front of P2, then themself) * 4
+    1. Until there are 2 rows of 4 face down cards (total of 8)
+5. (P1 places 1 face up card in front of P2 on top of the face down card, then themself) * 4
+    1. Until there are 2 rows of 4 face up cards (total of 8)
+6. Deal 1 card to P1 and the last card to P2
+
+Here's a visualization:
+
+::: {.panel-tabset}
+
+#### Step 3.1
+
+P2: 🃏🃏
+P1: 🃏🃏
+
+#### Step 3.2
+
+P2: 🃏🃏 + 🃏🃏
+P1: 🃏🃏 + 🃏🃏
+
+#### Step 4.1
+
+P2: 🃏🃏🃏🃏
+
+    🃏 (face down)
+    🃏 (face down)
+
+P1: 🃏🃏🃏🃏
+
+#### Step 4.2
+
+P2: 🃏🃏🃏🃏
+
+    🃏🃏🃏🃏 (face down)
+    🃏🃏🃏🃏 (face down)
+    
+P1: 🃏🃏🃏🃏
+
+#### Step 5.1
+
+P2: 🃏🃏🃏🃏
+
+    🃏 (face up)
+    🃏🃏🃏🃏 
+    🃏🃏🃏🃏
+    🃏 (face up)
+    
+P1: 🃏🃏🃏🃏
+
+#### Step 5.2
+
+P2: 🃏🃏🃏🃏
+
+    🃏🃏🃏🃏 (face up)
+    🃏🃏🃏🃏 
+    🃏🃏🃏🃏
+    🃏🃏🃏🃏 (face up)
+    
+P1: 🃏🃏🃏🃏
+
+#### Step 6
+
+P2: 🃏🃏🃏🃏 + 🃏
+
+    🃏🃏🃏🃏 (face up)
+    🃏🃏🃏🃏 
+    🃏🃏🃏🃏
+    🃏🃏🃏🃏 (face up)
+    
+P1: 🃏🃏🃏🃏 + 🃏 (last card)
+
+:::
+
+Each player will have 5 cards in their hand that is only visible to them. Both players have 4 face up cards each that are visible to the both players and both players will have 4 face down cards each that are not visible to both players until they are revealed. With this variation you can plan for the cards that are visible but there is still some chance for the cards that are hidden.
+
+P2 starts, as per usual that the person who cuts the deck begins the game. They can play a card from their hand or they can play one of their face up cards. If you play a face up card, you can reveal the card underneath once the round has been resolved. Additionally, you cannot move a face up card over to be able to flip a face down card.
+
+The rules, otherwise for playing are the same.
+
 ### Playing with 4 people
 
 The extra player deals (and bartends) in rotation.

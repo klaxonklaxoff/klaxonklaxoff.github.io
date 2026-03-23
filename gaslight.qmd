@@ -16,8 +16,6 @@ execute:
   eval: false
 ---
 
-> Photo from [Adobe Stock](https://stock.adobe.com/ca).
-
 ::::{.cr-section}
 
 :::{#cr-ok}

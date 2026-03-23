@@ -169,11 +169,13 @@ Here's a visualization:
 #### Step 3.1
 
 P2: 🃏🃏
+
 P1: 🃏🃏
 
 #### Step 3.2
 
 P2: 🃏🃏 + 🃏🃏
+
 P1: 🃏🃏 + 🃏🃏
 
 #### Step 4.1

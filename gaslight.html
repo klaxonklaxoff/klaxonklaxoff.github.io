@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>gaslight – My site</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -74,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-36f59d36646c11b08501fca13ec4f093.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-914f5654efbf6377eda54e76762056d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
 <script src="site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
 <script src="site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
@@ -109,14 +106,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+</head><body class="nav-fixed quarto-light"><div class="section1">
+
+    <div class="text">I'M BEING GASLIT 🔥</div>
+
+</div>
+
 <meta cr-debug-mode="false">
 <meta cr-remove-header-space="false">
 
 
-<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
-</head>
+<link rel="stylesheet" href="_extensions/qmd-lab/closeread/closeread.css">
 
-<body class="nav-fixed quarto-light">
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -204,8 +207,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-section-background-color: #55499b;
---cr-narrative-text-color-sidebar: #fdfdfd;
+          --cr-narrative-text-color-sidebar: #fdfdfd;
+--cr-section-background-color: #55499b;
         }
       </style>
     
@@ -275,12 +278,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>And what</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-riverpath_lit" data-pan-to="25px" data-scale-by="2">
+<div class="trigger new-trigger" data-scale-by="2" data-focus-on="cr-riverpath_lit" data-pan-to="25px">
 <div class="narrative">
 <p>do we</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-riverpath_lit" data-pan-to="50px" data-scale-by="2.5">
+<div class="trigger new-trigger" data-scale-by="2.5" data-focus-on="cr-riverpath_lit" data-pan-to="50px">
 <div class="narrative">
 <p>have here?</p>
 </div>
@@ -479,7 +482,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="cr-mapcode1" class="sticky">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>street_lamps <span class="ot">&lt;-</span> query <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>street_lamps <span class="ot">&lt;-</span> query <span class="sc">|&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a>    <span class="fu">add_osm_feature</span>(</span>
 <span id="cb1-3"><a href="#cb1-3"></a>      <span class="at">key =</span> <span class="st">"highway"</span>,</span>
 <span id="cb1-4"><a href="#cb1-4"></a>      <span class="at">value =</span> <span class="st">"street_lamp"</span>) <span class="sc">|&gt;</span></span>
@@ -487,12 +490,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6"></a></span>
 <span id="cb1-7"><a href="#cb1-7"></a>street_lamps_cropped <span class="ot">&lt;-</span> <span class="fu">st_crop</span>(rec<span class="sc">$</span>osm_points, bbox_sf)</span>
 <span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a>street_lamp_colour <span class="ot">&lt;-</span> <span class="st">"#ffab00"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-9"><a href="#cb1-9"></a>street_lamp_colour <span class="ot">&lt;-</span> <span class="st">"#ffab00"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="cr-mapcode2" class="sticky">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>plt <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>plt <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>    <span class="co"># rivers</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a>    <span class="fu">geom_sf</span>(<span class="at">data =</span> water_a_cropped,</span>
 <span id="cb2-4"><a href="#cb2-4"></a>            <span class="at">fill =</span> water_colour,</span>
@@ -531,12 +534,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-37"><a href="#cb2-37"></a>      <span class="at">alpha =</span> <span class="fl">0.7</span></span>
 <span id="cb2-38"><a href="#cb2-38"></a>    )</span>
 <span id="cb2-39"><a href="#cb2-39"></a></span>
-<span id="cb2-40"><a href="#cb2-40"></a><span class="fu">ggsave</span>(filename_lamp_true)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-40"><a href="#cb2-40"></a><span class="fu">ggsave</span>(filename_lamp_true)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="cr-mapoutput" class="sticky">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">source</span>(<span class="st">'./map_function_lights.R'</span>)</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">source</span>(<span class="st">'./map_function_lights.R'</span>)</span>
 <span id="cb3-2"><a href="#cb3-2"></a></span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="co"># For loop ----</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="cf">for</span> (x <span class="cf">in</span> <span class="fu">c</span>(<span class="st">'centretown'</span>, <span class="st">'west'</span>, <span class="st">'east'</span>, <span class="st">'riverpath'</span>)) {</span>
@@ -562,7 +565,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-24"><a href="#cb3-24"></a>    <span class="fu">paste0</span>(filepath_start, <span class="st">'lit_'</span>, x, filepath_end)</span>
 <span id="cb3-25"><a href="#cb3-25"></a>  )</span>
 <span id="cb3-26"><a href="#cb3-26"></a>  </span>
-<span id="cb3-27"><a href="#cb3-27"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-27"><a href="#cb3-27"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="cr-error" class="sticky">
@@ -642,14 +645,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -664,7 +666,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/klaxonklaxoff\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

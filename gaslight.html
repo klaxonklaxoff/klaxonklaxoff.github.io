@@ -215,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="cr-section cr-column-screen sidebar-left">
 <div class="narrative-col">
-<div class="trigger new-trigger" data-scale-by="10" data-focus-on="cr-ok">
+<div class="trigger new-trigger" data-focus-on="cr-ok" data-scale-by="10">
 <div class="narrative">
 <p>Not <em>clinically</em>, but something is up for real.</p>
 </div>
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>And then here again, Open Street Maps or WHOEVER is telling AND showing me that I’m wrong. The streets are lit.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="10" data-focus-on="cr-ok">
+<div class="trigger new-trigger" data-focus-on="cr-ok" data-scale-by="10">
 <div class="narrative">
 <p>But I won’t go down without a fight. I know <strong>FOR A FACT</strong> that I hit a Personal Record (PR) at night because I was scared of the dark so I decided to look at that segment in my Strava. I remember thinking that I was out later than expected and didn’t have my headlamp so I was pumping down the strip like my life depended on it.was this segment you ask?</p>
 </div>
@@ -270,17 +270,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Just kidding!</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="1.5" data-focus-on="cr-riverpath_lit">
+<div class="trigger new-trigger" data-focus-on="cr-riverpath_lit" data-scale-by="1.5">
 <div class="narrative">
 <p>And what</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2" data-pan-to="25px" data-focus-on="cr-riverpath_lit">
+<div class="trigger new-trigger" data-focus-on="cr-riverpath_lit" data-pan-to="25px" data-scale-by="2">
 <div class="narrative">
 <p>do we</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2.5" data-pan-to="50px" data-focus-on="cr-riverpath_lit">
+<div class="trigger new-trigger" data-focus-on="cr-riverpath_lit" data-pan-to="50px" data-scale-by="2.5">
 <div class="narrative">
 <p>have here?</p>
 </div>
@@ -295,7 +295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Anyways, here’s my PR for that segment. <br><br> For a mostly casual, bike-to-get-around-the-city kind of person, it’s not too shabby. However, I don’t want to be hitting my PRs out of fear. I want to be hitting them because I want to, on my own terms. <br><br> So Ottawa/National Capital Commission, put more lights around when people be walking/biking/getting around.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="10" data-focus-on="cr-ok">
+<div class="trigger new-trigger" data-focus-on="cr-ok" data-scale-by="10">
 <div class="narrative">
 <p>EDIT: I drove along the Kichi Zibi Mikan recently and noticed there weren’t any lights PERIOD so …</p>
 </div>
@@ -313,37 +313,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The code starts by asking you to enter the parameters for OpenStreetMap to know what area you want to focus in on. Next, you have to tell it what attributes you want. For the most part I wanted to show the the basic infracture of the city.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="3,4" data-focus-on="cr-mapcode1">
+<div class="trigger new-trigger" data-focus-on="cr-mapcode1" data-highlight="3,4">
 <div class="narrative">
 <p>This is a section I added to add a layer of street lamps on top of the map.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="7" data-focus-on="cr-mapcode1">
+<div class="trigger new-trigger" data-focus-on="cr-mapcode1" data-highlight="7">
 <div class="narrative">
 <p>We see from the wiki that this is a node so we use <code>osm_points</code> instead of <code>osm_multipolygons</code>, <code>osm_polygons</code>, or <code>osm_lines</code> which were used for water, vegetation, or roads resepectively.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="9" data-focus-on="cr-mapcode1">
+<div class="trigger new-trigger" data-focus-on="cr-mapcode1" data-highlight="9">
 <div class="narrative">
 <p>And we assign a nice yellow to indicate street lamp locations.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="1-27" data-focus-on="cr-mapcode2">
+<div class="trigger new-trigger" data-focus-on="cr-mapcode2" data-highlight="1-27">
 <div class="narrative">
 <p>Further down the code, the next big modification I made was to output 2 maps. The first being the unlit version of my map.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="29" data-focus-on="cr-mapcode2">
+<div class="trigger new-trigger" data-focus-on="cr-mapcode2" data-highlight="29">
 <div class="narrative">
 <p>Then, we export this map.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="31-38" data-focus-on="cr-mapcode2">
+<div class="trigger new-trigger" data-focus-on="cr-mapcode2" data-highlight="31-38">
 <div class="narrative">
 <p>After this, I overlay the streetlamps on top of this map.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="40" data-focus-on="cr-mapcode2">
+<div class="trigger new-trigger" data-focus-on="cr-mapcode2" data-highlight="40">
 <div class="narrative">
 <p>And then we export this map.</p>
 </div>
@@ -353,22 +353,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Here is the code for the map outputs.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="1" data-focus-on="cr-mapoutput">
+<div class="trigger new-trigger" data-focus-on="cr-mapoutput" data-highlight="1">
 <div class="narrative">
 <p>The first step is that it calls the function we talked about earlier.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="4" data-focus-on="cr-mapoutput">
+<div class="trigger new-trigger" data-focus-on="cr-mapoutput" data-highlight="4">
 <div class="narrative">
 <p>I have the list I want to re-iterate over.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="5-19" data-focus-on="cr-mapoutput">
+<div class="trigger new-trigger" data-focus-on="cr-mapoutput" data-highlight="5-19">
 <div class="narrative">
 <p>Then, because we essentially want to do the same thing 4 times, I’ve made this into a loop.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="21-25" data-focus-on="cr-mapoutput">
+<div class="trigger new-trigger" data-focus-on="cr-mapoutput" data-highlight="21-25">
 <div class="narrative">
 <p>Each section of the city has different query parameters but most of the code if repeated with minor differences.</p>
 </div>
@@ -381,12 +381,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="next-steps" class="level2 narrative trigger">
 <h2 class="narrative anchored" data-anchor-id="next-steps">Next steps</h2>
 </section>
-<div class="trigger new-trigger" data-scale-by="10" data-focus-on="cr-ok">
+<div class="trigger new-trigger" data-focus-on="cr-ok" data-scale-by="10">
 <div class="narrative">
 <p>I’ve got some Strava data to look at and compare all the times I’ve gone through this segment but that will take some time to parse through the data because geospatial data is fairly new to me.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="10" data-focus-on="cr-heart">
+<div class="trigger new-trigger" data-focus-on="cr-heart" data-scale-by="10">
 <div class="narrative">
 <p>Thanks for listening to my Ted Talk!</p>
 </div>

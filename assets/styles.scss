@@ -6,11 +6,8 @@ $navbar-fg: $primary;
 $light-bg: $secondary;
 $link-color: $secondary; 
 
-// @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Sono:wght,MONO@200..800,1&display=swap" rel="stylesheet');
-
-// $font-family: "Love Ya Like A Sister", cursive;
 
 /*-- scss:rules --*/
 
@@ -64,7 +61,7 @@ body {
   }
   
 
-.section1, .section2 {
+.section1 {
     width: 100%;
     min-height: 100vh;
     position: relative;
@@ -86,10 +83,6 @@ body {
 .section1 .text {
     top: 10%;
     transform: translateZ(-0.5px) scale(1.5,1.6) translate(-33%,10%);
-}
-
-.section2 {
-    background: rgb(68, 35, 19);
 }
 
 .navbar-container {

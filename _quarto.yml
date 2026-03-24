@@ -53,7 +53,7 @@ format:
     theme: 
       light: zephyr
       dark: darkly
-    css: styles.css
+    # css: styles.css
     toc: true
     grid:
       sidebar-width: 0px

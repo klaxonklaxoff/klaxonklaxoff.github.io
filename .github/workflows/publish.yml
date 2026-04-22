@@ -47,6 +47,8 @@ jobs:
             any::jquerylib
             any::rmarkdown
             any::sass
+            any::libcurl4-gnutls-dev
+            any::libxml2-dev
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

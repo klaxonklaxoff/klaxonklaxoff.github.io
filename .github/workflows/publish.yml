@@ -22,10 +22,16 @@ jobs:
         with:
           r-version: '4.5.3'
 
-      - name: Install R Dependencies
-        uses: r-lib/actions/setup-renv@v2
-        with:
-          cache-version: 1
+      - name : Install dependencies
+        run: |
+          install.packages(c("remotes", "knitr", "rmarkdown"))
+          remotes::install_deps(dependencies = TRUE)
+        shell: Rscript {0}
+
+      #- name: Install R Dependencies
+        #uses: r-lib/actions/setup-renv@v2
+        #with:
+          #cache-version: 1
 
       # - name: Install packages
       #   uses: r-lib/actions/setup-r-dependencies@v2

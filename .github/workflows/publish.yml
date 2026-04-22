@@ -41,6 +41,12 @@ jobs:
             any::rvest
             any::kableExtra
             any::digest
+            any::bslib
+            any::fontawesome
+            any::htmltools
+            any::jquerylib
+            any::rmarkdown
+            any::sass
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

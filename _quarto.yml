@@ -38,11 +38,7 @@ website:
           - file: zole.qmd
       - text: Secret
         menu:
-          - text: "It's trivia time!"
-            file: databaes_quiz.qmd
-          
-      #   menu:
-      #     - file: onepiece.qmd
+          - file: databaes_quiz.qmd
     
 page-footer:  
   - icon: github

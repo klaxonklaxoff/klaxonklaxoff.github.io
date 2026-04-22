@@ -22,35 +22,34 @@ jobs:
         with:
           r-version: '4.5.3'
 
-      #- name: Install R Dependencies
-        #uses: r-lib/actions/setup-renv@v2
-        #with:
-          #cache-version: 1
+      - name: Install R Dependencies
+        uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 1
 
-      # - name: Install packages
-      #   uses: r-lib/actions/setup-r-dependencies@v2
-      #   with:
-      #     packages: |
-      #       extra-packages: any::digest
-      #       # any::tidyverse
-      #       # any::ggridges
-      #       # any::RColorBrewer
-      #       # any::plotly
-      #       # any::scales
-      #       # any::MetBrewer
-      #       # any::DiagrammeR
-      #       # any::rvest
-      #       # any::kableExtra
-      #       # any::knitr
-      #       # any::digest
-      #       # any::bslib
-      #       # any::fontawesome
-      #       # any::htmltools
-      #       # any::jquerylib
-      #       # any::rmarkdown
-      #       # any::sass
-      #       # any::libcurl4-gnutls-dev
-      #       # any::libxml2-dev
+       - name: Install packages
+         uses: r-lib/actions/setup-r-dependencies@v2
+         with:
+           packages: |
+              any::tidyverse
+              any::ggridges
+              any::RColorBrewer
+              any::plotly
+              any::scales
+              any::MetBrewer
+              any::DiagrammeR
+              any::rvest
+              any::kableExtra
+              any::knitr
+              any::digest
+              any::bslib
+              any::fontawesome
+              any::htmltools
+              any::jquerylib
+              any::rmarkdown
+              any::sass
+              any::libcurl4-gnutls-dev
+              any::libxml2-dev
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

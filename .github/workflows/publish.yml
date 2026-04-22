@@ -26,6 +26,10 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1      
+          run: |           
+            install.packages(c("digest"), repos='http://cran.us.r-project.org')           
+            remotes::install_deps(dependencies = TRUE)           
+            remotes::install_github("repo/package")
 
       # - name: Install R Dependencies
       #   uses: r-lib/actions/setup-renv@v2

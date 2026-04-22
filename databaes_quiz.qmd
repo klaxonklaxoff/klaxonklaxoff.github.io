@@ -8,6 +8,13 @@ format:
 footer: "Who is the bae of data?"
 ---
 
+```{r setup}
+#| echo: false
+
+# Load libraries ----
+library(tidyverse)
+```
+
 # About this quiz
 
 These questions will start easy and get harder--so watch out! Everyone will play against the mastermind on their given topic.

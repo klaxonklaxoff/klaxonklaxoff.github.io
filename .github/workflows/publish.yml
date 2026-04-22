@@ -40,6 +40,8 @@ jobs:
             any::DiagrammeR
             any::rvest
             any::kableExtra
+            any::knitr
+            any::rmarkdown
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

@@ -1,0 +1,667 @@
+---
+title: "Databaes Mastermind Trivia"
+format: 
+  revealjs:
+    theme: dracula
+    transition: slide
+    background-transition: fade
+footer: "Who is the bae of data?"
+---
+
+# About this quiz
+
+These questions will start easy and get harder--so watch out! Everyone will play against the mastermind on their given topic.
+
+## About the questions {.smaller}
+
+Below are the types of questions you'll see:
+
+1. Multiple-choice
+    - the easiest question to get yourself situated
+2. Open 
+    - it gets a little harder when you don't have options anymore
+3. Ranking
+    - can you put them in the right order?
+
+--- 
+
+## About the questions, cont'd {.smaller}
+
+4. Sound-bite
+    - I'll play a sound clip and you'll have to answer the question related to it
+5. Range
+    - unlike the other questions so far, whoever is closest will get this point
+6. Who/What am I?
+    - you'll get 3 clues, if you can get the person/object on the first clue that'll be worth 3 points, 2 for the second clue, and 1 for the last clue--pending you get the right answer
+
+## About the scoring
+
+We'll calculate the differentials between the mastermind and the rest of the team--whoever has the highest differential wins the crown: the bae of data.
+
+However, if there is a tie I have some volleyball trivia questions to break it.
+
+<!-- ## Question 1: multiple choice
+
+a. x
+b. x
+c. x
+d. x
+
+---
+
+The correct answer is:
+
+x. x
+
+## Question 2: Q&A
+
+---
+
+The correct answer is:
+
+x
+
+## Question 3: rank
+
+-
+-
+-
+-
+-
+
+---
+
+The correct answer is:
+
+1. 
+2. 
+3. 
+4.
+5. 
+
+## Question 4: sound bite
+
+---
+
+The correct answer is:
+
+x
+
+## Question 5: range
+
+---
+
+The correct answer is:
+
+x
+
+## Question 6: 3 guesses
+
+::: {.incremental}
+:::
+
+---
+
+The correct answer is:
+
+x -->
+
+# Trinity: Women's sports
+
+## Question 1
+
+In 2025, who was the most paid player in PWHL?
+
+a. Britta Curl-Salemme
+b. Marie-Philip Poulin
+c. Emily Clark
+d. Ann-Renée Desbiens
+
+---
+
+The correct answer is:
+
+c. Emily Clark
+
+## Question 2
+
+This female tennis player was the first Asian player to hold the top rankings in 2019--who was she?
+
+---
+
+The correct answer is:
+
+Naomi Osaka
+
+## Question 3
+
+The Commissioner's Cup has been around since 2020. Name the winners of this cup in chronological order.
+
+- New York Liberty
+- Seattle Storm
+- Indiana Fever
+- Las Vegas Aces
+- Minnesota Lynx
+
+---
+
+The correct answer is:
+
+1. Seattle Storm (2021)
+2. Las Vegas Aces (2022)
+3. New York Liberty (2023)
+4. Minnesota Lynx (2024)
+5. Indiana Fever (2025)
+
+## Question 4
+
+This was an exchange between an interviewer and an athlete during the 2026 Winter Olympics in Italy. Name the athlete responding to the interviewer.
+
+---
+
+The correct answer is:
+
+Eileen Gu
+
+## Question 5
+
+Portia Woodman-Wickliffe, AKA the mother of stiff-arms, has been a staple in women's rugby since 2013. How many points has she scored during her career?
+
+---
+
+The correct answer is:
+
+250
+
+## Question 6
+
+Name this person.
+
+::: {.incremental}
+- This Burnaby native is an Olympic gold medalist and two-time Olympic bronze medalist.
+- She is the leader of international goals for men and women at 190.
+- She has won the Canada Soccer Player of the Year 14 times.
+:::
+
+---
+
+The correct answer is:
+
+Christine Sinclair
+
+# Marc: Smosh
+
+## Question 1
+
+The name 'Smosh' came as to be as a result of mishearing what word or words?
+
+a. Mosh pit
+b. Smash
+c. Smooch
+d. Smoosh
+
+---
+
+The correct answer is:
+
+a. Mosh pit
+
+## Question 2
+
+With 108 million views, this video came out in May 3, 2008. What is the name of this video?
+
+---
+
+The correct answer is:
+
+Beef 'n Go
+
+## Question 3
+
+Rank these cast members from when they joined Smosh, in chronological order:
+
+- Amanda Lehan-Canto
+- Ian Hecox
+- Damien Haas
+- Olivia Sui
+- Keith Leak Jr.
+
+---
+
+The correct answer is:
+
+1. Ian Hecox
+2. Keith Leak Jr.
+3. Olivia Sui
+4. Damien Haas
+5. Amanda Lehan-Canto
+
+## Question 4
+
+In this viral clip, this person gets activated and then quickly desescalates--what is her name?
+
+---
+
+The correct answer is:
+
+Angela (Giarratana)
+
+## Question 5
+
+Since their debut in 2005, how many videos have been created under the Smosh (original and main) YouTube channel?
+
+---
+
+The correct answer is:
+
+2.2K
+
+## Question 6
+
+Name the topic.
+
+::: {.incremental}
+- Smosh initially rose to fame due to a lip-synced video to this theme song.
+- However, this video was removed was due to copyright infringement.
+- The video game wants you to catch 'em all.
+:::
+
+---
+
+The correct answer is:
+
+Pokémon theme song
+
+# Noah: General metal music
+
+## Question 1
+
+Which of the following is not a genre of metal?
+
+a. Nu
+b. Heavy
+c. Funk
+d. Brass
+
+---
+
+The correct answer is:
+
+d. Brass
+
+## Question 2
+
+This band opened for the 2024 Summer Olympics opening cerenomy in Paris. Name this band.
+
+---
+
+The correct answer is:
+
+Gojira
+
+## Question 3
+
+According to Spotify, rank the top 5 most popular bands in 2026 by Spotify listeners, in ascending order.
+
+- Metallica
+- System of a Down
+- Black Sabbath
+- Evanescence
+- Linkin Park
+
+---
+
+The correct answer is:
+
+1. Linkin Park
+2. Metallica
+3. Black Sabbath
+4. System of a Down
+5. Evanescence
+
+## Question 4
+
+Name the band being sampled in the song: 'She Watch Channel Zero?!' by Public Enemy.
+
+---
+
+The correct answer is:
+
+'Raining Blood' by Slayer
+
+## Question 5
+
+According to Spotify, as of April 13, 2026, how many plays does the song 'Chop Suey' by System of a Down have?
+
+---
+
+The correct answer is:
+
+1,974,667,473
+
+## Question 6
+
+Name the song title.
+
+::: {.incremental}
+- Richard Cheese made a cover of this song in 2002.
+- This cover was featured on the Tuxicity album.
+- The original song was by the band 'Disturbed'.
+:::
+
+---
+
+The correct answer is:
+
+Down with the Sickness
+
+# Ben: How I Met Your Mother (minus the last season)
+
+## Question 1
+
+Which of the following actors are not in the cast of How I Met Your Mother?
+
+a. Jason Segel
+b. Alyson Hannigan
+c. Sarah Michelle GellarJason Segel
+d. Josh Radnor
+
+---
+
+The correct answer is:
+
+c. Sarah Michelle Gellar
+
+## Question 2
+
+What are the names of Ted's children?
+
+---
+
+The correct answer is:
+
+Penny and Luke
+
+## Question 3
+
+List these guests in chronological order of appearance.
+
+- Britney Spears
+- Katy Perry
+- Bryan Cranston
+- Lin-Manuel Miranda
+- Jennifer Lopez
+
+---
+
+The correct answer is:
+
+1. Bryan Cranston (S2, E6 & E7; S9)
+2. Britney Spears (S3, E13 & E19)
+3. Jennifer Lopez (S5, E17)
+4. Katy Perry (S6: E15)
+5. Lin-Manuel Miranda (S9, E11)
+
+## Question 4
+
+In this scene, Barney is presenting a deck to what appears to be a younger crowd. In this clip, what is being referenced?
+
+---
+
+The correct answer is:
+
+Ewoks
+
+## Question 5
+
+Barney Stinson likes to make up statistics and when doing so often uses this specific number. What number is it?
+
+---
+
+The correct answer is:
+
+83
+
+## Question 6
+
+Name the theory.
+
+::: {.incremental}
+- This hyphenated theory presents the idea of a dichotomy.
+- Devised by Ted Mosby, contains 2 names.
+- This theory states that: "If both people are into each other, then a big romantic gesture works: ..., but if one person isn't into the other, the same gesture comes off serial-killer crazy: ...."
+:::
+
+---
+
+The correct answer is:
+
+Dobler-Dahmer Theory
+
+> The Theory was used as a reference Dobler of Lloyd Dobler from the late 1980’s romantic comedy film, Say Anything, while the Dahmer is referenced to serial killer Jeffrey Dahmer.
+
+# Pascale: Céline Dion
+
+## Question 1
+
+What is the name of the official 2024 Céline Dion biopic?
+
+Qu'est-ce que le titre du 2024 filme biographique officiel de Céline Dion ?
+
+a. Aline
+b. I am: Céline Dion
+c. Céline
+d. Celine: Through the Eyes of the World
+
+---
+
+The correct answer is:
+
+b. I am: Céline Dion
+
+## Question 2
+
+What international contest did Céline Dion win in 1988?
+
+Quel concours international Céline Dion a-t-elle gagné en 1988 ?
+
+---
+
+The correct answer is:
+
+Eurovision
+
+## Question 3
+
+List these songs in chronological order from when they were released:
+
+Classez ces chansons par ordre chronologique de sortie :
+
+- My Heart Will Go On
+- All by Myself
+- The Power of Love
+- J'irai ou tu iras
+- I'm Alive
+
+---
+
+The correct answer is:
+
+1. The Power of Love (1993)
+2. J'irai ou tu iras (1995)
+3. All by Myself (1996)
+4. My Heart Will Go On (1997)
+5. I'm Alive (2002)
+
+## Question 4
+
+In this music video, it starts with a tragic event involving the love interest of the Queen of Power Ballads. What song is this?
+
+Dans ce clip, l'histoire commence par un événement tragique impliquant l'amoureux de la « reine des power ballades ». De quelle chanson s'agit-il ?
+
+---
+
+The correct answer is:
+
+It's All Coming Back to Me
+
+## Question 5
+
+Céline was the second concert residency by Céline Dion, spanning from March 15, 2011 to June 8, 2019. How many shows did she perform during this time?
+
+« Céline » était la deuxième série de concerts donnés par Céline Dion, qui s'est déroulée du 15 mars 2011 au 8 juin 2019. Combien de concerts a-t-elle donnés pendant cette période ?
+
+---
+
+The correct answer is:
+
+427
+
+## Question 6
+
+Name the album.
+
+::: {.incremental}
+- This was Céline Dion's highest grossing album.
+- Il s'agit de l'album de Céline Dion qui a généré le plus de recettes.
+- This album was released in 1996.
+- Cet album est sorti en 1996.
+- Hits from this album include: Falling into You, Let's Talke About Love, and All the Way.
+- Parmi les tubes de cet album, on trouve : « Falling into You », « Let's Talk About Love » et « All the Way ».
+:::
+
+<!-- Name the musical.
+
+::: {.incremental}
+- This parody which features Céline Dion and her music premiered in 2017.
+- Cette parodie mettant en scène Céline Dion et ses chansons a été créée en 2017.
+- Based off a popular movie, it is a retelling of the events through Céline Dion's perspective.
+- Inspirée d'un film à succès, elle revisite les événements à travers le regard de Céline Dion.
+- This musical provides boatloads of fun and Céline Dion's songs are only the tip of the ice berg.
+- Cette comédie musicale est une véritable source de divertissement, et les chansons de Céline Dion n'en sont que la partie émergée de l'iceberg.
+::: -->
+
+---
+
+The correct answer is:
+
+Falling into You
+
+<!-- Titanique -->
+
+# Emily: Friends
+
+## Question 1
+
+In what US city does the 1990's sitcom Friends take place?
+
+a. Manhattan
+b. Manhattan
+c. Baltimore
+d. San Diego
+
+---
+
+The correct answer is:
+
+a. Manhattan
+
+## Question 2
+
+Joey Tribanni acts in a famous, real-life soap opera as a neurosurgeon named Dr. Drake Ramoray. What is the name of this soap opera?
+
+---
+
+The correct answer is:
+
+Days of Our Lives
+
+## Question 3
+
+It’s hard to believe that Phoebe never had a serious relationship before meeting Mike Hannigan in Season 9. List the following men in chronological order of when Phoebe dated them.
+
+- Jake
+- Vince
+- Robert
+- Sergei
+- Ryan
+
+---
+
+The correct answer is:
+
+1. Ryan (S2, E23)
+2. Robert (S3, E13)
+3. Sergei (S3, E15)
+4. Vince (S3, E23)
+5. Jake (S7, E17)
+
+## Question 4
+
+The friends are taking turns teasing Chandler around the kitchen. Who are they imitating in this clip?
+
+---
+
+The correct answer is:
+
+Janice
+
+## Question 5
+
+With a total of 10 years on the air and a reputation as one of TV's most-watched sitcoms, Friends racked up an impressive number of high-profile guest stars in its time. How many celebrities have appeared on Friends? (I'm using the number provided by Bustle.)
+
+---
+
+The correct answer is:
+
+73
+
+## Question 6
+
+Name the song by Phoebe.
+
+::: {.incremental}
+- This song was performed in the episode: The One After the SuperBowl.
+- It is 1 of 4 songs related to animals.
+- This song explains how we get hamburgers.
+:::
+
+---
+
+The correct answer is:
+
+The Cow in the Meadow Goes Moo
+
+# OT: volleyball
+
+## Question 1
+
+What country won the 2025 Women's Volleyball Nations League? 
+
+---
+
+The correct answer is:
+
+Italy
+
+## Question 2
+
+What is a dink?
+
+---
+
+The correct answer is:
+
+A legal push of the ball around or over blockers.
+
+## Question 3
+
+What is the official women's indoor and beach volleyball net height?
+
+---
+
+The correct answer is:
+
+7 feet, 4 ⅛ inches (2.24 meters)
+
+# Thanks for playing!

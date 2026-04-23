@@ -370,7 +370,7 @@ Which of the following actors are not in the cast of How I Met Your Mother?
 
 a. Jason Segel
 b. Alyson Hannigan
-c. Sarah Michelle GellarJason Segel
+c. Sarah Michelle Gellar
 d. Josh Radnor
 
 ---
@@ -563,7 +563,7 @@ Falling into You
 In what US city does the 1990's sitcom Friends take place?
 
 a. Manhattan
-b. Manhattan
+b. Boston
 c. Baltimore
 d. San Diego
 
